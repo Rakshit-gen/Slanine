@@ -25,7 +25,7 @@ export const UsageTrack = () => {
         <Button className='w-full bg-slate-400 text-black'>Upgrade</Button>
         </div>
         <div className='items-center justify-center m-auto flex'>
-        <UserButton />
+        
         </div>
     </div>
   )
