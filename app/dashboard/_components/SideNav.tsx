@@ -4,6 +4,8 @@ import React, { useEffect } from 'react'
 import Image from 'next/image'
 import { History, Home, MonitorSmartphone, Settings, Wallet } from 'lucide-react'
 import { usePathname } from 'next/navigation';
+import { UsageTrack } from './UsageTrack';
+import Link from 'next/link';
 
 const SideNav = () => {
     const MenuList=[{
@@ -34,11 +36,16 @@ const SideNav = () => {
 
         <div className='mt-5'>
             {MenuList.map((menu,index)=>(
+                <Link href={menu.path}>
                 <div className={`flex rounded-2xl gap-2 mb-2 p-3 border-b hover:bg-blue-500 hover:text-white rounded-lg${path===menu.path&&'text-white bg-blue-500'}`}>
                     <menu.icons />
                     <h2>{menu.name}</h2>
                 </div>
+                </Link>
             ))}
+        </div>
+        <div className='absolute bottom-10 left-0 w-full'>
+            <UsageTrack />
         </div>
     </div>
 

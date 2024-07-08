@@ -1,5 +1,6 @@
 import { Search } from 'lucide-react'
 import React from 'react'
+import { UserButton } from '@clerk/nextjs'
 
 const Header = () => {
   return (
@@ -10,9 +11,14 @@ const Header = () => {
             className='outline-none '
             />
         </div>
-    <div>
-        <h2 className='bg-blue-400 p-1 rounded text-xs text-white px-2 hidden md:block lg:block'>Join Membership for just $7.99/month</h2>
+        
+    <div className='flex gap-4'>
+    <UserButton />
+        <h2 className='mt-2 bg-blue-400 p-1 rounded text-xs text-white px-2 hidden md:block lg:block w-fit h-fit'>Join Membership for just $7.99/month
+          🔥🔥
+        </h2>
     </div>
+    
     </div>
   )
 }
