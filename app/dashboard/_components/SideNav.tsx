@@ -15,7 +15,7 @@ const SideNav = () => {
     },{
         name:'Billing',
         icons:Wallet,
-        path:'/dashboard/billing'
+        path:'/dashboard/'
     },{
         name:'Settings',
         icons:Settings,
@@ -32,7 +32,7 @@ const SideNav = () => {
         <div className='flex justify-center gap-3'>
         <Image src='/logo.svg' alt='logo' width={50} height={50}></Image>
         <h1 className='mt-1 text-3xl'>
-        Sla<span className='text-purple-500'>ni</span>ne
+        <span className='text-purple-500'>S</span>la<span className='text-purple-500'>ni</span>ne
         </h1>
         </div>
         <hr className='my-6' />
