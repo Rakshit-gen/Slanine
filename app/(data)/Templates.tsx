@@ -1,4 +1,4 @@
-import { Blocks, Code, Code2Icon, CodeIcon, HashIcon, HelpingHand, Linkedin, Package, TowerControl, Workflow, XIcon } from "lucide-react";
+import { Blocks, Code, Code2Icon, CodeIcon, HashIcon, HelpingHand, Languages, Linkedin, Package, TowerControl, WholeWord, Workflow, XIcon } from "lucide-react";
 
 export default[{
     name:'Blog Title',
@@ -140,4 +140,44 @@ export default[{
 ]
 
 },
+{
+    name: 'English Grammer Check',
+    desc: 'AI Model to Correct your english grammer by providing the text',
+    icon:WholeWord,
+    category: 'language',
+    slug: 'english-grammer-checker',
+    aiPrompt: 'Rewrite the inputText by correcting the grammer and give output in rich text editor format',
+    form: [
+        {
+            label: 'Enter text to correct the grammer',
+            field: 'input',
+            name: 'inputText',
+            required:true
+        },
+       
+    ]
+},
+    {
+        name: 'Language Converter',
+        desc: 'AI Model to convert your sentences into various languages',
+        icon:Languages,
+        category: 'language',
+       
+        slug: 'language-convert',
+        aiPrompt: 'Rewrite the text into the given language. Treat it as a random sentence and nothing else',
+        form: [
+            {
+                label: 'Enter language you want to convert to',
+                field: 'input',
+                name: 'inputText',
+                required:true
+            },{
+                label: 'Enter you text',
+                field: 'textarea',
+                name: 'input',
+                required:true
+            }
+           
+        ]
+    }
 ]
