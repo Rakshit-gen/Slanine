@@ -1,4 +1,4 @@
-import { Blocks, Code, Code2Icon, CodeIcon, HashIcon, HelpingHand, Languages, Linkedin, Package, TowerControl, WholeWord, Workflow, XIcon } from "lucide-react";
+import { Blocks, Bug, Code, Code2Icon, CodeIcon, HashIcon, HelpingHand, Languages, Linkedin, Package, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
 
 export default[{
     name:'Blog Title',
@@ -105,6 +105,23 @@ export default[{
     
 ]
 
+},{
+    name: 'Code Analyser',
+    desc: 'Tool to find bugs in your code and provide you with detailed fixes.',
+    icon:Bug,
+    category: 'Code',
+   
+    slug: 'code-bug-detector',
+    aiPrompt: 'Depends on user codeInput find bug in code and give solution and give output in  in rich text editor format in code block ',
+    form: [
+        {
+            label: 'Enter code which you want to test bug',
+            field: 'textarea',
+            name: 'codeInput',
+            required:true
+        },
+       
+    ]
 },
 {
     name:'Instagram Hashtag',
@@ -146,7 +163,7 @@ export default[{
     icon:WholeWord,
     category: 'language',
     slug: 'english-grammer-checker',
-    aiPrompt: 'Rewrite the inputText by correcting the grammer and give output in rich text editor format',
+    aiPrompt: 'Rewrite the inputText by correcting the grammer and give output in rich text editor format no json and explain mistake in my sentence.',
     form: [
         {
             label: 'Enter text to correct the grammer',
@@ -159,7 +176,7 @@ export default[{
 },
     {
         name: 'Language Converter',
-        desc: 'AI Model to convert your sentences into various languages',
+        desc: 'AI Model to convert your sentences into different languages. Can convert into multiple languages together',
         icon:Languages,
         category: 'language',
        
@@ -179,5 +196,29 @@ export default[{
             }
            
         ]
+    },{
+        name: 'Tagline Generator',
+        desc: 'Struggling to find the perfect tagline for your brand? Let our AI-tool assist you in creating a tagline that stands out.',
+        icon:Webhook,
+        category: 'Marketing',
+       
+        slug: 'tagline-generator',
+        aiPrompt: 'Depends on user productName and outline generate catchy 5-10 tagline for the business product and give output  in rich text editor format ',
+        form: [
+            {
+                label: 'Product/Brand Name',
+                field: 'input',
+                name: 'productName',
+                required:true
+            },
+            {
+                label: 'What you are selling / Marketting',
+                field: 'textarea',
+                name: 'outline',
+                required:true
+            },
+           
+        ]
     }
+    
 ]
