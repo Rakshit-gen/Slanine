@@ -22,9 +22,12 @@ export interface FORM{
 declare const item: any
 
 const TemplateListSection = ({userSearchInput}:any) => {
+  const [templateList,setTemplateList]=useState(Templates)
   useEffect(()=>{
     if(userSearchInput){
-      const filterData = Templates.filter(item=>item.name.toLowerCase().includes(userSearchInput.toLowerCase()))
+      const filterData = Templates.filter(item=>
+        item.name.toLowerCase()
+        .includes(userSearchInput.toLowerCase()));
       setTemplateList(filterData);
     }
     else{
@@ -33,10 +36,9 @@ const TemplateListSection = ({userSearchInput}:any) => {
 
   },[userSearchInput])
 
-  const [templateList,setTemplateList]=useState(Templates)
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
-        {Templates.map((item:TEMPLATE,index:number)=>(
+        {templateList.map((item:TEMPLATE,index:number)=>(
             <TemplateCard {...item} />
 
         ))}

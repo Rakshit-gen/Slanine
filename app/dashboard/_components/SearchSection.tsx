@@ -11,12 +11,12 @@ const SearchSection = ({onSearchInput}:any) => {
         </h2>
         <p>What are you looking for?</p>
         <br />
-        <div>
+        {/*<div>
             <div className='flex gap-2 items-center p-2 border rounded-md max-w-xl bg-white'>
                 <Search className='text-gray-700' />
                 <input type='text' placeholder='Search' onChange={(event)=>onSearchInput(event.target.value)} className='bg-transparent w-full outline-none text-gray-600' /> 
             </div>
-        </div>
+        </div>*/}
     </div>
   )
 }

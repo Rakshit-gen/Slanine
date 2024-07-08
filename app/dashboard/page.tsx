@@ -8,7 +8,7 @@ const Dashboard = () => {
   const [userSearchInput,setUserSearchInput]=useState<string>()
   return (
     <div>
-      <SearchSection onSearchInput={(value:string)=>console.log(value)} />
+      <SearchSection onSearchInput={(value:string)=>setUserSearchInput(value)} />
       <TemplateListSection searchInput={userSearchInput} />
 
     </div>
