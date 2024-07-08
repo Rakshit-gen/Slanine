@@ -1,4 +1,4 @@
-import { Blocks, Code, Code2Icon, CodeIcon, HashIcon, HelpingHand, Linkedin, Package, TowerControl, XIcon } from "lucide-react";
+import { Blocks, Code, Code2Icon, CodeIcon, HashIcon, HelpingHand, Linkedin, Package, TowerControl, Workflow, XIcon } from "lucide-react";
 
 export default[{
     name:'Blog Title',
@@ -8,11 +8,17 @@ export default[{
     aiPrompt:'Give me 3 blog topic idea in a bullet wise only based on given niche topic and give me the reason for this title',
     slug:'generate-blog-title',
     form:[{
-        label:'Enter your blog',
+        label:'Enter your blog topic',
         field:'input',
         name:'niche',
         required:true
     },
+    {
+        label:'Enter your blog content',
+        field:'textarea',
+        name:'content',
+        required:false
+    }
     
 ]
 
@@ -111,6 +117,23 @@ export default[{
         label:'Enter your topic',
         field:'input',
         name:'topic',
+        required:true
+    },
+    
+]
+
+},
+{
+    name:'Schedule maker',
+    desc:'A useful AI tool to help you create a daily schedule.',
+    category:'Helper',
+    icon:Workflow,
+    aiPrompt:'Provide me with a schedule for my day focusing on the following activities',
+    slug:'generate-schedule',
+    form:[{
+        label:'What do you want to focus on today?',
+        field:'input',
+        name:'focus',
         required:true
     },
     
