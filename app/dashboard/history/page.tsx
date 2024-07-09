@@ -1,3 +1,4 @@
+// lib/fetchUser.js
 import React from 'react'
 
 const page = () => {

@@ -1,24 +1,32 @@
+'use client'
+
 import { Button } from "@/components/ui/button";
+import { UserButton, useSession } from "@clerk/nextjs";
 import { Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Navbarb } from "@/components/Nav";
+import { ContainerScroll } from "@/components/ui/containerscroll";
 
 export default function Home() {
+  const { isLoaded, session, isSignedIn } = useSession();
   return (
-    <section className="bg-[#D9AFD9] bg-gradient-to-b from-[#D9AFD9] to-[#97D9E1] text-black max-h-fit">
+    <div className="h-full overflow-hidden">
+      <Navbarb />
+      
+    <section className="bg-[#D9AFD9] bg-gradient-to-b from-[#D9AFD9] to-[#97D9E1] text-black overflow-hidden">
       <nav>
         <div className="justify-between items-center m-auto flex p-5">
-          <Link href={'/dashboard'}>
-          <Button className="bg-gray-800 text-white hover:bg-gray-900">Sign In</Button>
-          
-          </Link>
+          <div className="flex md:hidden lg:hidden">
+          <UserButton />
+          </div>
           <Link href={'https://github.com/Rakshit-gen/Slanine'}>
           <Button className="bg-transparent text-black hover:bg-slate-300"><Github /></Button>
           </Link>
         </div>
       </nav>
-  <div className="h-screen mx-auto max-w-screen-xl px-4 py-12 lg:flex lg:h-screen lg:items-center">
-    <div className="mx-auto max-w-3xl text-center mt-32 md:-mt-40 mg:-mt-24">
+  <div className="h-screen mx-auto max-w-screen-xl px-4 py-12 lg:flex lg:h-screen lg:items-center overflow-hidden">
+    <div className="mx-auto max-w-3xl text-center mt-20 md:-mt-64 lg:-mt-64 mb-0">
     
       
       <h1
@@ -43,9 +51,13 @@ export default function Home() {
       </div>
       
       
+      
     </div>
   </div>
   
+  
 </section>
+
+</div>
   );
 }
