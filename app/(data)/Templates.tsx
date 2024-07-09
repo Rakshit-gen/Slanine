@@ -1,4 +1,4 @@
-import { Blocks, Bug, Code, Code2Icon, CodeIcon, HashIcon, HelpingHand, Languages, Linkedin, Package, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
+import { Blocks, Bug, Code, Code2Icon, CodeIcon, HashIcon, HelpingHand, Languages, Linkedin, Package, Pill, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
 
 export default[{
     name:'Blog Title',
@@ -216,6 +216,29 @@ export default[{
                 field: 'textarea',
                 name: 'outline',
                 required:true
+            },
+           
+        ]
+    },{
+        name: 'Recipe Generator',
+        desc: 'Find detailed recipe of any food items you wanna savour within seconds!',
+        icon:SproutIcon,
+        category: 'Helper',
+       
+        slug: 'recipe-generator',
+        aiPrompt: 'Generate a recipe for the given foodItem depending on the givenItems make sure it is really tasty!',
+        form: [
+            {
+                label: 'What do you wanna eat today?',
+                field: 'input',
+                name: 'productName',
+                required:true
+            },
+            {
+                label: 'What stuff you have?',
+                field: 'textarea',
+                name: 'outline',
+                required:false
             },
            
         ]
