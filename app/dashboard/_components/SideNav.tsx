@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react'
 import Image from 'next/image'
-import { History, Home, MonitorSmartphone, Settings, Wallet } from 'lucide-react'
+import { History, Home, LayoutDashboard, MonitorSmartphone, Settings, Wallet } from 'lucide-react'
 import { usePathname } from 'next/navigation';
 import { UsageTrack } from './UsageTrack';
 import Link from 'next/link';
@@ -12,6 +12,10 @@ const SideNav = () => {
     const MenuList=[{
         name:'Home',
         icons:Home,
+        path:'/'
+    },{
+        name:'Dashboard',
+        icons:LayoutDashboard,
         path:'/dashboard'
     },{
         name:'Billing',
