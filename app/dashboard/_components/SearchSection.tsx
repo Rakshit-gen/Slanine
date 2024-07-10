@@ -5,7 +5,7 @@ import React from 'react'
 
 const SearchSection = ({onSearchInput}:any) => {
   return (
-    <div className='p-10 bg-gradient-to-br from-purple-400 via bg-purple-600 to-blue-400 flex flex-col justify-center items-center text-white'>
+    <div className='p-10 bg-purple-500 flex flex-col justify-center items-center text-white dark:bg-gray-600'>
         <h2 className='text-3xl font-bold'>
             Browse Anything
         </h2>

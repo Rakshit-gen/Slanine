@@ -51,7 +51,7 @@ const CreatNewContent = (props:PROPS) => {
       console.log(result)
     }
     return (
-    <div className='p-5'>
+    <div className='p-5 dark:bg-black'>
       <Link href={'/dashboard'}>
       <Button className='bg-transparent text- hover:bg-transparent'><ArrowLeft /></Button>
       </Link>

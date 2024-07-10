@@ -17,10 +17,10 @@ const OutputSection = ({aiOutput}:PROPS) => {
 
     },[aiOutput])
   return (
-    <div className='bg-white shadow-lg border'>
+    <div className='bg-white shadow-lg border dark:bg-slate-700 dark:text-white'>
     <div className='flex justify-between items-center p-5'>
         <h2 className='font-bold'>Your Results</h2>
-        <Button className='bg-transparent text-black hover:bg-slate-50'><Copy /></Button>
+        
     </div>
     <Editor
     ref={editorRef}

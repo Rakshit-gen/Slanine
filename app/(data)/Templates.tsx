@@ -2,7 +2,7 @@ import { Blocks, Bug, Code, Code2Icon, CodeIcon, HashIcon, HelpingHand, Language
 
 export default[{
     name:'Blog Title',
-    desc:'An AI tool to help you with blog title generation based on blog information',
+    desc:'An AI tool to help you with accurate and fast blog title generation based on blog information',
     category:'Blog',
     icon:Package,
     aiPrompt:'Give me 3 blog topic idea in a bullet wise only based on given niche topic and give me the reason for this title',

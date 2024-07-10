@@ -26,9 +26,9 @@ const FormSection = ({selectedTemplate,userFormInput,loading}:PROPS) => {
     }
   return (
 
-    <div className='p-5 shadow-md border rounded-lg bg-white'>
+    <div className='p-5 shadow-md border rounded-lg bg-white dark:bg-slate-800'>
         <h2 className='font-bold text-2xl mb-2 text-purple'>{selectedTemplate?.name}</h2>
-        <p className='text-gray-700'>{selectedTemplate?.desc}</p>
+        <p className='text-gray-700 dark:text-gray-100'>{selectedTemplate?.desc}</p>
         <form className='mt-6' onSubmit={onSubmit}>
             {selectedTemplate?.form?.map((item,index)=>(
                 <div className='my-2 flex flex-col gap-2 mb-7'>
@@ -43,7 +43,7 @@ const FormSection = ({selectedTemplate,userFormInput,loading}:PROPS) => {
 
                 </div>
             ))}
-            <Button type='submit' className='w-full py-3' disabled={loading}>{loading&&<Loader2Icon className='animate-spin' />} Submit</Button>
+            <Button type='submit' className='w-full py-3 dark:text-white' disabled={loading}>{loading&&<Loader2Icon className='animate-spin' />} Submit</Button>
         </form>
     </div>
   )
