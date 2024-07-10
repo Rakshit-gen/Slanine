@@ -1,4 +1,4 @@
-import { Blocks, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, HashIcon, HelpingHand, Languages, Linkedin, Package, Pill, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
+import { AirVent, Blocks, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, HashIcon, HelpingHand, Languages, Linkedin, Newspaper, Package, Pill, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
 
 export default[{
     name:'Blog Title',
@@ -250,27 +250,33 @@ export default[{
         aiPrompt:'Create a dialogue between the givenPeople depending on givenStory, make it engaging and interesting.',
         slug:'generate-dialogues',
         form:[{
-            label:'Enter your topic',
+            label:'Enter name of the characters',
             field:'input',
-            name:'topic',
+            name:'givenPeople',
             required:true
         },
+        {
+            label:'Enter your short story or the name of it',
+            field:'textarea',
+            name:'givenStory',
+            required:true
+        }
         
     ]
     
     },{
-        name:'Write a X post',
-        desc:'An AI tool to help you with twitter posts generation regarding any trending topic',
+        name:'Synonym and Antonym',
+        desc:'An AI tool to Find Antonyms and Synonyms of any words you give it with.',
         category:'Helper',
-        icon:XIcon,
-        aiPrompt:'Write a twitter post about the given topic in under twitters word limit, Make it trendy.',
-        slug:'generate-x-post',
+        icon:AirVent,
+        aiPrompt:'Find out the different synonyms and antonyms of all the wordsgiven.',
+        slug:'generate-ansyn',
         form:[{
-            label:'Enter your topic',
-            field:'input',
-            name:'topic',
+            label:'Enter words',
+            field:'textarea',
+            name:'wordsgiven',
             required:true
-        },
+        }
         
     ]
     
