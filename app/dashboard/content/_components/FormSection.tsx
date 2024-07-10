@@ -36,9 +36,9 @@ const FormSection = ({selectedTemplate,userFormInput,loading}:PROPS) => {
                     <label className='font-bold'>{item.label}</label>
                     
                     {item.field=='input'?
-                    <Input name={item.name} required={item?.required} onChange={handleInputChange} />
+                    <Input name={item.name} required={item?.required} onChange={handleInputChange} className='text-sm' />
                     :item.field=='textarea'?
-                    <Textarea name={item.name} required={item?.required} onChange={handleInputChange} />:null
+                    <Textarea name={item.name} required={item?.required} onChange={handleInputChange} className='text-sm' />:null
 }
 
                 </div>
