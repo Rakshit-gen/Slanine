@@ -1,4 +1,4 @@
-import { AirVent, Blocks, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, HashIcon, HelpingHand, Languages, Linkedin, Newspaper, Package, Pill, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
+import { AirVent, Blocks, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, HashIcon, HelpingHand, Languages, Linkedin, Mic2Icon, Newspaper, Package, Pill, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
 
 export default[{
     name:'Blog Title',
@@ -266,7 +266,7 @@ export default[{
     
     },{
         name:'Synonym and Antonym',
-        desc:'An AI tool to Find Antonyms and Synonyms of any words you give it with.',
+        desc:'An AI tool to Find Antonyms and Synonyms of any word or a collection of words you provide it with.',
         category:'Helper',
         icon:AirVent,
         aiPrompt:'Find out the different synonyms and antonyms of all the wordsgiven.',
@@ -276,6 +276,34 @@ export default[{
             field:'textarea',
             name:'wordsgiven',
             required:true
+        }
+        
+    ]
+    
+    },{
+        name:'Pro Writer',
+        desc:'An AI tool to help you write shayari, songs or poems and even rap in the language of your choice.',
+        category:'Helper',
+        icon:Mic2Icon,
+        aiPrompt:'Create a givenArt in the givenlang on the givenTopic if given.',
+        slug:'generate-poem',
+        form:[{
+            label:'What do you want? Song/Shayari/Poem/Rap',
+            field:'input',
+            name:'givenArt',
+            required:true
+        },
+        {
+            label:'Language you want it in?',
+            field:'input',
+            name:'givenlang',
+            required:true
+        },
+        {
+            label:'Any topics you want it on?',
+            field:'input',
+            name:'givenTopic',
+            required:false
         }
         
     ]
