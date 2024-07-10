@@ -1,4 +1,4 @@
-import { Blocks, Bug, Code, Code2Icon, CodeIcon, HashIcon, HelpingHand, Languages, Linkedin, Package, Pill, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
+import { Blocks, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, HashIcon, HelpingHand, Languages, Linkedin, Package, Pill, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
 
 export default[{
     name:'Blog Title',
@@ -221,7 +221,7 @@ export default[{
         ]
     },{
         name: 'Recipe Generator',
-        desc: 'Find detailed recipe of any food items you wanna savour within seconds!',
+        desc: 'Find detailed recipe of any food items you wanna savour within seconds using this easy to use AI tool!',
         icon:SproutIcon,
         category: 'Helper',
        
@@ -242,6 +242,38 @@ export default[{
             },
            
         ]
-    }
+    },{
+        name:'Dialogue maker',
+        desc:'An AI tool to create dialogue conversation between any number of characters in a given story.',
+        category:'Helper',
+        icon:DiamondPlusIcon,
+        aiPrompt:'Create a dialogue between the givenPeople depending on givenStory, make it engaging and interesting.',
+        slug:'generate-dialogues',
+        form:[{
+            label:'Enter your topic',
+            field:'input',
+            name:'topic',
+            required:true
+        },
+        
+    ]
+    
+    },{
+        name:'Write a X post',
+        desc:'An AI tool to help you with twitter posts generation regarding any trending topic',
+        category:'Helper',
+        icon:XIcon,
+        aiPrompt:'Write a twitter post about the given topic in under twitters word limit, Make it trendy.',
+        slug:'generate-x-post',
+        form:[{
+            label:'Enter your topic',
+            field:'input',
+            name:'topic',
+            required:true
+        },
+        
+    ]
+    
+    },
     
 ]

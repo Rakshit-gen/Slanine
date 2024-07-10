@@ -17,7 +17,7 @@ export default function Home() {
   const { theme } = useTheme();
   const [color, setColor] = useState("#ffffff");
   useEffect(() => {
-    setColor(theme === "dark" ? "black" : "white");
+    setColor(theme == "dark" ? "#000000" : "#ffffff");
   }, [theme]);
  
   return (
@@ -76,9 +76,16 @@ export default function Home() {
         className="absolute inset-0"
         quantity={300}
         ease={80}
-        color={color}
+        color={"#ffffff"}
         refresh
       />
+      <Particles
+      className="absolute inset-0"
+      quantity={300}
+      ease={80}
+      color={'#000000'}
+      refresh
+       />
 
 </div>
   );
