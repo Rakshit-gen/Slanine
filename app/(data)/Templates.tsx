@@ -41,7 +41,7 @@ export default[{
 },
 {
     name:'Write a X post',
-    desc:'An AI tool to help you with twitter posts generation regarding any topic',
+    desc:'An AI tool to help you with twitter posts generation regarding any trending topic',
     category:'Helper',
     icon:XIcon,
     aiPrompt:'Write a twitter post about the given topic in under twitters word limit, Make it trendy.',

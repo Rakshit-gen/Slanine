@@ -10,7 +10,7 @@ const TemplateCard = (item:TEMPLATE) => {
         <div className='items-center justify-center left-[50%] flex m-auto mb-3'>
         <item.icon />
         </div>
-        <h2 className='text-lg'>{item.name}</h2>
+        <h2 className='text-lg font-bold'>{item.name}</h2>
         <p>{item.desc}</p>
     </div>
     </Link>

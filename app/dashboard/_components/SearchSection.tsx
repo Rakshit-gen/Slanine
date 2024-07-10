@@ -5,11 +5,12 @@ import React from 'react'
 
 const SearchSection = ({onSearchInput}:any) => {
   return (
-    <div className='p-10 bg-purple-500 flex flex-col justify-center items-center text-white dark:bg-gray-600'>
+    <div className='bg-gradient-to-r from-purple-400 via-blue-300 to-amber-300 text-black'>
+    <div className='p-10 bg-transparent flex flex-col justify-center items-center text-black dark:text-gray-300 dark:bg-gray-600'>
         <h2 className='text-3xl font-bold'>
             Browse Anything
         </h2>
-        <p>What are you looking for?</p>
+        <p className='font-semibold'>What are you looking for?</p>
         <br />
         {/*<div>
             <div className='flex gap-2 items-center p-2 border rounded-md max-w-xl bg-white'>
@@ -18,6 +19,8 @@ const SearchSection = ({onSearchInput}:any) => {
             </div>
         </div>*/}
     </div>
+    </div>
+    
   )
 }
 
