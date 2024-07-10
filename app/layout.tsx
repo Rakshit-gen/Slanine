@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Rajdhani } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { ThemeProvider } from "@/components/ThemeProv";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Rajdhani({ subsets: ["latin"], weight:['300','400','600'] });
 
 export const metadata: Metadata = {
   title: "Slanine",
@@ -18,7 +19,16 @@ export default function RootLayout({
   return (
     <ClerkProvider>
     <html lang="en" >
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+          {children}
+        </ThemeProvider>
+        </body>
     </html>
     </ClerkProvider>
   );
