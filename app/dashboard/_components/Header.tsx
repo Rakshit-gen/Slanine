@@ -5,7 +5,7 @@ import { ModeToggle } from '@/components/ModeToggle'
 
 const Header = () => {
   return (
-    <div className='p-5 shadow-sm border-b-2 flex justify-between m-auto items-center bg-gray-200 dark:bg-slate-900'>
+    <div className='p-5 shadow-sm border-b-2 flex justify-between m-auto items-center bg-gray-200 dark:bg-slate-800'>
         
     <div className='flex gap-4 pl-4'>
     <UserButton />
