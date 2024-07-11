@@ -41,7 +41,11 @@ export const UsageTrack = () => {
   const usagelimiter=await (total/100000)*100 
   return usagelimiter
   }
+  
   const usagevalue=calcUsage()
+  const perc=Math.round(total/1000)
+  console.log(perc)
+  
 
   return (
     <div className=''>
@@ -49,11 +53,11 @@ export const UsageTrack = () => {
         <div className='bg-purple-600 text-white rounded-lg p-3 m-5'>
             <h2 className='font-medium'>Credits</h2>
             <div className='h-2 bg-purple-400 w-full rounded-full mt-3'>
-                <div className='h-2 bg-white rounded-full' style={{width:{usagevalue}+"%"}}>
+                <div className='h-2 bg-white rounded-full' style={{width:(perc)+'%'}}>
 
                 </div>
             </div>
-            <h2 className='mt-3 text-sm'>{total}/100,000</h2>
+            <h2 className='mt-3 text-sm'>{total}/100,000 words</h2>
         </div>
         <div className='p-3'>
         <Link href={'/billing'}><Button className='w-full bg-slate-400 text-black hover:bg-slate-500'>Upgrade</Button></Link>
