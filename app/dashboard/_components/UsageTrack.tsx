@@ -7,6 +7,7 @@ import { AIOutput } from '@/utils/schema'
 import { eq } from 'drizzle-orm'
 import { currentUser } from '@clerk/nextjs/server'
 import { TotalUsageContext } from '@/app/(context)/TotalUsageContext'
+import Link from 'next/link'
 
 export const UsageTrack = () => {
   const {user} = useUser()
@@ -55,7 +56,7 @@ export const UsageTrack = () => {
             <h2 className='mt-3 text-sm'>{total}/100,000</h2>
         </div>
         <div className='p-3'>
-        <Button className='w-full bg-slate-400 text-black hover:bg-slate-500'>Upgrade</Button>
+        <Link href={'/billing'}><Button className='w-full bg-slate-400 text-black hover:bg-slate-500'>Upgrade</Button></Link>
         </div>
         <div className='items-center justify-center m-auto flex'>
         
