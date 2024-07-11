@@ -22,7 +22,7 @@ const testimonials = [
     {
       quote:PointerIcon,
       name: "Bullet Point Optimizer",
-      title: "An AI tool to optimize bullet points for resume based on XYZ format of bullet points for resume.",
+      title: "An AI tool to optimize bullet points for resume to be way more impactful based on XYZ format of bullet points for resume.",
       link:'/dashboard/content/generate-bullet-points'
     },
     {
