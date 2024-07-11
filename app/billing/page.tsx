@@ -23,7 +23,7 @@ import Link from "next/link"
 export default function page() {
   return (
 
-    <div className="justify-center items-center m-auto h-screen gap-8 md:flex lg:flex">
+    <div className="justify-center items-center m-auto h-screen gap-8 md:flex lg:flex -mt-10">
         <Card className="w-[350px] bg-white border shadow-lg text-black rounded-xl dark:bg-slate-700 my-10 ml-5">
       <CardHeader>
         <CardTitle className="dark:text-white">Slanine</CardTitle>
