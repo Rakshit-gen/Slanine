@@ -43,7 +43,7 @@ export const UsageTrack = () => {
   const usagevalue=calcUsage()
 
   return (
-    <div>
+    <div className=''>
         
         <div className='bg-purple-600 text-white rounded-lg p-3 m-5'>
             <h2 className='font-medium'>Credits</h2>
@@ -55,7 +55,7 @@ export const UsageTrack = () => {
             <h2 className='mt-3 text-sm'>{total}/100,000</h2>
         </div>
         <div className='p-3'>
-        <Button className='w-full bg-slate-400 text-black'>Upgrade</Button>
+        <Button className='w-full bg-slate-400 text-black hover:bg-slate-500'>Upgrade</Button>
         </div>
         <div className='items-center justify-center m-auto flex'>
         
