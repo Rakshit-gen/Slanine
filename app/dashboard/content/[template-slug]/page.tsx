@@ -35,7 +35,7 @@ const CreatNewContent = (props:PROPS) => {
     const {toast}=useToast()
 
     const GenerateAIcontent=async(formData:any)=>{
-      if(total>=10000 && user?.primaryEmailAddress?.emailAddress!='sisodarakshit456@gmail.com'){
+      if(total>=100000 && user?.primaryEmailAddress?.emailAddress!='sisodarakshit456@gmail.com'){
         return toast({
           title: "Your subscription ended",
           description: "You exceeded number of words available",
