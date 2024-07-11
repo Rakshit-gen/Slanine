@@ -1,30 +1,53 @@
-import { AirVent, Blocks, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, HashIcon, HelpingHand, Languages, Linkedin, Mic2Icon, Newspaper, Package, Pill, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
+import { ResumeIcon } from "@radix-ui/react-icons";
+import { AirVent, Blocks, BookImage, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, HashIcon, HelpingHand, Languages, Linkedin, Mic2Icon, Newspaper, Package, Pill, PointerIcon, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
 
 export default[{
-    name:'Blog Title',
-    desc:'An AI tool to help you with accurate and fast blog title generation based on blog information',
-    category:'Blog',
-    icon:Package,
-    aiPrompt:'Give me 3 blog topic idea in a bullet wise only based on given niche topic and give me the reason for this title',
-    slug:'generate-blog-title',
+    name:'Cover Letter',
+    desc:'An AI tool for writing proper and effective cover letters for your desired job at any company.',
+    category:'jobhunt',
+    icon:BookImage,
+    aiPrompt:'Create a cover letter for the givenComp for the givenJob by searching out the companies job description and users givenResume if given else write a good and nice cover letter in a formal language.',
+    slug:'generate-cover-letter',
     form:[{
-        label:'Enter your blog topic',
+        label:'Company name?',
         field:'input',
-        name:'niche',
+        name:'givenComp',
         required:true
     },
     {
-        label:'Enter your blog content',
+        label:'What job do you want the cover letter for?',
+        field:'input',
+        name:'givenJob',
+        required:true
+    },
+    {
+        label:'Paste your resume content to better the cover letter(optional)',
         field:'textarea',
-        name:'content',
+        name:'givenResume',
         required:false
     }
     
 ]
 
 },{
+    name:'Bullet Point Optimizer',
+    desc:'An AI tool to optimize bullet points for resume based on XYZ format of bullet points for resume.',
+    category:'jobhunt',
+    icon:PointerIcon,
+    aiPrompt:'Form the givenBullets using the XYZ format of resume bullet point optimization in a single line only. Make the points impactful and use Task oriented language. Use strong action verbs',
+    slug:'generate-bullet-points',
+    form:[{
+        label:'Enter your bullet points here(1 at a time)',
+        field:'textarea',
+        name:'givenBullets',
+        required:true
+    }
+    
+]
+
+},{
     name:'Homework helper',
-    desc:'Search up any question for its detailed answer from your textbooks with this latest AI tool.',
+    desc:'Search up any question for its detailed answer with this latest AI tool.',
     category:'Helper',
     icon:HelpingHand,
     aiPrompt:'Give answer to this question in brief detail',
@@ -159,7 +182,7 @@ export default[{
 },
 {
     name: 'English Grammer Check',
-    desc: 'AI Model to Correct your english grammer by providing the text',
+    desc: 'An AI Model to analyze, check and improve your english grammer by providing the text to it',
     icon:WholeWord,
     category: 'language',
     slug: 'english-grammer-checker',
