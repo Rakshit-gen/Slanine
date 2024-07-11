@@ -42,8 +42,12 @@ To get started with Slanine, follow these steps:
 3. Set up the environment variables:
    Create a `.env` file in the root directory and add your configuration details:
    ```env
-   DATABASE_URL=your_postgresql_database_url
-   STRIPE_SECRET_KEY=your_stripe_secret_key
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+   CLERK_SECRET_KEY=
+
+   NEXT_PUBLIC_GOOGLE_GEMINI_API_KEY=
+
+   NEXT_PUBLIC_DRIZZLE_DB_URL=
    ```
 
 4. Run the development server:
