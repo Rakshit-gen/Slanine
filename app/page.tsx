@@ -86,6 +86,7 @@ export default function Home() {
       color={'#000000'}
       refresh
        />
+       <p className="justify-center items-center text-center mb-5 -mt-20">Copyright 2024 @ Rakshit Sisodiya</p>
 
 </div>
   );

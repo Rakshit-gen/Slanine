@@ -67,7 +67,7 @@ export default[{
     desc:'An AI tool to help you with twitter posts generation regarding any trending topic',
     category:'Helper',
     icon:XIcon,
-    aiPrompt:'Write a twitter post about the given topic in under twitters word limit, Make it trendy.',
+    aiPrompt:'Write a twitter post about the given topic in under word limit of 250 characters, Make it trendy.',
     slug:'generate-x-post',
     form:[{
         label:'Enter your topic',
