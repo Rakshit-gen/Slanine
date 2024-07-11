@@ -47,7 +47,6 @@ export const UsageTrack = () => {
   if(perc>=100){
     perc=100
   }
-  console.log(perc)
   
 
   return (
