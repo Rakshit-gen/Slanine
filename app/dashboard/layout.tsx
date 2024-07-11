@@ -21,7 +21,7 @@ function layout({children,}:Readonly<{children:React.ReactNode}>) {
           <Header />
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
           >

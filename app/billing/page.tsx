@@ -19,12 +19,14 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import Link from "next/link"
+import Particles from "@/components/ui/particles"
 
 export default function page() {
   return (
-
+    
     <div className="justify-center items-center m-auto h-screen gap-8 md:flex lg:flex -mt-10">
-        <Card className="w-[350px] bg-white border shadow-lg text-black rounded-xl dark:bg-slate-700 my-10 ml-5">
+      
+        <Card className="w-[350px] bg-slate-100 border shadow-md text-black rounded-xl dark:bg-transparent my-10 ml-5 dark:shadow-white hover:shadow-2xl dark:hover:shadow-white ">
       <CardHeader>
         <CardTitle className="dark:text-white">Slanine</CardTitle>
         <CardDescription className="font-semibold dark:text-white">100000 words only</CardDescription>
@@ -52,7 +54,7 @@ export default function page() {
         
       </CardFooter>
     </Card>
-    <Card className="w-[350px] bg-white border shadow-lg text-black rounded-xl dark:bg-slate-700 my-10 ml-5">
+    <Card className="w-[350px] border shadow-md text-black rounded-xl dark:bg-transparent my-10 ml-5 bg-slate-100 dark:shadow-white hover:shadow-2xl dark:hover:shadow-white ">
       <CardHeader>
         <CardTitle className="dark:text-white">Slanine Pro</CardTitle>
         <CardDescription className="font-semibold dark:text-white">Get unlimited usage.</CardDescription>
@@ -79,9 +81,12 @@ export default function page() {
         <div className="w-full"><Link href='https://buy.stripe.com/test_14keW25rNcK36as145'><Button className="bg-black dark:hover:bg-slate-400 font-bold text-white dark:text-black dark:bg-slate-200 rounded-xl w-full hover:bg-gray-600">Buy</Button></Link></div>
         
       </CardFooter>
+      
     </Card>
     
+    
     </div>
+    
   )
 }
 
