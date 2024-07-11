@@ -17,36 +17,36 @@ const testimonials = [
       quote:BookImage,
       name: "Cover Letter",
       title: "An AI tool for writing proper and effective cover letters for your desired job at any company.",
-      link:'/dashboard/contents/generate-cover-letter'
+      link:'/dashboard/content/generate-cover-letter'
     },
     {
       quote:PointerIcon,
       name: "Bullet Point Optimizer",
       title: "An AI tool to optimize bullet points for resume based on XYZ format of bullet points for resume.",
-      link:'/dashboard/contents/generate-bullet-points'
+      link:'/dashboard/content/generate-bullet-points'
     },
     {
       quote: XCircleIcon,
       name: "Write a X post",
       title: "An AI tool to help you with twitter posts generation regarding any trending topic",
-      link:'/dashboard/contents/generate-x-post'
+      link:'/dashboard/content/generate-x-post'
     },
     {
       quote:Languages,
       name: "Language Converter",
       title: "AI Model to convert your sentences into different languages. Can convert into multiple languages together",
-      link:'/dashboard/contents/language-convert'
+      link:'/dashboard/content/language-convert'
     },
     {
       quote:SproutIcon,
       name: "Recipe Generator",
       title: "Find detailed recipe of any food items you wanna savour within seconds using this easy to use AI tool!",
-      link:'/dashboard/contents/recipe-generator'
+      link:'/dashboard/content/recipe-generator'
     },{
         quote:DiamondPlusIcon,
         name: "Dialogue maker",
         title: "An AI tool to create dialogue conversation between any number of characters in a given story.",
-        link:'/dashboard/contents/generate-dialogues'
+        link:'/dashboard/content/generate-dialogues'
       },
   ];
 
