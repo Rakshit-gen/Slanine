@@ -1,5 +1,5 @@
 import { ResumeIcon } from "@radix-ui/react-icons";
-import { AirVent, Blocks, BookImage, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, HashIcon, HelpingHand, Languages, Linkedin, Mic2Icon, Newspaper, Package, Pill, PointerIcon, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
+import { AirVent, Blocks, BookImage, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, GitBranchPlus, HashIcon, HelpingHand, Languages, Linkedin, Mic2Icon, Newspaper, Package, Pill, PointerIcon, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
 
 export default[{
     name:'Cover Letter',
@@ -34,12 +34,34 @@ export default[{
     desc:'An AI tool to optimize bullet points for resume based on XYZ format of bullet points for resume.',
     category:'jobhunt',
     icon:PointerIcon,
-    aiPrompt:'Form the givenBullets using the XYZ format of resume bullet point optimization in a single line only. Make the points impactful and use Task oriented language. Use strong action verbs',
+    aiPrompt:'Recreate the givenBullets using the XYZ format of resume bullet point optimization in a single line only. Make the points impactful and use Task oriented language. Use strong action verbs',
     slug:'generate-bullet-points',
     form:[{
         label:'Enter your bullet points here(1 at a time)',
         field:'textarea',
         name:'givenBullets',
+        required:true
+    }
+    
+]
+
+},{
+    name:'Github Project Readme',
+    desc:'An AI tool to generate github README.md file for any project based on project description.',
+    category:'code',
+    icon:GitBranchPlus,
+    aiPrompt:'Create a Github Project Readme for givenProject based on the givenDescription make it detailed and standard.',
+    slug:'generate-readme',
+    form:[{
+        label:'Project Name',
+        field:'input',
+        name:'givenProject',
+        required:true
+    },
+    {
+        label:'Tech Stack and Project Description',
+        field:'textarea',
+        name:'givenDescription',
         required:true
     }
     
@@ -289,7 +311,7 @@ export default[{
     
     },{
         name:'Synonym and Antonym',
-        desc:'An AI tool to Find Antonyms and Synonyms of any word or a collection of words you provide it with.',
+        desc:'An AI tool to Find multiple Antonyms and Synonyms of any word or a collection of words you provide it with.',
         category:'Helper',
         icon:AirVent,
         aiPrompt:'Find out the different synonyms and antonyms of all the wordsgiven.',
