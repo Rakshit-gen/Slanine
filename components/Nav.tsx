@@ -17,6 +17,10 @@ export function Navbarb() {
       link: "/settings",
       
     },
+    {
+      name:"Pricing",
+      link:"/billing"
+    }
   ];
   return (
     <div className="relative  w-full ">

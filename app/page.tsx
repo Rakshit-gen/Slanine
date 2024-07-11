@@ -1,7 +1,18 @@
 'use client'
 
 import { useState,useEffect } from "react";
-import { Button } from "@/components/ui/button";
+
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import { UserButton, useSession } from "@clerk/nextjs";
 import { Github } from "lucide-react";
 import Image from "next/image";
@@ -14,6 +25,7 @@ import TemplateCard from "./dashboard/_components/TemplateCard";
 import Templates from "./(data)/Templates";
 import { InfiniteMovingCards } from "@/components/ui/infinitecards";
 import MovingCards from "@/components/InfiniteCards";
+import Billingcards from "@/components/Billingcards";
 
 export interface TEMPLATE{
   name:string,
@@ -43,6 +55,7 @@ export default function Home() {
   
  
   return (
+    <div className="h-full">
     <div className="h-full overflow-hidden dark:bg-black">
       <Navbarb />
       
@@ -98,25 +111,28 @@ export default function Home() {
   
   
   
+  
 </section>
 
 <p className="justify-center items-center text-center mb-5">Copyright 2024 @ Rakshit Sisodiya</p>
-    <Particles
-        className="absolute inset-0"
+    
+       
+
+</div>
+<Particles
+        className="absolute inset-0 h-full object-cover"
         quantity={300}
         ease={80}
         color={"#ffffff"}
         refresh
       />
       <Particles
-      className="absolute inset-0"
+      className="absolute inset-0 h-full"
       quantity={300}
       ease={80}
       color={'#000000'}
       refresh
        />
-       
-
 </div>
   );
 }

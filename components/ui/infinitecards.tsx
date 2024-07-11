@@ -90,7 +90,7 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <Link href={item.link}>
           <li
-            className="w-[350px] bg-white text-black max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 dark:border-slate-700 px-8 py-6 md:w-[450px] text-center dark:bg-slate-800 dark:text-white"
+            className="w-[350px] bg-white text-black max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 dark:border-slate-700 px-8 py-6 md:w-[450px] text-center dark:bg-slate-800 dark:text-white hover:scale-105"
             style={{
               background:
                 "",
