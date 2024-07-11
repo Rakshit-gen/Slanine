@@ -43,7 +43,10 @@ export const UsageTrack = () => {
   }
   
   const usagevalue=calcUsage()
-  const perc=Math.round(total/1000)
+  let perc=Math.round(total/100)
+  if(perc>=100){
+    perc=100
+  }
   console.log(perc)
   
 
