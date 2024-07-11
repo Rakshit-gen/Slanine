@@ -16,7 +16,7 @@ const testimonials = [
     {
       quote:BookImage,
       name: "Cover Letter",
-      title: "An AI tool for writing proper and effective cover letters for your desired job at any company.",
+      title: "An AI tool for writing proper and effective cover letters for your desired job at any company with the help of your resume.",
       link:'/dashboard/content/generate-cover-letter'
     },
     {
@@ -28,7 +28,7 @@ const testimonials = [
     {
       quote: XCircleIcon,
       name: "Write a X post",
-      title: "An AI tool to help you with twitter posts generation regarding any trending topic",
+      title: "An AI tool to help you with twitter posts generation regarding any trending topic in word limit with hashtags.",
       link:'/dashboard/content/generate-x-post'
     },
     {
