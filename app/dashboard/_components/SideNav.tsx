@@ -20,7 +20,7 @@ const SideNav = () => {
     },{
         name:'Billing',
         icons:Wallet,
-        path:'/dashboard/'
+        path:'/billing'
     },{
         name:'Settings',
         icons:Settings,

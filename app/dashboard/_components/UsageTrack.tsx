@@ -37,7 +37,7 @@ export const UsageTrack = () => {
 
   const usage= await getUserData(user?.primaryEmailAddress?.emailAddress??'none')
   setTotal(usage)
-  const usagelimiter=await (total/100000)*100
+  const usagelimiter=await (total/100000)*100 
   return usagelimiter
   }
   const usagevalue=calcUsage()

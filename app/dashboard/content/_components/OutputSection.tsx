@@ -1,4 +1,6 @@
-import React, { useRef,useEffect } from 'react'
+'use client'
+
+import React, { useRef,useEffect,useState } from 'react'
 import '@toast-ui/editor/dist/toastui-editor.css';
 
 import { Editor } from '@toast-ui/react-editor';
@@ -16,10 +18,14 @@ const OutputSection = ({aiOutput}:PROPS) => {
       editorInstance.setMarkdown(aiOutput);
 
     },[aiOutput])
+    const [copy,setcopy]=useState<String>('Copy')
   return (
     <div className='bg-white shadow-lg border dark:bg-slate-700 dark:text-white'>
     <div className='flex justify-between items-center p-5'>
         <h2 className='font-bold'>Your Results</h2>
+        <Button className='flex gap-2 bg-transparent hover:bg-transparent dark:text-white border text-black' onClick={()=>{navigator.clipboard.writeText(aiOutput); setcopy('Copied'); setInterval(()=>setcopy('Copy'),2000)}}>
+          <Copy className='w-4 h-4'></Copy>{copy}
+        </Button>
         
     </div>
     <Editor

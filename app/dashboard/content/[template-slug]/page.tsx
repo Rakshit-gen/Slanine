@@ -35,12 +35,12 @@ const CreatNewContent = (props:PROPS) => {
     const {toast}=useToast()
 
     const GenerateAIcontent=async(formData:any)=>{
-      if(total>=10000 && user?.primaryEmailAddress?.emailAddress!='sisodiarakshit456@gmail.com'){
+      if(total>=10000 && user?.primaryEmailAddress?.emailAddress!='sisodarakshit456@gmail.com'){
         return toast({
           title: "Your subscription ended",
           description: "You exceeded number of words available",
           action: (
-           <Link href={'/billing'}><ToastAction altText="Goto schedule to undo">Upgrade</ToastAction></Link>
+           <Link href={'/billing'}><ToastAction altText="Goto billing" className='font-semibold bg-purple-300'>Upgrade</ToastAction></Link>
           ),
         }) ;
       }

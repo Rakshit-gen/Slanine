@@ -5,7 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/ThemeProv";
 import { Toaster } from "@/components/ui/toaster";
 
-const inter = Rajdhani({ subsets: ["latin"], weight:['300','400','600'] });
+const inter = Rajdhani({ subsets: ["latin"], weight:['300','400','600','700'] });
 
 export const metadata: Metadata = {
   title: "Slanine",
