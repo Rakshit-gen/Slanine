@@ -22,31 +22,42 @@ const getUserData = async (userEmail: string) => {
     columns: {
       id: true,
       formData: true,
-      aiResponse: true
+      aiResponse: true,
+      createdAt:true
     },
     orderBy: (AIOutput, { desc }) => [desc(AIOutput.createdAt)],
     
   });
-  let res=0
+  const idu=[]
+  const data=[]
+  const result=[]
+  const creator=[]
   for(let i=0;i<userData.length;i++){
-    if(userData[i].aiResponse?.split(" ").length){
-      res=res+(userData[i]?.aiResponse?.split(" ").length??0)
-    }
-  }
-  console.log(res)
-  return res
-};
+  idu.push(userData[i].id)
+  data.push(userData[i].formData)
+  result.push(userData[i].aiResponse)
+  creator.push(userData[i].createdAt)
 
-// Usage
+  
+}
+const allValues=[idu,data,result,creator]
+
+return allValues;
+
+    
+  }
+
+
   
 
 const page = () => {
-  const user = getUserData('sisodiarakshit456@gmail.com')
+  const user = getUserData("sisodiarakshit456@gmail.com")
   console.log(user)
+  
   return (
-    <div className='text-6xl'>{user}</div>
+    <div className='text-sm text-black'>page</div>
   )
 }
 
-export default page;getUserData
+export default page;
 
