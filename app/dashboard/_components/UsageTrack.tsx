@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
 //import { currentUser } from '@clerk/nextjs/server'
 import { UserButton, useSession, useUser } from '@clerk/nextjs'
@@ -6,10 +6,11 @@ import { db } from '@/utils/db'
 import { AIOutput } from '@/utils/schema'
 import { eq } from 'drizzle-orm'
 import { currentUser } from '@clerk/nextjs/server'
+import { TotalUsageContext } from '@/app/(context)/TotalUsageContext'
 
 export const UsageTrack = () => {
   const {user} = useUser()
-  const [total,setTotal]=useState<number>(100)
+  const {total,setTotal}=useContext(TotalUsageContext)
 
   useEffect(()=>{
     user&&getUserData

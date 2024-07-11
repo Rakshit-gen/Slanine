@@ -3,6 +3,7 @@
 import React,{useState} from 'react'
 import SearchSection from './_components/SearchSection'
 import TemplateListSection from './_components/TemplateListSection'
+import { UsageTrack } from './_components/UsageTrack'
 
 const Dashboard = () => {
   const [userSearchInput,setUserSearchInput]=useState<string>()
@@ -10,6 +11,7 @@ const Dashboard = () => {
     <div className='dark:bg-black'>
       <SearchSection onSearchInput={(value:string)=>setUserSearchInput(value)} />
       <TemplateListSection searchInput={userSearchInput} />
+      
 
     </div>
   )

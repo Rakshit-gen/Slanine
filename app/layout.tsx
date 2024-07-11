@@ -3,6 +3,7 @@ import { Rajdhani } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/ThemeProv";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Rajdhani({ subsets: ["latin"], weight:['300','400','600'] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
           >
           {children}
         </ThemeProvider>
+        <Toaster />
         </body>
     </html>
     </ClerkProvider>

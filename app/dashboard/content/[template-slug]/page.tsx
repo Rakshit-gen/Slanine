@@ -13,6 +13,11 @@ import { db } from '@/utils/db'
 import { AIOutput } from '@/utils/schema'
 import { useUser } from '@clerk/nextjs'
 import moment from 'moment'
+import { useContext } from 'react'
+import { TotalUsageContext } from '@/app/(context)/TotalUsageContext'
+import { AlertDialog,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle,AlertDialogAction,AlertDialogCancel,AlertDialogTrigger } from '@/components/ui/alert-dialog'
+import { useToast } from '@/components/ui/use-toast'
+import { ToastAction } from '@/components/ui/toast'
 
 interface PROPS{
     params:{
@@ -26,8 +31,19 @@ const CreatNewContent = (props:PROPS) => {
     const [loading,setLoading]=useState(false)
     const [aiOutput,setAiOutput] = useState<string>('');
     const {user}=useUser()
+    const {total,setTotal}=useContext(TotalUsageContext)
+    const {toast}=useToast()
 
     const GenerateAIcontent=async(formData:any)=>{
+      if(total>=10000 && user?.primaryEmailAddress?.emailAddress!='sisodiarakshit456@gmail.com'){
+        return toast({
+          title: "Your subscription ended",
+          description: "You exceeded number of words available",
+          action: (
+           <Link href={'/billing'}><ToastAction altText="Goto schedule to undo">Upgrade</ToastAction></Link>
+          ),
+        }) ;
+      }
       setLoading(true);
       const SelectedPrompt=selectedTemplate?.aiPrompt;
 
