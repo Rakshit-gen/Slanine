@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import Image from 'next/image'
-import { History, Home, LayoutDashboard, MonitorSmartphone, Settings, Wallet } from 'lucide-react'
+import { History, Home, LayoutDashboard, MonitorSmartphone, Settings, Wallet,SidebarClose, ArrowLeft } from 'lucide-react'
 import { usePathname } from 'next/navigation';
 import { UsageTrack } from './UsageTrack';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/utils/cn';
 
 const SideNav = () => {
     const MenuList=[{
@@ -31,15 +32,19 @@ const SideNav = () => {
     useEffect(()=>{
         console.log(path)
     },[])
+    
 
   return (
     <div className='h-screen p-5 shadow-lg border dark:bg-slate-800 dark:text-white'>
+        
         <div className='flex justify-center gap-3 pr-3'>
         <Image src='/logo.svg' alt='logo' width={50} height={50}></Image>
         <h1 className='mt-1 text-3xl dark:text-white'>
         <span className='text-purple-500 dark:text-purple-300'>S</span>la<span className='text-purple-500 dark:text-purple-300'>ni</span>ne
         </h1>
         </div>
+        
+        
         <hr className='my-6' />
 
         <div className='mt-5 font-bold'>
