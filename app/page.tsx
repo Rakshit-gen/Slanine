@@ -10,21 +10,43 @@ import { Navbarb } from "@/components/Nav";
 import { ModeToggle } from "@/components/ModeToggle";
 import Particles from "@/components/ui/particles";
 import { useTheme } from "next-themes";
+import TemplateCard from "./dashboard/_components/TemplateCard";
+import Templates from "./(data)/Templates";
+import { InfiniteMovingCards } from "@/components/ui/infinitecards";
+import MovingCards from "@/components/InfiniteCards";
 
+export interface TEMPLATE{
+  name:string,
+  desc:string,
+  icon:string,
+  category:string,
+  aiPrompt:string,
+  slug:string,
+  form?:FORM[]
+}
 
+export interface FORM{
+  label:string,
+  field:string,
+  name:string,
+  required?:boolean
+}
+declare const item: any
 export default function Home() {
+  
   const { isLoaded, session, isSignedIn } = useSession();
   const { theme } = useTheme();
   const [color, setColor] = useState("#ffffff");
   useEffect(() => {
     setColor(theme == "dark" ? "#000000" : "#ffffff");
   }, [theme]);
+  
  
   return (
     <div className="h-full overflow-hidden dark:bg-black">
       <Navbarb />
       
-    <section className="bg-slate-100 text-black overflow-hidden dark:bg-black dark:text-white h-full">
+    <section className="bg-slate-100 text-black overflow-hidden dark:bg-black dark:text-white h-full w-full">
       <nav>
         <div className="justify-between items-center m-auto flex p-5">
           <div className="flex md:hidden lg:hidden">
@@ -66,12 +88,19 @@ export default function Home() {
       
       
     </div>
+    
   </div>
+  <div className="w-screen ml-10 -mt-52">
+  <MovingCards />
+  </div>
+  <br />
+  
+  
   
   
 </section>
 
-
+<p className="justify-center items-center text-center mb-5">Copyright 2024 @ Rakshit Sisodiya</p>
     <Particles
         className="absolute inset-0"
         quantity={300}
@@ -86,7 +115,7 @@ export default function Home() {
       color={'#000000'}
       refresh
        />
-       <p className="justify-center items-center text-center mb-5 -mt-20">Copyright 2024 @ Rakshit Sisodiya</p>
+       
 
 </div>
   );

@@ -38,7 +38,7 @@ const TemplateListSection = ({userSearchInput}:any) => {
 
   return (
     <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 md:gap-3 lg:gap-3 md:mt-3 lg:m-3'>
-        {templateList.map((item:TEMPLATE,index:number)=>(
+        {Templates.map((item:TEMPLATE,index:number)=>(
             <TemplateCard {...item} />
 
         ))}
