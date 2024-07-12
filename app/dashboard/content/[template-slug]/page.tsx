@@ -11,14 +11,18 @@ import { Button } from '@/components/ui/button'
 import { chatSession } from '@/utils/AIModal'
 import { db } from '@/utils/db'
 import { AIOutput } from '@/utils/schema'
-import { useUser } from '@clerk/nextjs'
+import { useSession, useUser } from '@clerk/nextjs'
 import moment from 'moment'
 import { useContext } from 'react'
 import { TotalUsageContext } from '@/app/(context)/TotalUsageContext'
 import { AlertDialog,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle,AlertDialogAction,AlertDialogCancel,AlertDialogTrigger } from '@/components/ui/alert-dialog'
 import { useToast } from '@/components/ui/use-toast'
 import { ToastAction } from '@/components/ui/toast'
+import { getAuth,auth } from '@clerk/nextjs/server'
 
+type Session = {
+  isSignedIn?: () => boolean;
+};
 interface PROPS{
     params:{
         'template-slug':string
@@ -35,6 +39,8 @@ const CreatNewContent = (props:PROPS) => {
     const {toast}=useToast()
 
     const GenerateAIcontent=async(formData:any)=>{
+      
+      
       if(total>=100000 && user?.primaryEmailAddress?.emailAddress!='sisodarakshit456@gmail.com'){
         return toast({
           title: "Your subscription ended",
@@ -44,6 +50,7 @@ const CreatNewContent = (props:PROPS) => {
           ),
         }) ;
       }
+      
       setLoading(true);
       const SelectedPrompt=selectedTemplate?.aiPrompt;
 
