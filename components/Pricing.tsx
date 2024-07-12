@@ -38,7 +38,7 @@ const Pricing = () => {
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name" className="font-bold text-3xl dark:text-white">Price</Label>
               <Label className="font-semibold text-2xl dark:text-white">Free <span className="text-slate-300 text-lg"></span></Label>
-              <Button className='w-full bg-slate-300 text-black dark:bg-slate-600 dark:text-white'>Subscribe</Button>
+              <Link href="/dashboard"><Button className='w-full bg-slate-300 text-black dark:bg-slate-600 dark:text-white'>Explore</Button></Link>
               <hr className='bg-black dark:bg-white' />
             </div>
             <div className="flex flex-col space-y-1.5 dark:text-white">
