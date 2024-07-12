@@ -193,7 +193,7 @@ const SkeletonFour = () => {
       >
         <User2Icon className="rounded-full h-10 w-10" />
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-            I am better
+            No Slanine needed
         </p>
         <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Delusional
