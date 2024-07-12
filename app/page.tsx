@@ -26,6 +26,9 @@ import Templates from "./(data)/Templates";
 import { InfiniteMovingCards } from "@/components/ui/infinitecards";
 import MovingCards from "@/components/InfiniteCards";
 import Billingcards from "@/components/Billingcards";
+import { Bent } from "@/components/Grid";
+import Footer from "@/components/Footer";
+import Pricing from "@/components/Pricing";
 
 export interface TEMPLATE{
   name:string,
@@ -103,7 +106,7 @@ export default function Home() {
     </div>
     
   </div>
-  <div className="w-screen ml-10 -mt-52">
+  <div className="w-screen ml-10 -mt-80 md:-mt-52 lg:-mt-52">
   <MovingCards />
   </div>
   <br />
@@ -114,7 +117,21 @@ export default function Home() {
   
 </section>
 
-<p className="justify-center items-center text-center mb-5">Copyright 2024 @ Rakshit Sisodiya</p>
+<br />
+<div className="mt-24">
+<Bent />
+</div>
+
+
+<br />
+<br />
+
+<Pricing />
+
+<div className="md:mt-10">
+<Footer />
+</div>
+
     
        
 
