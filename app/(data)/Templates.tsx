@@ -361,7 +361,7 @@ export default[{
         aiPrompt:'Create a workout schedule with diet schedule focusing on givenPart. Create both vegetarian diet and non veg. Make it depending in user givenWeight in kilograms and givenHeight in centimeter and the time they can give as givenTime. Assume they only have givenAcc as the accessories to workout if gym is written then assume all the accessories of a regular gym.',
         slug:'generate-workout',
         form:[{
-            label:'What do you wanna focus on? Weight loss/Bulking/Body Building',
+            label:'What do you wanna focus on?  Weight loss/Bulking/Body Building/Anything else',
             field:'input',
             name:'givenPart',
             required:true
@@ -384,7 +384,7 @@ export default[{
             required:false
         },
         {
-            label:'What Accessories do you have.',
+            label:'What Accessories do you have.(Write Gym if you go to Gym)',
             field:'input',
             name:'givenAcc',
             required:false
