@@ -1,5 +1,5 @@
 import { ResumeIcon } from "@radix-ui/react-icons";
-import { AirVent, Blocks, BookImage, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, GitBranchPlus, HashIcon, HelpingHand, Languages, Linkedin, Mic2Icon, Newspaper, Package, Pill, PointerIcon, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
+import { AirVent, Blocks, BookImage, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, Dumbbell, GitBranchPlus, HashIcon, HelpingHand, Languages, Linkedin, Mic2Icon, Newspaper, Package, Pill, PointerIcon, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
 
 export default[{
     name:'Cover Letter',
@@ -348,6 +348,45 @@ export default[{
             label:'Any topics you want it on?',
             field:'input',
             name:'givenTopic',
+            required:false
+        }
+        
+    ]
+    
+    },{
+        name:'Workout Buddy',
+        desc:'An AI tool to help you generate a workout schedule based on your needs.',
+        category:'Helper',
+        icon:Dumbbell,
+        aiPrompt:'Create a workout schedule with diet schedule focusing on givenPart. Create both vegetarian diet and non veg. Make it depending in user givenWeight in kilograms and givenHeight in centimeter and the time they can give as givenTime. Assume they only have givenAcc as the accessories to workout if gym is written then assume all the accessories of a regular gym.',
+        slug:'generate-workout',
+        form:[{
+            label:'What do you wanna focus on? Weight loss/Bulking/Body Building',
+            field:'input',
+            name:'givenPart',
+            required:true
+        },
+        {
+            label:'How much is your weight(in kg)',
+            field:'input',
+            name:'givenWeight',
+            required:true
+        },{
+            label:'How much is your height(in cm)',
+            field:'input',
+            name:'givenHeight',
+            required:true
+        },
+        {
+            label:'How much time can you give?(hours/week)',
+            field:'input',
+            name:'givenTime',
+            required:false
+        },
+        {
+            label:'What Accessories do you have.',
+            field:'input',
+            name:'givenAcc',
             required:false
         }
         
