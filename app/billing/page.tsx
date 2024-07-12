@@ -24,7 +24,7 @@ import Particles from "@/components/ui/particles"
 export default function page() {
   return (
     
-    <div className="justify-center items-center m-auto h-[100%] gap-8 md:flex lg:flex mt-10 bg-white dark:bg-black">
+    <div className="justify-center items-center m-auto h-[100%] gap-8 md:flex lg:flex mt-10 bg-white dark:bg-black w-full ">
       <div className="justify-center items-center flex flex-col m-auto text-black md:flex-row">
         <div>
         <Card className="w-[350px] bg-slate-100 border shadow-md text-black rounded-xl dark:bg-transparent my-10 ml-5 dark:shadow-white hover:shadow-2xl dark:hover:shadow-white ">

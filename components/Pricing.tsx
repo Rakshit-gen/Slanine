@@ -27,7 +27,7 @@ const Pricing = () => {
     >
         <Link href={'/dashboard'}>
       <MagicCard
-        className="cursor-pointer flex-col items-center justify-center whitespace-nowrap text-4xl h-[70%] md:h-[420px] md:w-[350px] dark:shadow-white border shadow-md w-[400px] z-20"
+        className="cursor-pointer flex-col items-center justify-center whitespace-nowrap text-4xl h-[70%] md:h-[420px] md:w-[350px] dark:shadow-white border shadow-md w-[380px] z-20"
         gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
       >
         <br />
@@ -56,7 +56,7 @@ const Pricing = () => {
       </Link>
       <Link href={'/billing'}>
       <MagicCard
-        className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl h-[70%] md:h-[420px] md:w-[350px] w-[400px] z-20"
+        className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl h-[70%] md:h-[420px] md:w-[350px] w-[380px] z-20"
         gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
       >
         <br />
