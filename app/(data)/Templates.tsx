@@ -1,4 +1,5 @@
 import { ResumeIcon } from "@radix-ui/react-icons";
+import { IconBook } from "@tabler/icons-react";
 import { AirVent, Blocks, BookImage, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, Dumbbell, GitBranchPlus, HashIcon, HelpingHand, Languages, Linkedin, Mic2Icon, Newspaper, Package, Pill, PointerIcon, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
 
 export default[{
@@ -388,6 +389,22 @@ export default[{
             field:'input',
             name:'givenAcc',
             required:false
+        }
+        
+    ]
+    
+    },{
+        name:'Text Summarizer',
+        desc:'An AI tool to summarize any piece of text. Just paste it in and get a detailed summary.',
+        category:'Helper',
+        icon:IconBook,
+        aiPrompt:'Write the bulletwise summary of the givenText.',
+        slug:'generate-summary',
+        form:[{
+            label:'Enter the Text',
+            field:'textarea',
+            name:'givenText',
+            required:true
         }
         
     ]
