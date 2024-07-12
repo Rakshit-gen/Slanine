@@ -56,7 +56,7 @@ const Pricing = () => {
       </Link>
       <Link href={'/billing'}>
       <MagicCard
-        className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl h-[70%] md:h-[420px] md:w-[350px] w-[380px] z-20"
+        className="cursor-pointer flex-col items-center justify-center shadow-md whitespace-nowrap text-4xl h-[70%] md:h-[420px] md:w-[350px] w-[380px] z-20 dark:shadow-white border"
         gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
       >
         <br />
