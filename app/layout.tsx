@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-    <html lang="en" className="bg-slate-100">
+    <html lang="en">
       <body className={inter.className}>
       <ThemeProvider
             attribute="class"
