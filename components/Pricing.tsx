@@ -17,7 +17,7 @@ const Pricing = () => {
       <div className="relative text-center">
         <h2 className="text-6xl font-bold text-black dark:text-white">Simple pricing for everyone.</h2>
         <br />
-        <p className='text-xl'>Get unlimited access to Slanine and all it&apos;s templates</p>
+        <p className='text-xl text-black dark:text-white'>Get unlimited access to Slanine and all it&apos;s templates</p>
         <br />
         <br />
         <div
@@ -27,7 +27,7 @@ const Pricing = () => {
     >
         <Link href={'/dashboard'}>
       <MagicCard
-        className="cursor-pointer flex-col items-center justify-center whitespace-nowrap text-4xl h-[70%] md:h-[420px] md:w-[350px] dark:shadow-white border shadow-md w-[360px] z-20"
+        className="cursor-pointer flex-col items-center justify-center whitespace-nowrap text-4xl h-[70%] md:h-[420px] md:w-[350px] dark:shadow-white border shadow-md w-[360px] z-20 hover:shadow-xl"
         gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
       >
         <br />
@@ -56,7 +56,7 @@ const Pricing = () => {
       </Link>
       <Link href={'/billing'}>
       <MagicCard
-        className="cursor-pointer flex-col items-center justify-center shadow-md whitespace-nowrap text-4xl h-[70%] md:h-[420px] md:w-[350px] w-[360px] z-20 dark:shadow-white border"
+        className="cursor-pointer flex-col items-center justify-center shadow-md whitespace-nowrap text-4xl h-[70%] md:h-[420px] md:w-[350px] w-[360px] z-20 dark:shadow-white border hover:shadow-xl"
         gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
       >
         <br />

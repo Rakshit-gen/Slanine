@@ -4,6 +4,7 @@ import React from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 
 export interface MagicCardProps {
   children: React.ReactNode;
@@ -17,7 +18,7 @@ export function MagicCard({
   children,
   className = "",
   gradientSize = 200,
-  gradientColor = "#262626",
+  gradientColor = "#FFFFFF",
 }: MagicCardProps) {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
