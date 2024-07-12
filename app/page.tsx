@@ -29,6 +29,8 @@ import Billingcards from "@/components/Billingcards";
 import { Bent } from "@/components/Grid";
 import Footer from "@/components/Footer";
 import Pricing from "@/components/Pricing";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { IconBrandGithub } from "@tabler/icons-react";
 
 export interface TEMPLATE{
   name:string,
@@ -69,7 +71,7 @@ export default function Home() {
           <UserButton />
           </div>
           <Link href={'https://github.com/Rakshit-gen/Slanine'}>
-          <Button className="bg-transparent text-black hover:bg-slate-300 dark:text-white dark:hover:bg-black"><Github className="z-20" /></Button>
+          <Button className="bg-transparent text-black hover:bg-slate-300 dark:text-white dark:hover:bg-black"><IconBrandGithub className="z-20" /></Button>
           </Link>
           <div className="z-10">
           <ModeToggle />
