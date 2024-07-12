@@ -29,9 +29,9 @@ const FormSection = ({selectedTemplate,userFormInput,loading}:PROPS) => {
     <div className='p-5 shadow-md border rounded-lg bg-white dark:bg-slate-800'>
         <h2 className='font-bold text-2xl mb-2 text-purple'>{selectedTemplate?.name}</h2>
         <p className='text-gray-700 dark:text-gray-100'>{selectedTemplate?.desc}</p>
-        <form className='mt-6' onSubmit={onSubmit}>
+        <form className='mt-2' onSubmit={onSubmit}>
             {selectedTemplate?.form?.map((item,index)=>(
-                <div className='my-2 flex flex-col gap-2 mb-7'>
+                <div className='my-2 flex flex-col -gap-6 mb-7'>
                     <br />
                     <label className='font-bold'>{item.label}</label>
                     
