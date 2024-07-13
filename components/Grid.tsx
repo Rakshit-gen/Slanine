@@ -66,18 +66,12 @@ const SkeletonOne = () => {
       whileHover="animate"
       className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
     >
-      <motion.div
-        variants={variants}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-white dark:bg-black"
-      >
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-        <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
-      </motion.div>
+      <br className="hidden md:flex" />
       <motion.div
         variants={variantsSecond}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
       >
-        <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
+        <div className="w-full bg-gray-100 h-6 rounded-full dark:bg-neutral-900" />
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
       </motion.div>
       <motion.div
@@ -85,7 +79,7 @@ const SkeletonOne = () => {
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 bg-white dark:bg-black"
       >
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-        <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
+        <div className="w-full bg-gray-100 h-10 rounded-full dark:bg-neutral-900" />
       </motion.div>
     </motion.div>
   );
@@ -281,7 +275,7 @@ const items = [
     title: "AI Content Generation",
     description: (
       <span className="text-sm">
-        Experience the power of AI in generating unique content.
+        Experience the power of AI in generating unique content from your daily schedule to new songs.
       </span>
     ),
     header: <SkeletonOne />,
@@ -301,10 +295,10 @@ const items = [
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Contextual Suggestions",
+    title: "Text-to-Voice Functionality",
     description: (
       <span className="text-sm">
-        Get AI-powered suggestions based on your writing context.
+        Hear out the results you have generated with just one click!
       </span>
     ),
     header: <SkeletonThree />,
@@ -326,7 +320,7 @@ const items = [
     title: "Text Summarization",
     description: (
       <span className="text-sm">
-        Summarize your lengthy documents with AI technology.
+        Summarize your lengthy documents or texts with AI in just one click.
       </span>
     ),
     header: <SkeletonFive />,

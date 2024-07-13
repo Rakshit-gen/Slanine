@@ -107,12 +107,17 @@ export default[{
     desc:'An AI tool to help you with Linkedin posts generation regarding any topic',
     category:'Helper',
     icon:Linkedin,
-    aiPrompt:'Write a Linkedin post for on the given topic make it casual and a good readable post.',
+    aiPrompt:'Write a Linkedin post for on the givenTopic make it casual and a good readable post in exactly givenWords words.',
     slug:'generate-linkedin-post',
     form:[{
         label:'Enter your topic',
         field:'textarea',
-        name:'niche',
+        name:'givenTopic',
+        required:true
+    },{
+        label:'Post length in words(10-1000 words)',
+        field:'input',
+        name:'givenWords',
         required:true
     },
     
