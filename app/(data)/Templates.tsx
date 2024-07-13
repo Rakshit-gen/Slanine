@@ -35,7 +35,7 @@ export default[{
     desc:'An AI tool to optimize bullet points for resume based on XYZ format of bullet points for resume.',
     category:'jobhunt',
     icon:PointerIcon,
-    aiPrompt:'Recreate the givenBullets using the XYZ format of resume bullet point optimization in a single line only. Make the points impactful and use Task oriented language. Use strong action verbs',
+    aiPrompt:'Recreate the givenBullets using the XYZ format of resume bullet point optimization in a single line only. Make the points impactful some percentages or real life values and use Task oriented language. Use strong action verbs',
     slug:'generate-bullet-points',
     form:[{
         label:'Enter your bullet points here(1 at a time)',

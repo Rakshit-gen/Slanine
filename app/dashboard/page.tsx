@@ -4,6 +4,7 @@ import React,{useState} from 'react'
 import SearchSection from './_components/SearchSection'
 import TemplateListSection from './_components/TemplateListSection'
 import { UsageTrack } from './_components/UsageTrack'
+import Particles from '@/components/ui/particles'
 
 const Dashboard = () => {
   const [userSearchInput,setUserSearchInput]=useState<string>()
@@ -14,7 +15,6 @@ const Dashboard = () => {
 
       <p className='text-center'>Many more on the way...</p>
       <br />
-      
 
     </div>
   )

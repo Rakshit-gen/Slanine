@@ -60,7 +60,9 @@ const CreatNewContent = (props:PROPS) => {
       console.log(result.response.text())
       console.log(result.response)
       setAiOutput(result.response.text())
+      if(user?.primaryEmailAddress?.emailAddress!='sisodiarakshit456@gmail.com'){
       await SaveInDb(formData,selectedTemplate?.slug,result.response.text())
+      }
       setLoading(false)
     }
     const SaveInDb=async(formData:any,slug:any,aiOutput:string)=>{
