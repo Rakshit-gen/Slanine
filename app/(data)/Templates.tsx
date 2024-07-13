@@ -1,6 +1,6 @@
-import { ResumeIcon } from "@radix-ui/react-icons";
+import { PaperPlaneIcon, ResumeIcon } from "@radix-ui/react-icons";
 import { IconBook, IconBook2 } from "@tabler/icons-react";
-import { AirVent, Blocks, BookImage, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, Dumbbell, GitBranchPlus, HashIcon, HelpingHand, Languages, Linkedin, Mic2Icon, Newspaper, Package, Pill, PointerIcon, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
+import { AirVent, Blocks, BookImage, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, Dumbbell, FileCode, GitBranchPlus, HashIcon, HelpingHand, Languages, Linkedin, Mic2Icon, Newspaper, Package, Pill, PointerIcon, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
 
 export default[{
     name:'Cover Letter',
@@ -403,13 +403,44 @@ export default[{
         desc:'An AI tool to summarize any piece of text. Just paste it in and get a detailed summary.',
         category:'Helper',
         icon:IconBook2,
-        aiPrompt:'Write the bulletwise summary of the givenText.',
+        aiPrompt:'Write the bulletwise summary of the givenText or if the givenText is name of a story, find it and summarize it.',
         slug:'generate-summary',
         form:[{
             label:'Enter the Text',
             field:'textarea',
             name:'givenText',
             required:true
+        }
+    ]
+    
+    },{
+        name:'Resume Optimization',
+        desc:'An AI tool to optimize your resume fully based on the company description and tailor it accordingly.',
+        category:'Helper',
+        icon:FileCode,
+        aiPrompt:'Judge this givenResume resume according to the givenDesc job description and the givenJob Job they are applying to if given else choose the job description of the givenCompany from the internet also tell all the missing skills and shortcomings along with strong points.',
+        slug:'resume-review',
+        form:[{
+            label:'Company name?',
+            field:'input',
+            name:'givenCompany',
+            required:true
+        },
+        {
+            label:'What Job are you applying for',
+            field:'input',
+            name:'givenJob',
+            required:true
+        },{
+            label:'Your Resume(Copy Paste the content here)',
+            field:'textarea',
+            name:'givenResume',
+            required:true
+        },{
+            label:'Job Description(Optional)',
+            field:'textarea',
+            name:'givenDesc',
+            required:false
         }
     ]
     

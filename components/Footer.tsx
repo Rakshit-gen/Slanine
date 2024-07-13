@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-200 dark:bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border">
+    <footer className="bg-gray-200 dark:bg-gradient-to-tl from-slate-700 via-slate-800 to-slate-900 border">
   <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
     
 
