@@ -6,6 +6,7 @@ import '@toast-ui/editor/dist/toastui-editor.css';
 import { Editor } from '@toast-ui/react-editor';
 import { Button } from '@/components/ui/button';
 import { Copy, IndentIncrease, Mic2, Pause, Play } from 'lucide-react';
+import { Select,SelectItem } from '@/components/ui/select';
 
 interface PROPS{
   aiOutput:string
@@ -50,6 +51,7 @@ const OutputSection = ({aiOutput}:PROPS) => {
         <Button className='text-black dark:text-white bg-transparent border hover:bg-gray-200 dark:hover:bg-slate-900 mx-2' onClick={()=>{speakthis(aiOutput)}}><Mic2></Mic2></Button>
         <Button className='text-black dark:text-white bg-transparent border mx-2 hover:bg-gray-200 dark:hover:bg-slate-900' onClick={()=>{pause()}}><Pause /></Button>
         <Button className='text-black dark:text-white bg-transparent border mx-2 hover:bg-gray-200 dark:hover:bg-slate-900' onClick={()=>{play()}}><Play /></Button>
+
         
         
         </div>
@@ -59,7 +61,7 @@ const OutputSection = ({aiOutput}:PROPS) => {
         </Button>
         
     </div>
-    <p className='text-xs justify-center text-center'>Voice function not available for languages other than english</p>
+    <p className='text-xs justify-center text-center hidden md:flex'>Voice function not available for languages other than english</p>
     <Editor
     ref={editorRef}
     initialValue="Your result will appear here"
