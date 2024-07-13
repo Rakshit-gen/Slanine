@@ -8,7 +8,7 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Rajdhani({ subsets: ["latin"], weight:['300','400','600','700'] });
 
 export const metadata: Metadata = {
-  title: "Slanine | Get stuff done",
+  title: "Slanine | Tasks Simplified",
   description: "Generate anything using Gemini AI",
 };
 
