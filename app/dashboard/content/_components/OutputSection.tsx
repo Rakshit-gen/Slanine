@@ -5,7 +5,7 @@ import '@toast-ui/editor/dist/toastui-editor.css';
 
 import { Editor } from '@toast-ui/react-editor';
 import { Button } from '@/components/ui/button';
-import { Copy, Mic2, Pause, Play } from 'lucide-react';
+import { Copy, IndentIncrease, Mic2, Pause, Play } from 'lucide-react';
 
 interface PROPS{
   aiOutput:string
@@ -16,9 +16,17 @@ const speakthis=(text:string)=>{
   const regex = /[#?.,:;!@%^&*(){}[\]<>/~`+=|\\"]/g;
   const Ctext = text.replace(regex, '');
   const utterThis = new SpeechSynthesisUtterance(Ctext);
+  utterThis.lang='en-IN'
+  const voices=synth.getVoices()
+  const voice=voices[1]
+  utterThis.voice=voice
+  utterThis.rate=1.5
+  const increaseSpeed=()=>{
+  utterThis.rate+=1
+  }
   synth.cancel()
   synth.speak(utterThis);
-  console.log('yes')
+  return utterThis
 }
 const pause=()=>{
     synth.pause()
@@ -43,13 +51,15 @@ const OutputSection = ({aiOutput}:PROPS) => {
         <Button className='text-black dark:text-white bg-transparent border mx-2 hover:bg-gray-200 dark:hover:bg-slate-900' onClick={()=>{pause()}}><Pause /></Button>
         <Button className='text-black dark:text-white bg-transparent border mx-2 hover:bg-gray-200 dark:hover:bg-slate-900' onClick={()=>{play()}}><Play /></Button>
         
+        
         </div>
-        <p className='text-xs'>Voice function not available for languages other than english</p>
+        
         <Button className='flex gap-2 bg-transparent hover:bg-transparent dark:text-white border text-black' onClick={()=>{navigator.clipboard.writeText(aiOutput); setcopy('Copied'); setInterval(()=>setcopy('Copy'),2000)}}>
           <Copy className='w-4 h-4'></Copy>{copy}
         </Button>
         
     </div>
+    <p className='text-xs justify-center text-center'>Voice function not available for languages other than english</p>
     <Editor
     ref={editorRef}
     initialValue="Your result will appear here"
