@@ -331,7 +331,7 @@ export default[{
         desc:'An AI tool to help you write shayari, songs or poems and even rap in the language of your choice.',
         category:'Helper',
         icon:Mic2Icon,
-        aiPrompt:'Create a givenArt in the givenlang on the givenTopic if given.',
+        aiPrompt:'Create a givenArt in the givenlang on the givenTopic if given. If the givenTopic is bad or too graphic make a really simple one on the same topic ',
         slug:'generate-poem',
         form:[{
             label:'What do you want? Song/Shayari/Poem/Rap',
