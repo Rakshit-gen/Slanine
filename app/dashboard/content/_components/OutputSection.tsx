@@ -46,7 +46,7 @@ const OutputSection = ({aiOutput}:PROPS) => {
     <div className='bg-white shadow-lg border dark:bg-slate-700 dark:text-white'>
     <div className='flex justify-between items-center p-5'>
         <h2 className='font-bold'>Your Results</h2>
-        <div className='justify-between'>
+        <div className='justify-between hidden md:flex'>
         <Button className='text-black dark:text-white bg-transparent border hover:bg-gray-200 dark:hover:bg-slate-900 mx-2' onClick={()=>{speakthis(aiOutput)}}><Mic2></Mic2></Button>
         <Button className='text-black dark:text-white bg-transparent border mx-2 hover:bg-gray-200 dark:hover:bg-slate-900' onClick={()=>{pause()}}><Pause /></Button>
         <Button className='text-black dark:text-white bg-transparent border mx-2 hover:bg-gray-200 dark:hover:bg-slate-900' onClick={()=>{play()}}><Play /></Button>
