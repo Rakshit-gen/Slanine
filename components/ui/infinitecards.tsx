@@ -90,7 +90,7 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <Link href={item.link}>
           <li
-            className="w-[350px] bg-white text-black max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 dark:border-slate-700 px-8 py-6 md:w-[450px] text-center dark:bg-slate-800 dark:text-white hover:scale-105"
+            className="w-[350px] bg-white text-black max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 dark:border-slate-700 px-8 py-6 md:w-[450px] text-center dark:bg-slate-800 dark:text-white hover:scale-105 dark:hover:bg-slate-700 hover:bg-slate-200"
             style={{
               background:
                 "",
@@ -102,15 +102,15 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              <span className=" relative z-20 text-sm leading-[1.6] text-gray-700 font-normal text-center justify-center flex dark:text-white">
+              <span className=" relative z-20 text-sm leading-[1.6] text-gray-700 font-normal text-center justify-center flex dark:text-white font-bold">
                 <item.quote />
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-bold">
+                  <span className=" text-sm leading-[1.6] text-gray-800 font-bold dark:text-white">
                     {item.name}
                   </span>
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-semibold">
+                  <span className=" text-sm leading-[1.6] text-gray-800 font-semibold  dark:text-white">
                     {item.title}
                   </span>
                 </span>

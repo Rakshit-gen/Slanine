@@ -1,6 +1,7 @@
 import React from 'react';
 import { InfiniteMovingCards } from './ui/infinitecards';
-import { BookImage, Box, DiamondIcon, DiamondPlusIcon, GitBranchPlus, Languages, PointerIcon, SproutIcon, XCircleIcon } from 'lucide-react';
+import { BookImage, Box, DiamondIcon, DiamondPlusIcon, Dumbbell, GitBranchPlus, Languages, PointerIcon, SproutIcon, XCircleIcon } from 'lucide-react';
+import { IconBrandGmail } from '@tabler/icons-react';
 
 const MovingCards = () => (
   <div>
@@ -26,22 +27,22 @@ const testimonials = [
       link:'/dashboard/content/generate-bullet-points'
     },
     {
-      quote: XCircleIcon,
-      name: "Write a X post",
-      title: "An AI tool to help you with twitter posts generation regarding any trending topic in word limit with hashtags.",
-      link:'/dashboard/content/generate-x-post'
+      quote: IconBrandGmail,
+      name: 'Cold Mail',
+      title: "An AI tool to generate cold emails for employees or HRs to make job hunting a little easier",
+      link:'/dashboard/content/cold-mail'
     },
     {
-      quote:Languages,
-      name: "Language Converter",
-      title: "AI Model to convert your sentences into different languages. Can convert into multiple languages together",
-      link:'/dashboard/content/language-convert'
+      quote:Dumbbell,
+      name: "Workout Buddy",
+      title: "An AI tool to help you generate a workout schedule based on your needs.",
+      link:'/dashboard/content/generate-workout'
     },
     {
       quote:SproutIcon,
-      name: "Recipe Generator",
-      title: "Find detailed recipe of any food items you wanna savour within seconds using this easy to use AI tool!",
-      link:'/dashboard/content/recipe-generator'
+      name: "Tagline Generator",
+      title: "Struggling to find the perfect tagline for your brand? Let our AI-tool assist you in creating a tagline that stands out.",
+      link:'/dashboard/content/tagline-generator'
     },{
         quote:DiamondPlusIcon,
         name: "Dialogue maker",

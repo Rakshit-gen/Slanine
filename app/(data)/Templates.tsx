@@ -1,5 +1,5 @@
 import { PaperPlaneIcon, ResumeIcon } from "@radix-ui/react-icons";
-import { IconBook, IconBook2 } from "@tabler/icons-react";
+import { IconBook, IconBook2, IconBrandGmail } from "@tabler/icons-react";
 import { AirVent, Blocks, BookImage, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, Dumbbell, FileCode, GitBranchPlus, HashIcon, HelpingHand, Languages, Linkedin, Mic2Icon, Newspaper, Package, Pill, PointerIcon, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
 
 export default[{
@@ -416,7 +416,7 @@ export default[{
     },{
         name:'Resume Optimization',
         desc:'An AI tool to optimize your resume fully based on the company description and tailor it accordingly.',
-        category:'Helper',
+        category:'jobhunt',
         icon:FileCode,
         aiPrompt:'Judge this givenResume resume according to the givenDesc job description and the givenJob Job they are applying to if given else choose the job description of the givenCompany from the internet also tell all the missing skills and shortcomings along with strong points.',
         slug:'resume-review',
@@ -441,6 +441,32 @@ export default[{
             field:'textarea',
             name:'givenDesc',
             required:false
+        }
+    ]
+    
+    },{
+        name:'Cold Mail',
+        desc:'An AI tool to generate cold emails for employees or HRs to make job hunting a little easier',
+        category:'jobhunt',
+        icon:IconBrandGmail,
+        aiPrompt:'Write a cold email for givenJob as job based on givenResume as resume and make it detailed. Make it directed towards a HR or employee from givenCompany company.',
+        slug:'cold-mail',
+        form:[{
+            label:'Company name?',
+            field:'input',
+            name:'givenCompany',
+            required:true
+        },
+        {
+            label:'What Job are you applying for',
+            field:'input',
+            name:'givenJob',
+            required:true
+        },{
+            label:'Your Resume(Copy Paste the content here)',
+            field:'textarea',
+            name:'givenResume',
+            required:true
         }
     ]
     
