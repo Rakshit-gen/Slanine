@@ -27,6 +27,7 @@ export function Bent() {
           icon={item.icon}
         />
       ))}
+      
     </BentoGrid>
   );
 }

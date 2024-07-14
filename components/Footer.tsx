@@ -76,10 +76,10 @@ const Footer = () => {
     
 
     <p className="mt-12 text-center text-sm text-gray-500 lg:text-right dark:text-gray-400">
-    <div className='flex'>
+    {/*<div className='flex'>
       <div className='gap-4 flex'>
       <Label className='text-xl mt-1 text-red-300'>Keep in touch</Label> <Input placeholder='Write your email' className='w-72 bg-slate-700 text-white'></Input></div><Button className='bg-slate-700 h-10 text-white'><SendIcon></SendIcon></Button>
-    </div>
+    </div>*/}
       Copyright &copy; 2024. Rakshit Sisodiya.
     </p>
   </div>

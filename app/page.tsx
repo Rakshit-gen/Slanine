@@ -14,7 +14,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { UserButton, useSession } from "@clerk/nextjs";
-import { Github } from "lucide-react";
+import { Github, HeartHandshake } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Navbarb } from "@/components/Nav";
@@ -31,6 +31,7 @@ import Footer from "@/components/Footer";
 import Pricing from "@/components/Pricing";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { IconBrandGithub } from "@tabler/icons-react";
+import { MarqueeDemo } from "@/components/Passers";
 
 export interface TEMPLATE{
   name:string,
@@ -129,8 +130,10 @@ export default function Home() {
 <br />
 
 <Pricing />
+<MarqueeDemo></MarqueeDemo>
 
-<div className="md:mt-10">
+
+<div className="">
 <Footer />
 </div>
 
