@@ -37,7 +37,7 @@ const CreatNewContent = (props:PROPS) => {
     const {user}=useUser()
     const {total,setTotal}=useContext(TotalUsageContext)
     const {toast}=useToast()
-
+  
     const GenerateAIcontent=async(formData:any)=>{
       
       
