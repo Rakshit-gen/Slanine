@@ -35,7 +35,8 @@ const SideNav = () => {
     
 
   return (
-    <div className='h-screen p-5 shadow-lg border dark:bg-slate-800 dark:text-white'>
+    <div className='bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900'>
+    <div className='h-screen p-5 shadow-lg border bg-white dark:bg-transparent dark:text-white'>
         
         <div className='flex justify-center gap-3 pr-3'>
         <Link href="/"><Image src='/logo.svg' alt='logo' width={100} height={100}></Image></Link>
@@ -62,6 +63,7 @@ const SideNav = () => {
         <div className='absolute bottom-10 left-0 w-full'>
             <UsageTrack />
         </div>
+    </div>
     </div>
 
   )
