@@ -69,7 +69,7 @@ const ReviewCard = ({
 export function MarqueeDemo() {
   return (
     
-    <div className="relative flex h-[600px] w-full flex-col items-center justify-center overflow-hidden rounded-[300px] bg-transparent">
+    <div className="relative flex h-[600px] w-full flex-col items-center justify-center overflow-hidden md:rounded-[300px] bg-transparent">
         <br />
         <div className="text-center text-3xl font-semibold md:text-5xl">Do anything with Slanine</div>
         <br />
