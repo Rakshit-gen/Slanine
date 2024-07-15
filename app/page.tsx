@@ -51,7 +51,7 @@ export interface FORM{
 }
 declare const item: any
 export default function Home() {
-  
+
   const { isLoaded, session, isSignedIn } = useSession();
   const { theme } = useTheme();
   const [color, setColor] = useState("#ffffff");

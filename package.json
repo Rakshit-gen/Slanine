@@ -25,6 +25,7 @@
     "@toast-ui/react-editor": "^3.2.3",
     "@upstash/ratelimit": "^1.2.1",
     "@upstash/redis": "^1.32.0",
+    "@vercel/kv": "^2.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.31.4",
