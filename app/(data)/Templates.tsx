@@ -477,7 +477,7 @@ export default[{
         category: 'Marketing',
        
         slug: 'content-writer',
-        aiPrompt: 'Be a content writer and write content based on givenTopic',
+        aiPrompt: 'Be a content writer and write content based on givenTopic. Make it wih 0 AI plagiarism',
         form: [
             {
                 label: 'Your topic?',
