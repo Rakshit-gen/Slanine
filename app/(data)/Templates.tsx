@@ -472,7 +472,7 @@ export default[{
     
     },{
         name: 'Content Writer',
-        desc: 'Want to write content for your organisation, project or any forums. Slanine has a great tool for it, try it.',
+        desc: 'Want to write content for your organisation or any project. Slanine has a great tool for it',
         icon:PenIcon,
         category: 'Marketing',
        
