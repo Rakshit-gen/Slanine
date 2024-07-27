@@ -1,6 +1,6 @@
 import { PaperPlaneIcon, ResumeIcon } from "@radix-ui/react-icons";
 import { IconBook, IconBook2, IconBrandGmail } from "@tabler/icons-react";
-import { AirVent, Blocks, BookImage, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, Dumbbell, FileCode, GitBranchPlus, HashIcon, HelpingHand, Languages, Linkedin, Mic2Icon, Newspaper, Package, Pill, PointerIcon, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
+import { AirVent, Blocks, BookImage, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, Dumbbell, FileCode, GitBranchPlus, HashIcon, HelpingHand, Languages, Linkedin, Mic2Icon, Newspaper, Package, PenIcon, Pill, PointerIcon, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
 
 export default[{
     name:'Cover Letter',
@@ -470,6 +470,22 @@ export default[{
         }
     ]
     
+    },{
+        name: 'Content Writer',
+        desc: 'Want to write content for your organisation, project or any forums. Slanine has a great tool for it, try it.',
+        icon:PenIcon,
+        category: 'Marketing',
+       
+        slug: 'content-writer',
+        aiPrompt: 'Be a content writer and write content based on givenTopic',
+        form: [
+            {
+                label: 'Your topic?',
+                field: 'input',
+                name: 'givenTopic',
+                required:true
+            },
+        ]
     },
     
 ]
