@@ -41,8 +41,8 @@ To get started with Slanine, follow these steps:
 
 3. Set up the environment variables:
    Create a `.env` file in the root directory and add your configuration details:
-   ```env
    
+```env
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
 CLERK_SECRET_KEY=
 
