@@ -42,12 +42,18 @@ To get started with Slanine, follow these steps:
 3. Set up the environment variables:
    Create a `.env` file in the root directory and add your configuration details:
    ```env
-   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-   CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
 
-   NEXT_PUBLIC_GOOGLE_GEMINI_API_KEY=
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 
-   NEXT_PUBLIC_DRIZZLE_DB_URL=
+NEXT_PUBLIC_GOOGLE_GEMINI_API_KEY=
+
+NEXT_PUBLIC_DRIZZLE_DB_URL=
+
+UPSTASH_REDIS_REST_URL=
+UPSTASH_REDIS_REST_TOKEN=
    ```
 
 4. Run the development server:
