@@ -1,63 +1,109 @@
+"use client";
 // lib/fetchUser.js
-import { db } from '@/utils/db'
-import { AIOutput } from '@/utils/schema'
-import { PgRelationalQuery } from 'drizzle-orm/pg-core/query-builders/query'
-import React from 'react'
-import { eq } from 'drizzle-orm';
+import { db } from "@/utils/db";
+import { AIOutput } from "@/utils/schema";
+import { PgRelationalQuery } from "drizzle-orm/pg-core/query-builders/query";
+import React, { useEffect, useState } from "react";
+import { eq } from "drizzle-orm";
+import { getDefaultResultOrder } from "dns/promises";
+import { useUser } from "@clerk/nextjs";
+import {
+  Card,
+  CardContent,
+  CardTitle,
+  CardHeader,
+  CardFooter,
+} from "@/components/ui/card";
+import ReactMarkdown from "react-markdown";
+import { Button } from "@/components/ui/button";
+import {
+  DialogHeader,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+  Dialog,
+} from "@/components/ui/dialog";
+import { DialogDescription } from "@radix-ui/react-dialog";
 
 interface AIOutputRecord {
   id: number;
   formData: string;
-  aiResponse: string;
+  aiResponse: string | null;
   templateSlug: string;
-  createdBy: string;
-  createdAt: string;
+  createdAt: string | null;
 }
 
-const userEmail="sisodiarakshit456@gmail.com"
+const Page = () => {
+  const { user } = useUser();
+  const [userDataArr, setUserDataArr] = useState<AIOutputRecord[]>([]);
 
-const getUserData = async (userEmail: string) => {
-  const userData = await db.query.AIOutput.findMany({
-    where: eq(AIOutput.createdBy, userEmail),
-    columns: {
-      id: true,
-      formData: true,
-      aiResponse: true,
-      createdAt:true
-    },
-    orderBy: (AIOutput, { desc }) => [desc(AIOutput.createdAt)],
-    
-  });
-  const idu=[]
-  const data=[]
-  const result=[]
-  const creator=[]
-  for(let i=0;i<userData.length;i++){
-  idu.push(userData[i].id)
-  data.push(userData[i].formData)
-  result.push(userData[i].aiResponse)
-  creator.push(userData[i].createdAt)
+  const getUserData = async (userEmail: string) => {
+    const userData = await db.query.AIOutput.findMany({
+      where: eq(AIOutput.createdBy, userEmail),
+      columns: {
+        id: true,
+        formData: true,
+        aiResponse: true,
+        createdAt: true,
+        templateSlug: true,
+      },
+      orderBy: (AIOutput, { desc }) => [desc(AIOutput.createdAt)],
+    });
+    setUserDataArr(userData);
+  };
 
-  
-}
-const allValues=[idu,data,result,creator]
-
-return allValues;
-
-    
-  }
-
-
-  
-
-const page = () => {
-  const user = getUserData("sisodiarakshit456@gmail.com")
-  console.log(user)
-  
+  const userEmail = user?.primaryEmailAddress?.emailAddress;
+  useEffect(() => {
+    if (userEmail) getUserData(userEmail!);
+  }, [userEmail]);
   return (
-    <div className='text-sm text-black'>page</div>
-  )
-}
+    <div className="min-h-screen w-full bg-[#E5E7EB] dark:bg-[#20293a] p-8 text-center">
+      <h1 className="bg-gradient-to-r from-indigo-400 via-pink-500 to-yellow-600 bg-clip-text text-4xl md:text-5xl font-extrabold text-transparent inline-block mb-8">
+        Your History
+      </h1>
+      <div className="text-sm text-black dark:text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        {userDataArr &&
+          userDataArr.map((userData) => (
+            <Card key={userData.id} className="max-sm:max-w-[500px]">
+              <CardHeader>
+                <CardTitle className="text-black dark:text-white text-3xl font-extrabold">
+                  {userData.templateSlug}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ReactMarkdown className="text-slate-500 font-semibold text-lg">
+                  {userData.aiResponse?.length! < 100
+                    ? userData.aiResponse
+                    : userData.aiResponse?.slice(0, 100) + "....."}
+                </ReactMarkdown>
+              </CardContent>
+              <CardFooter className="flex justify-center">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button className="dark:text-white font-semibold text-md">
+                      View Full Content
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="flex flex-col items-center justify-center">
+                    <DialogHeader>
+                      <DialogTitle className="text-3xl font-extrabold">
+                        {userData.templateSlug}
+                      </DialogTitle>
+                      <DialogDescription className="text-center">
+                        Full response
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="text-slate-500 max-h-[60vh] overflow-y-scroll">
+                      <ReactMarkdown>{userData.aiResponse}</ReactMarkdown>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </CardFooter>
+            </Card>
+          ))}
+      </div>
+    </div>
+  );
+};
 
-export default page;
-
+export default Page;
