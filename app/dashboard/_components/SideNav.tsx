@@ -19,6 +19,10 @@ const SideNav = () => {
         icons:LayoutDashboard,
         path:'/dashboard'
     },{
+        name:'History',
+        icons:Wallet,
+        path:'/dashboard/history'
+    },{
         name:'Billing',
         icons:Wallet,
         path:'/billing'
