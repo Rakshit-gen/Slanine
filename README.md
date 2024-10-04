@@ -80,10 +80,16 @@ Explore the various features Slanine offers through its intuitive user interface
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://sourabh782.netlify.app"><img src="https://avatars.githubusercontent.com/u/103349890?v=4?s=100" width="100px;" alt="Sourabh Singh Rawat"/><br /><sub><b>Sourabh Singh Rawat</b></sub></a><br /><a href="https://github.com/Rakshit-gen/Slanine/commits?author=Sourabh782" title="Code">💻</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
-[![All Contributors](https://img.shields.io/github/all-contributors/projectOwner/projectName?color=ee8449&style=flat-square)](#contributors)
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
