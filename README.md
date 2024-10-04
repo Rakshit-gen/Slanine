@@ -72,7 +72,27 @@ Explore the various features Slanine offers through its intuitive user interface
 
 ## Author
 
-![GitHub profile picture](https://github.com/Rakshit-gen.png?size=60)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Picture in Circle</title>
+    <style>
+        .profile-pic {
+            width: 100px; /* Adjust the size as needed */
+            height: 100px; /* Ensure height and width are equal for a circle */
+            border-radius: 50%; /* This creates the circular shape */
+            object-fit: cover; /* Ensures the image covers the area without stretching */
+            border: 2px solid #ccc; /* Optional: add a border */
+        }
+    </style>
+</head>
+<body>
+    <h1>GitHub Profile Picture</h1>
+    <img src="https://github.com/Rakshit-gen.png" alt="GitHub Profile" class="profile-pic">
+</body>
+</html>
 
 ## Contributors
 <a href="https://github.com/Rakshit-gen/Slanine/graphs/contributors">
