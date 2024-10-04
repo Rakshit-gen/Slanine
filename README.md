@@ -1,9 +1,5 @@
 # Slanine: AI Assistant
 
-## Contributors
-<a href="https://github.com/Rakshit-gen/Slanine/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Rakshit-gen/Slanine" />
-</a>
 
 Welcome to **Slanine**, an advanced AI assistant designed to help you tackle daily problems and tasks with ease. Built with modern web technologies, Slanine leverages powerful AI capabilities to enhance your productivity and streamline your workflows.
 
@@ -73,6 +69,13 @@ UPSTASH_REDIS_REST_TOKEN=
 ## Usage
 
 Explore the various features Slanine offers through its intuitive user interface. From generating content to optimizing your resume, Slanine is designed to provide seamless assistance for your daily tasks.
+
+## Contributors
+<a href="https://github.com/Rakshit-gen/Slanine/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Rakshit-gen/Slanine" />
+</a>
+
+<hr />
 
 ## Contributing
 
