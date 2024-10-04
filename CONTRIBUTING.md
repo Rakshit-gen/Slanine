@@ -7,4 +7,6 @@
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
+![All Contributors](https://img.shields.io/github/all-contributors/Rakshit-gen/Slanine?color=ee8449&style=flat-square)](#contributors)
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
