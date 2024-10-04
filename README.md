@@ -73,7 +73,6 @@ Explore the various features Slanine offers through its intuitive user interface
 ## Author
 <a href="https://github.com/Rakshit-gen">
 <img src="https://github.com/Rakshit-gen.png" alt="GitHub Profile" class="profile-pic" height="70px" width="70px">
-   <h4>Rakshit-gen</h4>
 </a>
 
 ## Contributors
