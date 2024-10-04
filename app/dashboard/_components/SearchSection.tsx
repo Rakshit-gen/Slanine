@@ -1,40 +1,41 @@
 'use client'; 
 
-import { Search } from 'lucide-react'
-import React from 'react'
+import { Search } from 'lucide-react';
+import React from 'react';
 import { UsageTrack } from './UsageTrack';
 import MovingCards from '@/components/InfiniteCards2';
 
-const SearchSection = ({onSearchInput}:any) => {
+const SearchSection = ({ onSearchInput }: any) => {
   return (
-    <div className='bg-gradient-to-r from-purple-400 via-blue-300 to-amber-300 text-black'>
-    <div className='p-8 bg-transparent flex flex-col justify-center items-center text-black dark:text-gray-300 dark:bg-gray-600'>
-    <h1
-        className="bg-gradient-to-l from-indigo-400 via-pink-500 to-yellow-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl z-10"
-      >
-        Hot Today
-      </h1>
-      <br />
-    <div className='dark:bg-gray-600'>
-    <MovingCards />
-    </div>
-    <div className='dark:bg-slate-700 w-[70%] md:hidden lg:hidden'>
-      
-      <UsageTrack />
-      </div>
-        {/*<div>
-            <div className='flex gap-2 items-center p-2 border rounded-md max-w-xl bg-white'>
-                <Search className='text-gray-700' />
-                <input type='text' placeholder='Search' onChange={(event)=>onSearchInput(event.target.value)} className='bg-transparent w-full outline-none text-gray-600' /> 
-            </div>
-        </div>*/}
+    <div className='bg-gradient-to-r from-purple-500 via-blue-400 to-pink-400 text-white'>
+      <div className='flex flex-col justify-center items-center p-10'>
+        <h1 className="bg-gradient-to-l from-indigo-400 via-pink-500 to-yellow-600 bg-clip-text text-4xl font-extrabold text-transparent sm:text-5xl transition-transform transform hover:scale-110 z-10">
+          Hot Today
+        </h1>
+        <br />
         
-    </div>
-    
-    
-    </div>
-    
-  )
-}
+        <div className='w-full max-w-4xl mx-auto'>
+          <div className='relative flex items-center border border-white rounded-full overflow-hidden shadow-lg transition-shadow duration-300 hover:shadow-2xl'>
+            <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-300 transition-transform duration-300 hover:text-white' />
+            <input
+              type='text'
+              placeholder='Search...'
+              onChange={(event) => onSearchInput(event.target.value)}
+              className='pl-10 pr-4 py-2 w-full bg-transparent outline-none text-gray-300 placeholder-gray-500 transition-colors duration-300 focus:text-white focus:border-b-2 focus:border-white'
+            />
+          </div>
+        </div>
 
-export default SearchSection
+        <div className='mt-8 w-full'>
+          <MovingCards />
+        </div>
+
+        <div className='dark:bg-slate-700 w-[70%] md:hidden lg:hidden mt-8'>
+          <UsageTrack />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SearchSection;

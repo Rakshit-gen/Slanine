@@ -2,10 +2,8 @@
 // lib/fetchUser.js
 import { db } from "@/utils/db";
 import { AIOutput } from "@/utils/schema";
-import { PgRelationalQuery } from "drizzle-orm/pg-core/query-builders/query";
 import React, { useEffect, useState } from "react";
 import { eq } from "drizzle-orm";
-import { getDefaultResultOrder } from "dns/promises";
 import { useUser } from "@clerk/nextjs";
 import {
   Card,
@@ -56,22 +54,30 @@ const Page = () => {
   useEffect(() => {
     if (userEmail) getUserData(userEmail!);
   }, [userEmail]);
+
   return (
-    <div className="min-h-screen w-full bg-[#E5E7EB] dark:bg-[#20293a] p-8 text-center">
-      <h1 className="bg-gradient-to-r from-indigo-400 via-pink-500 to-yellow-600 bg-clip-text text-4xl md:text-5xl font-extrabold text-transparent inline-block mb-8">
+    <div className="min-h-screen w-full bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 p-8 text-center relative overflow-hidden">
+      {/* Floating Elements */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-purple-500 rounded-full opacity-30 blur-3xl animate-float"></div>
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-pink-500 rounded-full opacity-20 blur-3xl animate-float-delay"></div>
+      
+      {/* Title */}
+      <h1 className="bg-gradient-to-r from-pink-500 via-yellow-500 to-indigo-500 bg-clip-text text-4xl md:text-5xl font-extrabold text-transparent inline-block mb-8">
         Your History
       </h1>
-      <div className="text-sm text-black dark:text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+
+      {/* Content Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-white">
         {userDataArr &&
           userDataArr.map((userData) => (
-            <Card key={userData.id} className="max-sm:max-w-[500px]">
+            <Card key={userData.id} className="bg-white/10 backdrop-blur-lg shadow-lg hover:scale-105 transform transition-all duration-500">
               <CardHeader>
-                <CardTitle className="text-black dark:text-white text-3xl font-extrabold">
+                <CardTitle className="text-white text-3xl font-extrabold">
                   {userData.templateSlug}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <ReactMarkdown className="text-slate-500 font-semibold text-lg">
+                <ReactMarkdown className="text-slate-200 font-semibold text-lg">
                   {userData.aiResponse?.length! < 100
                     ? userData.aiResponse
                     : userData.aiResponse?.slice(0, 100) + "....."}
@@ -80,20 +86,20 @@ const Page = () => {
               <CardFooter className="flex justify-center">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button className="dark:text-white font-semibold text-md">
+                    <Button className="dark:text-white font-semibold text-md bg-gradient-to-r from-indigo-500 to-pink-500 hover:bg-gradient-to-l text-white">
                       View Full Content
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="flex flex-col items-center justify-center">
+                  <DialogContent className="bg-white/10 backdrop-blur-xl rounded-xl p-6 text-white max-w-3xl mx-auto shadow-lg transition-all duration-500">
                     <DialogHeader>
-                      <DialogTitle className="text-3xl font-extrabold">
+                      <DialogTitle className="text-3xl font-extrabold text-white">
                         {userData.templateSlug}
                       </DialogTitle>
-                      <DialogDescription className="text-center">
+                      <DialogDescription className="text-center text-slate-300">
                         Full response
                       </DialogDescription>
                     </DialogHeader>
-                    <div className="text-slate-500 max-h-[60vh] overflow-y-scroll">
+                    <div className="text-slate-200 max-h-[60vh] overflow-y-scroll">
                       <ReactMarkdown>{userData.aiResponse}</ReactMarkdown>
                     </div>
                   </DialogContent>
@@ -102,6 +108,25 @@ const Page = () => {
             </Card>
           ))}
       </div>
+
+      {/* Keyframes for floating animations */}
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(20px);
+          }
+        }
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-delay {
+          animation: float 8s ease-in-out infinite;
+          animation-delay: 3s;
+        }
+      `}</style>
     </div>
   );
 };
