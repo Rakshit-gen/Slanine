@@ -74,7 +74,7 @@ Explore the various features Slanine offers through its intuitive user interface
 <a href="https://github.com/Rakshit-gen/Slanine/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Rakshit-gen/Slanine" />
 </a>
-
+[![All Contributors](https://img.shields.io/github/all-contributors/Rakshit-gen/Slanine?color=ee8449&style=flat-square)](#contributors)
 <hr />
 
 ## Contributing
