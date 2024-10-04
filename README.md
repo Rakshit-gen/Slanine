@@ -72,7 +72,7 @@ Explore the various features Slanine offers through its intuitive user interface
 
 ## Author
 
-![GitHub profile picture](https://github.com/Rakshit-gen.png?size=20)
+![GitHub profile picture](https://github.com/Rakshit-gen.png?size=60)
 
 ## Contributors
 <a href="https://github.com/Rakshit-gen/Slanine/graphs/contributors">
