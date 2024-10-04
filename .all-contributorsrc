@@ -1,4 +1,7 @@
 {
-  "projectName": "Slanine,
-  "projectOwner": "Rakshit-gen"
+  "contributors": [],
+  "projectName": "your-project-name",
+  "projectOwner": "your-github-username-or-org",
+  "repoType": "github",
+  "repoHost": "https://github.com"
 }
