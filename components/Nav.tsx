@@ -14,7 +14,7 @@ export function Navbarb() {
     },
     {
       name: "Settings",
-      link: "/settings",
+      link: "/dashboard/settings",
       
     },
     {
