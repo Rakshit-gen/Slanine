@@ -80,7 +80,7 @@ const Page = () => {
               <CardFooter className="flex justify-center">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button className="dark:text-white bg-slate-400 font-semibold text-md">
+                    <Button className="dark:text-white bg-slate-600 hover:bg-slate-800 font-semibold text-md">
                       View Full Content
                     </Button>
                   </DialogTrigger>
