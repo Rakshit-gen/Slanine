@@ -71,9 +71,11 @@ UPSTASH_REDIS_REST_TOKEN=
 Explore the various features Slanine offers through its intuitive user interface. From generating content to optimizing your resume, Slanine is designed to provide seamless assistance for your daily tasks.
 
 ## Author
-
-<img src="https://github.com/Rakshit-gen.png" alt="GitHub Profile" class="profile-pic" height="60px" width="60px">
-
+<a href="https://github.com/Rakshit-gen">
+<img src="https://github.com/Rakshit-gen.png" alt="GitHub Profile" class="profile-pic" height="70px" width="70px">
+   <hr />
+   <h2>Rakshit-gen</h2>
+</a>a
 
 ## Contributors
 <a href="https://github.com/Rakshit-gen/Slanine/graphs/contributors">
