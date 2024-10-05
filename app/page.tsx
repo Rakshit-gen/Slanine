@@ -75,7 +75,7 @@ export default function Home() {
           <Button className="bg-transparent text-black hover:bg-slate-300 dark:text-white dark:hover:bg-black"><IconBrandGithub className="z-20" /></Button>
           </Link>
           <div className="z-10">
-          <ModeToggle />
+            <ModeToggle />
           </div>
         </div>
       </nav>
@@ -109,8 +109,8 @@ export default function Home() {
     </div>
     
   </div>
-  <div className="w-screen ml-10 -mt-80 md:-mt-52 lg:-mt-52">
-  <MovingCards />
+  <div className="w-screen -mt-80 md:-mt-52 lg:-mt-52">
+    <MovingCards />
   </div>
   <br />
   
