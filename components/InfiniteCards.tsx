@@ -3,8 +3,7 @@ import { InfiniteMovingCards } from './ui/infinitecards';
 import { BookImage, Box, DiamondIcon, DiamondPlusIcon, GitBranchPlus, Languages, PointerIcon, SproutIcon, XCircleIcon } from 'lucide-react';
 
 const MovingCards = () => (
-  <div>
-    
+  <div className='flex w-full justify-center'>
       <InfiniteMovingCards
         items={testimonials} // Pass the appropriate items
         direction="right"
