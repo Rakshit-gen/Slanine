@@ -15,7 +15,7 @@ const SearchSection = ({onSearchInput}:any) => {
         Hot Today
       </h1>
       <br />
-    <div className='dark:bg-gray-600'>
+    <div className='dark:bg-gray-600 w-full'>
     <MovingCards />
     </div>
     <div className='dark:bg-slate-700 w-[70%] md:hidden lg:hidden'>
