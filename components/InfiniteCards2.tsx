@@ -4,7 +4,7 @@ import { BookImage, Box, DiamondIcon, DiamondPlusIcon, Dumbbell, GitBranchPlus, 
 import { IconBrandGmail } from '@tabler/icons-react';
 
 const MovingCards = () => (
-  <div>
+  <div className='w-full'>
     
       <InfiniteMovingCards
         items={testimonials} // Pass the appropriate items
