@@ -71,7 +71,7 @@ const Page = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <ReactMarkdown className="text-slate-500 font-semibold text-lg">
+                <ReactMarkdown className="text-slate-500 font-semibold text-lg overflow-hidden">
                   {userData.aiResponse?.length! < 100
                     ? userData.aiResponse
                     : userData.aiResponse?.slice(0, 100) + "....."}
@@ -84,20 +84,24 @@ const Page = () => {
                       View Full Content
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="flex flex-col items-center justify-center">
+                  <DialogContent className="w-full max-w-3xl max-h-[80vh] p-6 overflow-hidden">
                     <DialogHeader>
-                      <DialogTitle className="text-3xl font-extrabold">
+                      <DialogTitle className="text-3xl font-extrabold text-center">
                         {userData.templateSlug}
                       </DialogTitle>
                       <DialogDescription className="text-center">
                         Full response
                       </DialogDescription>
                     </DialogHeader>
-                    <div className="text-slate-500 max-h-[60vh] overflow-y-scroll">
-                      <ReactMarkdown>{userData.aiResponse}</ReactMarkdown>
+                    <div className="mt-4 overflow-y-auto overflow-x-auto max-h-[60vh] w-full">
+                      <div className="inline-block min-w-full">
+                        <ReactMarkdown className="text-slate-500 whitespace-pre-wrap break-words">
+                          {userData.aiResponse}
+                        </ReactMarkdown>
+                      </div>
                     </div>
                   </DialogContent>
-                </Dialog>
+                </Dialog>{" "}
               </CardFooter>
             </Card>
           ))}
