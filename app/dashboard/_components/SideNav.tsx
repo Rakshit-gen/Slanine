@@ -11,10 +11,6 @@ import { cn } from '@/utils/cn';
 
 const SideNav = () => {
     const MenuList=[{
-        name:'Home',
-        icons:Home,
-        path:'/'
-    },{
         name:'Dashboard',
         icons:LayoutDashboard,
         path:'/dashboard'
