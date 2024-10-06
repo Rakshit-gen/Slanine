@@ -88,7 +88,7 @@ export function MarqueeDemo() {
         {firstRow.map((review) => (
           <div>
           <Button className="bg-transparent z-10 justify-center m-auto flex items-center -space-y-40">
-          <PenIcon className="text-white" />
+          <PenIcon className="text-black dark:text-white" />
           </Button>
         <ReviewCard key={review.username} {...review} />
         </div>
@@ -99,7 +99,7 @@ export function MarqueeDemo() {
             
             <div>
             <Button className="bg-transparent z-10 justify-center m-auto flex items-center -space-y-40">
-            <CodeIcon className="text-white" />
+            <CodeIcon className="text-black dark:text-white" />
             </Button>
           <ReviewCard key={review.username} {...review} />
           </div>
@@ -110,7 +110,7 @@ export function MarqueeDemo() {
         {firstRow.map((review) => (
         <div>
             <Button className="bg-transparent z-10 justify-center m-auto flex items-center -space-y-40">
-            <HeartHandshake className="text-white" />
+            <HeartHandshake className="text-black dark:text-white" />
             </Button>
           <ReviewCard key={review.username} {...review} />
           </div>
