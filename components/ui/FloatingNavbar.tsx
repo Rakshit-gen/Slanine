@@ -83,7 +83,7 @@ export const FloatingNav = ({
                 <UserButton />
               </div>
             ) : (
-              <Button className="bg-gray-600 dark:bg-gray-400 rounded-full bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border-gray-500 text-white hover:bg-gray-700 transition-all delay-75 ease-linear">Sign In</Button>
+              <Button className="bg-slate-500 dark:bg-slate-400 rounded-full bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border-gray-500 text-white hover:bg-slate-700 transition-all delay-75 ease-linear">Sign In</Button>
             )}
             <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
           </div>
