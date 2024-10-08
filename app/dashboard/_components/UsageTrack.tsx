@@ -52,9 +52,9 @@ export const UsageTrack = () => {
   return (
     <div className=''>
         
-        <div className='bg-purple-600 text-white rounded-lg p-3 m-5'>
+        <div className='bg-blue-600 text-white rounded-lg p-3 m-5'>
             <h2 className='font-medium'>Credits</h2>
-            <div className='h-2 bg-purple-400 w-full rounded-full mt-3'>
+            <div className='h-2 bg-blue-400 w-full rounded-full mt-3'>
                 <div className='h-2 bg-white rounded-full' style={{width:(perc)+'%'}}>
 
                 </div>
@@ -62,7 +62,7 @@ export const UsageTrack = () => {
             <h2 className='mt-3 text-sm'>{total}/100,000 words</h2>
         </div>
         <div className='p-3'>
-        <Link href={'/billing'}><Button className='w-full bg-slate-400 text-black hover:bg-slate-500'>Upgrade</Button></Link>
+        <Link href={'/billing'}><Button className='w-full bg-black text-white font-semibold text-lg hover:text-black hover:border-2 hover:border-black dark:text-black dark:hover:text-white hover:bg-white dark:bg-white dark:hover:bg-slate-700 transition-colors delay-100'>Upgrade</Button></Link>
         </div>
         <div className='items-center justify-center m-auto flex'>
         

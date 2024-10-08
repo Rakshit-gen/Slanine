@@ -35,7 +35,8 @@ const SideNav = () => {
     
 
   return (
-    <div className='bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900'>
+    <div className='bg-[#080d2b]'>
+    {/* <div className='bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900'> */}
     <div className='h-screen p-5 shadow-lg border bg-white dark:bg-transparent dark:text-white'>
         
         <div className='flex justify-center gap-3 pr-3'>
