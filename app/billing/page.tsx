@@ -24,7 +24,7 @@ import Particles from "@/components/ui/particles"
 export default function page() {
   return (
     
-    <div className="justify-center items-center m-auto h-[100%] gap-8 md:flex lg:flex mt-10 bg-white dark:bg-black w-full ">
+    <div className="justify-center items-center m-auto h-[100%] gap-8 md:flex lg:flex mt-10 bg-white dark:bg-[#080d2b] w-full ">
       <div className="justify-center items-center flex flex-col m-auto text-black md:flex-row">
         <div>
         <Card className="w-[350px] bg-slate-100 border shadow-md text-black rounded-xl dark:bg-transparent my-10 ml-5 dark:shadow-white hover:shadow-2xl dark:hover:shadow-white ">
@@ -51,7 +51,7 @@ export default function page() {
       </CardContent>
       <br />
       <CardFooter className="flex justify-between">
-        <div className="w-full"><Link href='/dashboard'><Button className="bg-black dark:hover:bg-slate-400 text-white dark:text-black dark:bg-slate-200 rounded-xl w-full hover:bg-gray-600 font-bold">Explore</Button></Link></div>
+        <div className="w-full"><Link href='/dashboard'><Button className="bg-black text-white dark:text-black dark:bg-slate-200 dark:hover:bg-slate-600 rounded-xl w-full dark:hover:text-white hover:bg-white hover:text-black hover:border-2 hover:border-black font-bold">Explore</Button></Link></div>
         
       </CardFooter>
     </Card>
@@ -81,7 +81,7 @@ export default function page() {
       </CardContent>
       <br />
       <CardFooter className="flex justify-between">
-        <div className="w-full"><Link href='https://buy.stripe.com/test_14keW25rNcK36as145'><Button className="bg-black dark:hover:bg-slate-400 font-bold text-white dark:text-black dark:bg-slate-200 rounded-xl w-full hover:bg-gray-600">Buy</Button></Link></div>
+        <div className="w-full"><Link href='https://buy.stripe.com/test_14keW25rNcK36as145'><Button className="bg-black dark:hover:bg-slate-600 dark:hover:text-white font-bold text-white dark:text-black dark:bg-slate-200 rounded-xl w-full  hover:bg-white hover:text-black hover:border-2 hover:border-black">Buy</Button></Link></div>
         
       </CardFooter>
       

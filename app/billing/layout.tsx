@@ -11,7 +11,7 @@ function layout({children,}:Readonly<{children:React.ReactNode}>) {
   const [total,setTotal]=useState<Number>(0)
   return (
     <TotalUsageContext.Provider value={{total,setTotal}}>
-    <div className='bg-slate-100 h-screen dark:bg-black' suppressHydrationWarning={true}>
+    <div className='bg-white h-screen dark:bg-[#080d2b]' suppressHydrationWarning={true}>
         <div className='md:w-64 hidden md:block fixed bg-white'>
             <SideNav />
         </div>

@@ -53,7 +53,7 @@ const SideNav = () => {
 
         <div className=' font-bold'>
             {MenuList.map((menu,index)=>(
-                <Link href={menu.path}>
+                <Link key={index} href={menu.path}>
                 <div className={`flex rounded-2xl gap-2 mb-2 p-3 border-b hover:bg-blue-500 hover:text-white rounded-lg${path===menu.path&&'m-2 text-white bg-blue-500'}`}>
                     <menu.icons />
                     <h2>{menu.name}</h2>

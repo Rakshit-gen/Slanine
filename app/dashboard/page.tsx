@@ -9,7 +9,7 @@ import Particles from '@/components/ui/particles'
 const Dashboard = () => {
   const [userSearchInput,setUserSearchInput]=useState<string>()
   return (
-    <div className='dark:bg-black'>
+    <div className='dark:bg-[#080d2b]'>
       <SearchSection onSearchInput={(value:string)=>setUserSearchInput(value)} />
       <TemplateListSection searchInput={userSearchInput} />
 
