@@ -1,6 +1,5 @@
 # Slanine: AI Assistant
 
-
 Welcome to **Slanine**, an advanced AI assistant designed to help you tackle daily problems and tasks with ease. Built with modern web technologies, Slanine leverages powerful AI capabilities to enhance your productivity and streamline your workflows.
 
 ## Features
@@ -30,19 +29,21 @@ Slanine is built using the following technologies:
 To get started with Slanine, follow these steps:
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/yourusername/slanine.git
    cd slanine
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Set up the environment variables:
    Create a `.env` file in the root directory and add your configuration details:
-   
+
 ```env
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
 CLERK_SECRET_KEY=
@@ -57,30 +58,127 @@ NEXT_PUBLIC_DRIZZLE_DB_URL=
 UPSTASH_REDIS_REST_URL=
 UPSTASH_REDIS_REST_TOKEN=
 
-   ```
+```
 
 4. Run the development server:
+
    ```bash
    npm run dev
    ```
 
 5. Open your browser and navigate to `http://localhost:3000`.
 
+Here’s the `README.md` written in MDN format:
+
+---
+
+## Docker Setup
+
+This project provides a local development environment using Docker and Docker Compose for a Next.js app, PostgreSQL, and Redis.
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- [Docker](https://www.docker.com/get-started)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+### 1. Clone the Repository
+
+First, clone the repository and navigate into the project directory:
+
+```bash
+git clone https://github.com/yourusername/slanine.git
+cd slanine
+```
+
+### 2. Configure Environment Variables
+
+Create a `.env.local` file in the root directory of the project. Add the following environment variables:
+
+```bash
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=<your-clerk-publishable-key>
+CLERK_SECRET_KEY=<your-clerk-secret-key>
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_GOOGLE_GEMINI_API_KEY=<your-google-api-key>
+NEXT_PUBLIC_DRIZZLE_DB_URL=postgres://user:password@db:5432/mydatabase
+UPSTASH_REDIS_REST_URL=<your-upstash-redis-url>
+UPSTASH_REDIS_REST_TOKEN=<your-upstash-redis-token>
+```
+
+Ensure these values are updated according to your local or production environment setup.
+
+### 3. Build and Run the Containers
+
+To build and start the Docker containers, run:
+
+```bash
+docker-compose up --build
+```
+
+This command will:
+
+- Build the Next.js app image.
+- Set up a PostgreSQL database.
+- Run both the app and database containers.
+
+### 4. Access the Application
+
+Once the containers are up and running, access the app and the database:
+
+- **App**: `http://localhost:3000`
+- **PostgreSQL**: `localhost:5432` (you can access this with a database client, using the credentials defined in the .env.local `NEXT_PUBLIC_DRIZZLE_DB_URL`)
+
+### 5. Terminate the Containers
+
+To terminate the running containers, execute:
+
+```bash
+docker-compose down
+```
+
+This will gracefully stop and remove the containers.
+
+### 6. Stop the Containers
+
+To stop the running containers, execute:
+
+```bash
+docker-compose stop
+```
+
+This will gracefully stop the containers.
+
+### 7. Start the Containers
+
+To start the stop containers, execute:
+
+```bash
+docker-compose start
+```
+
+This will gracefully start the stop containers.
+
+### 8. Docker Volumes
+
+This setup uses a Docker volume to persist PostgreSQL data. The `postgres_data` volume ensures that the database data is retained between container restarts.
+
 ## Usage
 
 Explore the various features Slanine offers through its intuitive user interface. From generating content to optimizing your resume, Slanine is designed to provide seamless assistance for your daily tasks.
 
 ## Author
+
 <a href="https://github.com/Rakshit-gen">
 <img src="https://github.com/Rakshit-gen.png" alt="GitHub Profile" class="profile-pic" height="70px" width="70px">
 </a>
 
 ## Contributors
+
 <a href="https://github.com/Rakshit-gen/Slanine/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Rakshit-gen/Slanine" />
 </a>
-
-
 
 ## Contributing
 
@@ -103,4 +201,3 @@ For any inquiries or support, please contact Rakshit Sisodiya at [sisodiarakshit
 ---
 
 Thank you for using Slanine! We hope it makes your daily tasks easier and more efficient.
-
