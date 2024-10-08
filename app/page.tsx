@@ -59,11 +59,11 @@ export default function Home() {
   }, [theme]);
 
   return (
-    <div className="h-full w-full">
-      <div className="h-full overflow-hidden dark:bg-black">
+    <div className="h-full w-full dark:bg-[#080d2b]">
+      <div className="h-full overflow-hidden ">
         <Navbarb />
         <section
-          className="bg-slate-100 text-black overflow-hidden dark:bg-black dark:text-white min-h-fit h-full w-full"
+          className="bg-slate-100 text-black overflow-hidden dark:bg-[#080d2b] dark:text-white min-h-fit h-full w-full"
           suppressHydrationWarning
         >
           <nav>
