@@ -32,6 +32,7 @@ import Pricing from "@/components/Pricing";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { IconBrandGithub } from "@tabler/icons-react";
 import { MarqueeDemo } from "@/components/Passers";
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 export interface TEMPLATE {
   name: string;
@@ -59,11 +60,11 @@ export default function Home() {
   }, [theme]);
 
   return (
-    <div className="h-full w-full">
-      <div className="h-full overflow-hidden dark:bg-black">
+    <div className="h-full w-full dark:bg-[#080d2b]">
+      <div className="h-full overflow-hidden ">
         <Navbarb />
         <section
-          className="bg-slate-100 text-black overflow-hidden dark:bg-black dark:text-white min-h-fit h-full w-full"
+          className="bg-slate-100 text-black overflow-hidden dark:bg-[#080d2b] dark:text-white min-h-fit h-full w-full"
           suppressHydrationWarning
         >
           <nav>
@@ -108,7 +109,7 @@ export default function Home() {
           </div>
 
           <br />
-        </section>
+          </section>
         <br />
         <div className="mt-24">
           <Bent />
@@ -138,6 +139,8 @@ export default function Home() {
         color={"#000000"}
         refresh
       />
+      <ScrollToTopButton /> {/* Add this line */}
     </div>
   );
 }
+

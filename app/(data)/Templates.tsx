@@ -487,5 +487,4 @@ export default[{
             },
         ]
     },
-    
 ]

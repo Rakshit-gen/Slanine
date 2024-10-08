@@ -35,7 +35,8 @@ const SideNav = () => {
     
 
   return (
-    <div className='bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900'>
+    <div className='bg-[#080d2b]'>
+    {/* <div className='bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900'> */}
     <div className='h-screen p-5 shadow-lg border bg-white dark:bg-transparent dark:text-white'>
         
         <div className='flex justify-center gap-3 pr-3'>
@@ -52,7 +53,7 @@ const SideNav = () => {
 
         <div className=' font-bold'>
             {MenuList.map((menu,index)=>(
-                <Link href={menu.path}>
+                <Link key={index} href={menu.path}>
                 <div className={`flex rounded-2xl gap-2 mb-2 p-3 border-b hover:bg-blue-500 hover:text-white rounded-lg${path===menu.path&&'m-2 text-white bg-blue-500'}`}>
                     <menu.icons />
                     <h2>{menu.name}</h2>
