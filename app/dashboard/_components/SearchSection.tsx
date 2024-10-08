@@ -4,6 +4,7 @@ import { Search } from 'lucide-react'
 import React from 'react'
 import { UsageTrack } from './UsageTrack';
 import MovingCards from '@/components/InfiniteCards2';
+import { Button } from '@/components/ui/button';
 
 const SearchSection = ({onSearchInput}:any) => {
   return (
@@ -15,8 +16,11 @@ const SearchSection = ({onSearchInput}:any) => {
         Hot Today
       </h1>
       <br />
-    <div className='w-full'>
+    <div className='w-full hidden md:flex'>
     <MovingCards />
+    </div>
+    <div className='p-6'>
+      <a href={'/dashboard/history'}><Button className='bg-white md:hidden font-bold text-black hover:bg-gray-600 hover:text-white'>History</Button></a>
     </div>
     <div className='dark:bg-slate-700 w-[70%] md:hidden lg:hidden'>
       

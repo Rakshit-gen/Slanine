@@ -1,5 +1,4 @@
-import { GitHubLogoIcon, InstagramLogoIcon } from '@radix-ui/react-icons'
-import { FaXTwitter } from "react-icons/fa6";
+import { GitHubLogoIcon, InstagramLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons'
 import React from 'react'
 import { Input } from './ui/input'
 import { Label } from './ui/label'
@@ -69,7 +68,7 @@ const Footer = () => {
       <ul className='items-center justify-center flex m-auto gap-10 mt-10'>
             <li><GitHubLogoIcon /></li>
             <li><InstagramLogoIcon /></li>
-            <li><FaXTwitter /></li>
+            <li><TwitterLogoIcon /></li>
         </ul>
       </div>
       
