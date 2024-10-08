@@ -4,10 +4,11 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/ThemeProv";
 import { Toaster } from "@/components/ui/toaster";
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 const inter = Rajdhani({ subsets: ["latin"], weight: ['300', '400', '600', '700'] });
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://slanine-s4bi.vercel.app/' ;
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://slanine-s4bi.vercel.app/';
 
 export const metadata: Metadata = {
   title: "Slanine | Tasks Simplified",
@@ -19,12 +20,11 @@ export const metadata: Metadata = {
     url: baseUrl,
     type: "website",
   },
-
+  
   twitter: {
     card: "summary_large_image",
     title: "Slanine | Tasks Simplified",
     description: "Generate anything using Gemini AI, powered by Gemini 1.5 Flash.",
-
   },
 };
 
@@ -44,6 +44,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {children}
+            <ScrollToTopButton />
           </ThemeProvider>
           <Toaster />
         </body>
@@ -51,4 +52,3 @@ export default function RootLayout({
     </ClerkProvider>
   );
 }
-

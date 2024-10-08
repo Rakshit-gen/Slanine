@@ -32,6 +32,7 @@ import Pricing from "@/components/Pricing";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { IconBrandGithub } from "@tabler/icons-react";
 import { MarqueeDemo } from "@/components/Passers";
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 export interface TEMPLATE {
   name: string;
@@ -108,7 +109,7 @@ export default function Home() {
           </div>
 
           <br />
-        </section>
+          </section>
         <br />
         <div className="mt-24">
           <Bent />
@@ -138,6 +139,8 @@ export default function Home() {
         color={"#000000"}
         refresh
       />
+      <ScrollToTopButton /> {/* Add this line */}
     </div>
   );
 }
+
