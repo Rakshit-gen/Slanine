@@ -11,7 +11,7 @@ const SearchSection = ({onSearchInput}:any) => {
     <div className='bg-gradient-to-r from-purple-300 via-blue-200 to-amber-300 text-black'>
     <div className='p-8 bg-transparent flex flex-col justify-center items-center text-black dark:text-gray-300 dark:bg-[#060b27]'>
     <h1
-        className="dark:text-white bg-gradient-to-l from-indigo-400 via-pink-500 to-yellow-600 bg-clip-text text-3xl font-extrabold text-black sm:text-5xl z-10"
+        className="dark:text-white bg-gradient-to-l from-indigo-400 via-pink-500 to-yellow-600 bg-clip-text text-3xl font-extrabold text-black sm:text-5xl z-10 hidden md:flex"
       >
         Hot Today
       </h1>

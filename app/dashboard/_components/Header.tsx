@@ -1,6 +1,6 @@
 import { Search } from 'lucide-react'
 import React from 'react'
-import { UserButton } from '@clerk/nextjs'
+import { SignOutButton, UserButton } from '@clerk/nextjs'
 import { ModeToggle } from '@/components/ModeToggle'
 
 const Header = () => {
@@ -10,6 +10,7 @@ const Header = () => {
         
     <div className='flex gap-4 pl-4'>
     <UserButton />
+    
         <h2 className='mt-0.5 bg-blue-500 p-1 rounded-md text-sm text-white px-2 md:block lg:block w-fit h-fit'>🔥 Join Membership for just $7.99/month 🔥
         </h2>
     </div>

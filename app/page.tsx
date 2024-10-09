@@ -60,11 +60,11 @@ export default function Home() {
   }, [theme]);
 
   return (
-    <div className="h-full w-full dark:bg-[#080d2b]">
+    <div className="h-full w-full dark:bg-[#040715]">
       <div className="h-full overflow-hidden ">
         <Navbarb />
         <section
-          className="bg-slate-100 text-black overflow-hidden dark:bg-[#080d2b] dark:text-white min-h-fit h-full w-full"
+          className="bg-slate-100 text-black overflow-hidden dark:bg-[#090e2c] dark:text-white min-h-fit h-full w-full"
           suppressHydrationWarning
         >
           <nav>
@@ -119,7 +119,9 @@ export default function Home() {
         <br />
 
         <Pricing />
+        <div className="dark:bg-black">
         <MarqueeDemo></MarqueeDemo>
+        </div>
 
         <div className="">
           <Footer />
