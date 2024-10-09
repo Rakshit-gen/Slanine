@@ -66,9 +66,21 @@ const Footer = () => {
         </li>
       </ul>
       <ul className='items-center justify-center flex m-auto gap-10 mt-10'>
-            <li><GitHubLogoIcon /></li>
-            <li><InstagramLogoIcon /></li>
-            <li><TwitterLogoIcon /></li>
+            <li>
+              <a href="https://github.com/Rakshit-gen/Slanine" target="_blank" rel="noopener noreferrer">
+                <GitHubLogoIcon />
+              </a>
+            </li>
+            <li>
+              <a href="/" target="_blank" rel="noopener noreferrer">
+                <InstagramLogoIcon />
+              </a>
+            </li>
+            <li>
+              <a href="/" target="_blank" rel="noopener noreferrer">
+                <TwitterLogoIcon />
+              </a>
+            </li>
         </ul>
       </div>
       
