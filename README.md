@@ -175,7 +175,6 @@ Explore the various features Slanine offers through its intuitive user interface
 </a>
 
 ## Contributors
-
 <a href="https://github.com/Rakshit-gen/Slanine/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Rakshit-gen/Slanine" />
 </a>
