@@ -85,7 +85,7 @@ export default function Home() {
 
           <div className="min-h-fit mx-auto max-w-screen-xl px-4 py-12 lg:flex lg:items-center">
             <div className="mx-auto max-w-3xl text-center mt-14">
-              <h1 className="bg-gradient-to-r from-green-600 via-blue-500 to-purple-500 bg-clip-text text-3xl font-extrabold sm:text-5xl z-10">
+              <h1 className="bg-gradient-to-r from-green-600 via-blue-500 to-purple-500 text-transparent bg-clip-text text-3xl font-extrabold sm:text-5xl z-10">
                 Slanine: Your AI problem solver.
               </h1>
 
