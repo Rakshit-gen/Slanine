@@ -64,7 +64,7 @@ export default function Home() {
       <div className="h-full overflow-hidden ">
         <Navbarb />
         <section
-          className="bg-slate-100 text-black overflow-hidden dark:bg-[#090e2c] dark:text-white min-h-fit h-full w-full"
+          className="bg-slate-100 text-black overflow-hidden dark:bg-[#090e2c] p-4 dark:text-white min-h-fit h-full w-full"
           suppressHydrationWarning
         >
           <nav>
@@ -111,7 +111,7 @@ export default function Home() {
           <br />
           </section>
         <br />
-        <div className="mt-24">
+        <div className="mt-24 p-4">
           <Bent />
         </div>
 
@@ -123,7 +123,7 @@ export default function Home() {
         <MarqueeDemo></MarqueeDemo>
         </div>
 
-        <div className="">
+        <div className="p-4">
           <Footer />
         </div>
       </div>

@@ -11,14 +11,17 @@ const inter= Inter({subsets:['latin']})
 function layout({children,}:Readonly<{children:React.ReactNode}>) {
 
   const [total,setTotal]=useState<Number>(0)
+  const [hidden, setHidden] = useState(true)
+  
   return (
     <TotalUsageContext.Provider value={{total,setTotal}}>
     <div className='bg-slate-100 min-h-screen dark:bg-[#080d2b]'>
-        <div className='md:w-64 hidden md:block fixed bg-white'>
-            <SideNav />
+        <div className={`md:w-64 w-screen z-[11] fixed bg-white ${hidden ? "hidden" : ""} md:flex md:flex-col`}>
+        {/* <div className='md:w-64 hidden md:block fixed bg-white'> */}
+            <SideNav setHidden={setHidden} hidden={hidden} />
         </div>
         <div className='md:ml-64'>
-          <Header />
+          <Header setHidden={setHidden} hidden={hidden} />
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"

@@ -57,8 +57,8 @@ const Page = () => {
     if (userEmail) getUserData(userEmail!);
   }, [userEmail]);
   return (
-    <div className="min-h-screen w-full bg-[#E5E7EB] dark:bg-[#20293a] p-8 text-center">
-      <h1 className="bg-gradient-to-r from-indigo-400 via-pink-500 to-yellow-600 bg-clip-text text-4xl md:text-5xl font-extrabold text-transparent inline-block mb-8">
+    <div className="min-h-screen w-full bg-[#E5E7EB] dark:bg-[#080d2b] p-8 text-center">
+      <h1 className="bg-clip-text text-4xl md:text-5xl dark:text-white text-black font-extrabold inline-block mb-8">
         Your History
       </h1>
       <div className="text-sm text-black dark:text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">

@@ -20,7 +20,7 @@ const Pricing = () => {
     return null; // Prevent rendering until the theme is mounted
   }
   return (
-    <div className="relative bg-white text-white py-16 dark:bg-black">
+    <div className="relative bg-white text-white py-16 dark:bg-black p-4">
       <div className="absolute top-0 left-0 w-full h-full dark:bg-gradient-to-b from-black via-slate-950 to-slate-900 md:rounded-[300px] bg-white"></div>
       <div className="relative text-center">
         <h2 className="text-6xl font-bold text-black dark:text-white">

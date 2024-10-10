@@ -25,9 +25,9 @@ export default function page() {
   return (
     
     <div className="justify-center items-center m-auto h-[100%] gap-8 md:flex lg:flex mt-10 bg-white dark:bg-[#080d2b] w-full ">
-      <div className="justify-center items-center flex flex-col m-auto text-black md:flex-row">
-        <div>
-        <Card className="w-[350px] bg-slate-100 border shadow-md text-black rounded-xl dark:bg-transparent my-10 ml-5 dark:shadow-white hover:shadow-2xl dark:hover:shadow-white ">
+      <div className="justify-center items-center flex flex-col m-auto text-black lg:flex-row">
+        <div className="w-full sm:w-auto p-4 sm:p-0">
+        <Card className="w-full sm:w-[350px] bg-slate-100 border shadow-md text-black rounded-xl dark:bg-transparent my-10 sm:ml-5 dark:shadow-white hover:shadow-2xl dark:hover:shadow-white ">
       <CardHeader>
         <CardTitle className="dark:text-white text-black">Slanine</CardTitle>
         <CardDescription className="font-semibold dark:text-white">100000 words only</CardDescription>
@@ -56,8 +56,8 @@ export default function page() {
       </CardFooter>
     </Card>
     </div>
-    <div>
-    <Card className="w-[350px] border shadow-md text-black rounded-xl dark:bg-transparent my-10 ml-5 bg-slate-100 dark:shadow-white hover:shadow-2xl dark:hover:shadow-white ">
+    <div className="w-full sm:w-auto p-4 sm:p-0">
+    <Card className="w-full sm:w-[350px] border shadow-md text-black rounded-xl dark:bg-transparent my-5 sm:my-10 sm:ml-5 bg-slate-100 dark:shadow-white hover:shadow-2xl dark:hover:shadow-white ">
       <CardHeader>
         <CardTitle className="dark:text-white">Slanine Pro</CardTitle>
         <CardDescription className="font-semibold dark:text-white">Get unlimited usage.</CardDescription>
