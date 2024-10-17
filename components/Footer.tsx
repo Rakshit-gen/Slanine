@@ -59,8 +59,8 @@ const StarryNight = () => {
 const AnimatedTitle = () => {
   return (
     <h1 className="text-purple-300 text-5xl font-bold lg:text-6xl mb-4 relative">
-      <span className="absolute inset-0 animate-float">Slannine</span>
-      <span className="relative z-10">Slannine</span>
+      <span className="absolute inset-0 animate-float">Slanine</span>
+      <span className="relative z-10">Slanine</span>
     </h1>
   );
 };
