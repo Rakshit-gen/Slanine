@@ -4,19 +4,13 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import {
   History,
-  Home,
   LayoutDashboard,
-  MonitorSmartphone,
   Settings,
   Wallet,
-  SidebarClose,
-  ArrowLeft,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { UsageTrack } from "./UsageTrack";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/utils/cn";
 
 const SideNav = ({setHidden, hidden}: any) => {
   const MenuList = [

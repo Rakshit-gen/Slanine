@@ -9,14 +9,21 @@ const TemplateCard = (item:TEMPLATE) => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => setIsVisible(entry.isIntersecting),
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          // Once visible, disconnect the observer
+          if (ref.current) observer.disconnect();
+        }
+      },
       { threshold: 0.1 }
     );
 
     if (ref.current) observer.observe(ref.current);
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      // Clean up observer on unmount
+      if (ref.current) observer.disconnect();
     };
   }, []);
   return (

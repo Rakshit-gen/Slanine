@@ -43,7 +43,7 @@ const FormSection = ({selectedTemplate,userFormInput,loading}:PROPS) => {
 
                 </div>
             ))}
-            <Button type='submit' className='w-full py-3 dark:text-white' disabled={loading}>{loading&&<Loader2Icon className='animate-spin' />} Submit</Button>
+            <Button type='submit' name='submit' className='w-full py-3 dark:text-white' disabled={loading}>{loading&&<Loader2Icon className='animate-spin' />} Submit</Button>
         </form>
     </div>
   )

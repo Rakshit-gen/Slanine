@@ -62,7 +62,7 @@ export const UsageTrack = ({ setHidden, hidden }: any) => {
       </div>
       <div className="p-3">
         <Link href={"/billing"} onClick={() => setHidden(!hidden)}>
-          <Button className="w-full bg-black text-white font-semibold text-lg hover:text-black hover:border-2 hover:border-black dark:text-black dark:hover:text-white hover:bg-white dark:bg-white dark:hover:bg-slate-700 transition-colors delay-100">
+          <Button name="upgrade" className="w-full bg-black text-white font-semibold text-lg hover:text-black hover:border-2 hover:border-black dark:text-black dark:hover:text-white hover:bg-white dark:bg-white dark:hover:bg-slate-700 transition-colors delay-100">
             Upgrade
           </Button>
         </Link>
