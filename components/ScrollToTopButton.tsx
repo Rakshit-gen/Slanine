@@ -21,24 +21,27 @@ const ScrollToTopButton: React.FC = () => {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+  const smoothScrollToTop = () => {
+    const scrollY = window.pageYOffset;
+    const scrollStep = Math.max(10, Math.floor(scrollY / 20));
+    
+    if (scrollY > 0) {
+      window.scrollBy(0, -scrollStep);
+      requestAnimationFrame(smoothScrollToTop);
+    }
   };
 
   return (
     <>
       {isVisible && (
         <div className='rounded-full'>
-        <Button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-gradient-to-r bg-black text-white shadow-lg hover:shadow-xl hover:bg-slate-800 transition-all duration-300 transform hover:scale-110"
-          aria-label="Scroll to top"
-        >
-          <ArrowUp size={24} className="animate-bounce" />
-        </Button>
+          <Button
+            onClick={smoothScrollToTop}
+            className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-gradient-to-r bg-black text-white shadow-lg hover:shadow-xl hover:bg-slate-800 transition-all duration-300 transform hover:scale-110"
+            aria-label="Scroll to top"
+          >
+            <ArrowUp size={24} className="animate-bounce" />
+          </Button>
         </div>
       )}
     </>
