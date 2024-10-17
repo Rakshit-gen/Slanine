@@ -20,7 +20,7 @@ const SearchSection = ({onSearchInput}:any) => {
     <MovingCards />
     </div>
     <div className='p-6 hidden'>
-      <a href={'/dashboard/history'}><Button className='bg-white md:hidden font-bold text-black hover:bg-gray-600 hover:text-white'>History</Button></a>
+      <a href={'/dashboard/history'}><Button name='history' className='bg-white md:hidden font-bold text-black hover:bg-gray-600 hover:text-white'>History</Button></a>
     </div>
     <div className='dark:bg-slate-700 w-[70%] hidden lg:hidden'>
       

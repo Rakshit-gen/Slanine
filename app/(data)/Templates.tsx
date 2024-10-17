@@ -1,4 +1,4 @@
-import { PaperPlaneIcon, ResumeIcon } from "@radix-ui/react-icons";
+
 import { IconBook, IconBook2, IconBrandGmail } from "@tabler/icons-react";
 import { AirVent, Blocks, BookImage, Bug, Code, Code2Icon, CodeIcon, DiamondPlusIcon, Dumbbell, FileCode, GitBranchPlus, HashIcon, HelpingHand, Languages, Linkedin, Mic2Icon, Newspaper, Package, PenIcon, Pill, PointerIcon, SproutIcon, TowerControl, Webhook, WholeWord, Workflow, XIcon } from "lucide-react";
 

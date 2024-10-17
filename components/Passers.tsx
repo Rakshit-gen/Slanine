@@ -78,7 +78,7 @@ export function MarqueeDemo() {
             <Marquee pauseOnHover className="[--duration:20s]">
                 {firstRow.map((review) => (
                     <div>
-                        <Button className="bg-transparent z-10 justify-center m-auto flex items-center -space-y-40">
+                        <Button name="marquee" className="bg-transparent z-10 justify-center m-auto flex items-center -space-y-40">
                             <PenIcon className="text-black dark:text-white" />
                         </Button>
                         <ReviewCard key={review.username} {...review} />
@@ -88,7 +88,7 @@ export function MarqueeDemo() {
             <Marquee reverse pauseOnHover className="[--duration:20s]">
                 {secondRow.map((review) => (
                     <div>
-                        <Button className="bg-transparent z-10 justify-center m-auto flex items-center -space-y-40">
+                        <Button name="code" className="bg-transparent z-10 justify-center m-auto flex items-center -space-y-40">
                             <CodeIcon className="text-black dark:text-white" />
                         </Button>
                         <ReviewCard key={review.username} {...review} />
@@ -99,7 +99,7 @@ export function MarqueeDemo() {
             <Marquee pauseOnHover className="[--duration:20s] z-0">
                 {firstRow.map((review) => (
                     <div>
-                        <Button className="bg-transparent z-10 justify-center m-auto flex items-center -space-y-40">
+                        <Button name="handshake" className="bg-transparent z-10 justify-center m-auto flex items-center -space-y-40">
                             <HeartHandshake className="text-black dark:text-white" />
                         </Button>
                         <ReviewCard key={review.username} {...review} />

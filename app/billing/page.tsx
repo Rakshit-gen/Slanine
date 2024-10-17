@@ -51,7 +51,7 @@ export default function page() {
       </CardContent>
       <br />
       <CardFooter className="flex justify-between">
-        <div className="w-full"><Link href='/dashboard'><Button className="bg-black text-white dark:text-black dark:bg-slate-200 dark:hover:bg-slate-600 rounded-xl w-full dark:hover:text-white hover:bg-white hover:text-black hover:border-2 hover:border-black font-bold">Explore</Button></Link></div>
+        <div className="w-full"><Link href='/dashboard'><Button name="explore" className="bg-black text-white dark:text-black dark:bg-slate-200 dark:hover:bg-slate-600 rounded-xl w-full dark:hover:text-white hover:bg-white hover:text-black hover:border-2 hover:border-black font-bold">Explore</Button></Link></div>
         
       </CardFooter>
     </Card>
@@ -81,7 +81,7 @@ export default function page() {
       </CardContent>
       <br />
       <CardFooter className="flex justify-between">
-        <div className="w-full"><Link href='https://buy.stripe.com/test_14keW25rNcK36as145'><Button className="bg-black dark:hover:bg-slate-600 dark:hover:text-white font-bold text-white dark:text-black dark:bg-slate-200 rounded-xl w-full  hover:bg-white hover:text-black hover:border-2 hover:border-black">Buy</Button></Link></div>
+        <div className="w-full"><Link  href='https://buy.stripe.com/test_14keW25rNcK36as145'><Button name="buy" className="bg-black dark:hover:bg-slate-600 dark:hover:text-white font-bold text-white dark:text-black dark:bg-slate-200 rounded-xl w-full  hover:bg-white hover:text-black hover:border-2 hover:border-black">Buy</Button></Link></div>
         
       </CardFooter>
       

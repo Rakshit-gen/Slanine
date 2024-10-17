@@ -115,7 +115,7 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="w-full text-xs h-8 rounded-l-md border-gray-700 bg-gray-800 text-white focus:border-purple-300 focus:ring-purple-300"
               />
-              <Button type="submit" size="sm" className="h-8 rounded-l-none bg-purple-600 hover:bg-purple-700">
+              <Button name="message" type="submit" size="sm" className="h-8 rounded-l-none bg-purple-600 hover:bg-purple-700">
                 <Send className="h-3 w-3" />
                 <span className="sr-only">Subscribe</span>
               </Button>

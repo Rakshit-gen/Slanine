@@ -1,5 +1,4 @@
 import { SignIn, useAuth } from '@clerk/nextjs'
-import { useRouter } from 'next/router'
 import React from 'react'
 
 const page = () => {
