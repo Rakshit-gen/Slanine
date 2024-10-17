@@ -16,7 +16,7 @@ const StarryNight = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const stars = [];
+    const stars:any = [];
     for (let i = 0; i < 100; i++) {
       stars.push({
         x: Math.random() * canvas.width,
