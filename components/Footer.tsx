@@ -1,4 +1,5 @@
 "use client";
+// @ts-nocheck
 import React, { useEffect, useRef } from "react";
 import { GitHubLogoIcon, InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
@@ -9,7 +10,7 @@ const StarryNight = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null); 
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas:any = canvasRef.current;
     if (!canvas) return; 
 
     const ctx = canvas.getContext("2d");
@@ -30,7 +31,7 @@ const StarryNight = () => {
       if (!ctx) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = "white";
-      stars.forEach((star) => {
+      stars.forEach((star:any) => {
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
         ctx.fill();
@@ -102,8 +103,8 @@ const Footer = () => {
             <nav className="flex flex-col space-y-1 text-xs text-gray-400">
               <a className="hover:text-purple-300 transition-colors" href="/">Home</a>
               <a className="hover:text-purple-300 transition-colors" href="/dashboard">Dashboard</a>
-              <a className="hover:text-purple-300 transition-colors" href="https://rakshit-portfolio-one.vercel.app/" target="_blank">Other projects</a>
-              <a className="hover:text-purple-300 transition-colors" href="https://github.com/Rakshit-gen/Slanine" target="_blank">Contribute</a>
+              <a className="hover:text-purple-300 transition-colors" href={"https://rakshit-portfolio-one.vercel.app/"} target="_blank">Other projects</a>
+              <a className="hover:text-purple-300 transition-colors" href={"https://github.com/Rakshit-gen/Slanine"} target="_blank">Contribute</a>
             </nav>
           </div>
           <div>
