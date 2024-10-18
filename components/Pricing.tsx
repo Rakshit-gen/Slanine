@@ -58,7 +58,7 @@ const Pricing = () => {
                       Free <span className="text-slate-300 text-lg"></span>
                     </Label>
                     <Link href="/dashboard">
-                      <Button className="w-full bg-slate-300 text-black dark:bg-slate-600 dark:text-white">
+                      <Button name="explore" className="w-full bg-slate-300 text-black dark:bg-slate-600 dark:text-white">
                         Explore
                       </Button>
                     </Link>
@@ -97,7 +97,7 @@ const Pricing = () => {
                       <span className="text-slate-300 text-lg">/month</span>
                     </Label>
                   </div>
-                  <Button className="w-full bg-slate-300 text-black dark:bg-slate-600 dark:text-white">
+                  <Button name="subscribe" className="w-full bg-slate-300 text-black dark:bg-slate-600 dark:text-white">
                     Subscribe
                   </Button>
 

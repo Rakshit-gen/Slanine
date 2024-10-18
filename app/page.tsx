@@ -3,33 +3,16 @@
 import { useState, useEffect } from "react";
 
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { UserButton, useSession } from "@clerk/nextjs";
-import { Github, HeartHandshake } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { Navbarb } from "@/components/Nav";
 import { ModeToggle } from "@/components/ModeToggle";
 import Particles from "@/components/ui/particles";
 import { useTheme } from "next-themes";
-import TemplateCard from "./dashboard/_components/TemplateCard";
-import Templates from "./(data)/Templates";
-import { InfiniteMovingCards } from "@/components/ui/infinitecards";
 import MovingCards from "@/components/InfiniteCards";
-import Billingcards from "@/components/Billingcards";
 import { Bent } from "@/components/Grid";
 import Footer from "@/components/Footer";
 import Pricing from "@/components/Pricing";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { IconBrandGithub } from "@tabler/icons-react";
 import { MarqueeDemo } from "@/components/Passers";
 import ScrollToTopButton from '@/components/ScrollToTopButton';
@@ -73,7 +56,7 @@ export default function Home() {
                 <UserButton />
               </div>
               <Link href={"https://github.com/Rakshit-gen/Slanine"}>
-                <Button className="bg-transparent text-black hover:bg-slate-300 dark:text-white dark:hover:bg-black">
+                <Button name="github" className="bg-transparent text-black hover:bg-slate-300 dark:text-white dark:hover:bg-black">
                   <IconBrandGithub className="z-20" />
                 </Button>
               </Link>
