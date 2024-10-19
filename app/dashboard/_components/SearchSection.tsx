@@ -13,7 +13,7 @@ const SearchSection = ({onSearchInput}:any) => {
     <h1
         className="bg-gradient-to-l from-indigo-400 via-pink-500 to-yellow-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl z-10 hidden md:flex"
       >
-        Hot Today
+        Cool Prompts for you
       </h1>
       <br />
     <div className='w-full hidden md:flex'>
