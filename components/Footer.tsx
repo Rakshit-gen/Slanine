@@ -1,6 +1,6 @@
 "use client";
 // @ts-nocheck
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { GitHubLogoIcon, InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,6 +8,7 @@ import { Send } from "lucide-react";
 
 const StarryNight = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null); 
+
 
   useEffect(() => {
     const canvas:any = canvasRef.current;
@@ -66,11 +67,24 @@ const AnimatedTitle = () => {
 };
 
 const Footer = () => {
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    
+  const [email, setEmail] = useState('');
+  
+  const handleSubmit = async (e : any) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://localhost:3000/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+      const data = await response.json();
+      alert(data.message);
+    } catch (error) {
+      console.error('Error subscribing:', error);
+    }
   };
-
   return (
     <footer className="bg-black text-white relative overflow-hidden py-8">
       <StarryNight />
@@ -108,12 +122,18 @@ const Footer = () => {
             </nav>
           </div>
           <div>
+          <p className="text-xl font-semibold text-center text-white mb-4">
+                Subscribe to our website
+              </p>
             <p className="font-medium text-purple-300 text-sm mb-2">Stay Updated</p>
+            
             <form className="flex items-center" onSubmit={handleSubmit}>
               <Input
                 type="email"
                 placeholder="Enter your email"
                 className="w-full text-xs h-8 rounded-l-md border-gray-700 bg-gray-800 text-white focus:border-purple-300 focus:ring-purple-300"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <Button name="message" type="submit" size="sm" className="h-8 rounded-l-none bg-purple-600 hover:bg-purple-700">
                 <Send className="h-3 w-3" />
