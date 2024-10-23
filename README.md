@@ -2,6 +2,11 @@
 
 Welcome to **Slanine**, an advanced AI assistant designed to help you tackle daily problems and tasks with ease. Built with modern web technologies, Slanine leverages powerful AI capabilities to enhance your productivity and streamline your workflows.
 
+## 📈 GitHub Repository Stats
+| 🌟 **Stars** | 🍴 **Forks** | 🐛 **Issues** | 🔔 **Open PRs** | 🔕 **Closed PRs** | 🛠️ **Languages** | ✅ **Contributors** |
+|--------------|--------------|---------------|-----------------|------------------|------------------|------------------|
+| ![GitHub stars](https://img.shields.io/github/stars/Rakshit-gen/Slanine) | ![forks](https://img.shields.io/github/forks/Rakshit-gen/Slanine) | ![issues](https://img.shields.io/github/issues/Rakshit-gen/Slanine?color=32CD32) | ![pull requests](https://img.shields.io/github/issues-pr/Rakshit-gen/Slanine?color=FFFF8F) | ![Closed PRs](https://img.shields.io/github/issues-pr-closed/Rakshit-gen/Slanine?color=20B2AA) | ![Languages](https://img.shields.io/github/languages/count/Rakshit-gen/Slanine?color=20B2AA) | ![Contributors](https://img.shields.io/github/contributors/Rakshit-gen/Slanine?color=00FA9A) |
+
 ## Features
 
 Slanine offers a variety of features to assist you in your daily tasks, including:
