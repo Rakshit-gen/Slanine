@@ -103,7 +103,7 @@ Slanine/
     Click on the top right corner marked as **Stars** at last.
 
 2. **Fork this repository**
-    Click on the top right corner marked as **Fork** at second last.                  Slanine
+    Click on the top right corner marked as **Fork** at second last.                  
 
 3. **Clone the forked repository**                   
 
