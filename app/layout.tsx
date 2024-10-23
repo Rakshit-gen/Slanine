@@ -59,7 +59,7 @@ export default function RootLayout({
               dangerouslySetInnerHTML={{
                 __html: `
                       window.embeddedChatbotConfig = {
-                      chatbotId: "Ll7vSI4Hj5lvzfYz-FAec",
+                      chatbotId:String  "Ll7vSI4Hj5lvzfYz-FAec",
                       domain: "www.chatbase.co"
                       };
                     `,
@@ -68,7 +68,7 @@ export default function RootLayout({
             <Script
               id="chatbase-script"
               src="https://www.chatbase.co/embed.min.js"
-              chatbotId="Ll7vSI4Hj5lvzfYz-FAec"
+              chatbotId:String ="Ll7vSI4Hj5lvzfYz-FAec"
               domain="www.chatbase.co"
               defer
             />
