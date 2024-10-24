@@ -11,7 +11,7 @@ const Dashboard = () => {
   return (
     <div className='dark:bg-[#080d2b]'>
       <SearchSection onSearchInput={(value:string)=>setUserSearchInput(value)} />
-      <TemplateListSection searchInput={userSearchInput} />
+      <TemplateListSection userSearchInput={userSearchInput} isLoading={false} />
 
       <p className='text-center'>Many more on the way...</p>
       <br />

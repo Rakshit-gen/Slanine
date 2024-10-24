@@ -1,50 +1,108 @@
-//@ts-nocheck
-import React, { useEffect,useState } from 'react'
-import Templates from '@/app/(data)/Templates'
-import TemplateCard from './TemplateCard'
+// @ts-ignore
+import React, { Suspense, lazy, useMemo } from 'react';
+import Templates from '@/app/(data)/Templates';
+import { LucideIcon } from 'lucide-react'; // Import LucideIcon type
+import { Skeleton } from '@/components/ui/skeleton';
 
-export interface TEMPLATE{
-    name:string,
-    desc:string,
-    icon:string,
-    category:string,
-    aiPrompt:string,
-    slug:string,
-    form?:FORM[]
+// Update the Template interface to accept LucideIcon
+export interface Template {
+  name: string;
+  desc: string;
+  icon: LucideIcon; // Changed from string to LucideIcon
+  category: string;
+  aiPrompt: string;
+  slug: string;
+  form?: FormField[];
 }
 
-export interface FORM{
-    label:string,
-    field:string,
-    name:string,
-    required?:boolean
+export interface FormField {
+  label: string;
+  field: string;
+  name: string;
+  required?: boolean;
 }
-declare const item: any
 
-const TemplateListSection = ({userSearchInput}:any) => {
-  const [templateList,setTemplateList]=useState(Templates)
-  useEffect(()=>{
-    if(userSearchInput){
-      const filterData = Templates.filter(item=>
-        item.name.toLowerCase()
-        .includes(userSearchInput.toLowerCase()));
-      setTemplateList(filterData);
-    }
-    else{
-      setTemplateList(Templates)
-    }
+interface TemplateListSectionProps {
+  userSearchInput: string | undefined;
+  isLoading?: boolean;
+}
 
-  },[userSearchInput])
+const TemplateSkeleton = () => (
+  <div className="space-y-3">
+    <Skeleton className="h-[125px] w-full rounded-lg" />
+    <Skeleton className="h-4 w-[250px]" />
+    <Skeleton className="h-4 w-[200px]" />
+  </div>
+);
+
+// Lazy load the TemplateCard component
+const TemplateCard = lazy(() => import('./TemplateCard'));
+
+const TemplateCardWithSuspense: React.FC<Template> = (props) => (
+  <Suspense fallback={<TemplateSkeleton />}>
+    <TemplateCard {...props} />
+  </Suspense>
+);
+
+const TemplateListSection: React.FC<TemplateListSectionProps> = ({ 
+  userSearchInput,
+  isLoading = false
+}) => {
+  const filteredTemplates = useMemo(() => {
+    if (!userSearchInput) return Templates;
+    
+    const searchTerm = userSearchInput.toLowerCase().trim();
+    return Templates.filter((template) => (
+      template.name.toLowerCase().includes(searchTerm) ||
+      template.desc.toLowerCase().includes(searchTerm) ||
+      template.category.toLowerCase().includes(searchTerm)
+    ));
+  }, [userSearchInput]);
+
+  if (isLoading) {
+    return (
+      <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-3 md:mt-3 lg:m-3">
+        {[...Array(6)].map((_, index) => (
+          <TemplateSkeleton key={index} />
+        ))}
+      </div>
+    );
+  }
+
+  if (filteredTemplates.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center p-8 text-center">
+        <p className="text-lg font-medium text-gray-900 dark:text-gray-100">
+          No templates found
+        </p>
+        <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+          Try adjusting your search terms
+        </p>
+      </div>
+    );
+  }
 
   return (
-    <div className='grid dark:text-gray-100 text-slate-800 gap-4 p-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-3 md:mt-3 lg:m-3'>
-        {Templates.map((item:TEMPLATE,index:number)=>(
-            <TemplateCard key={index} {...item} />
-
+    <Suspense 
+      fallback={
+        <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-3 md:mt-3 lg:m-3">
+          {[...Array(6)].map((_, index) => (
+            <TemplateSkeleton key={index} />
+          ))}
+        </div>
+      }
+    >
+      <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-3 md:mt-3 lg:m-3">
+        {filteredTemplates.map((template) => (
+          // @ts-ignore
+          <TemplateCardWithSuspense 
+            key={template.slug}
+            {...template}
+          />
         ))}
-        
-    </div>
-  )
-}
+      </div>
+    </Suspense>
+  );
+};
 
-export default TemplateListSection
+export default TemplateListSection;

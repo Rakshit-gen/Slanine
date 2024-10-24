@@ -1,9 +1,9 @@
 import React, { useRef, useState, useEffect }  from 'react'
-import { TEMPLATE } from './TemplateListSection'
+import { Template } from './TemplateListSection'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const TemplateCard = (item:TEMPLATE) => {
+const TemplateCard = (item:Template) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
 
