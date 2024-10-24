@@ -5,7 +5,7 @@ import { LucideIcon } from 'lucide-react'; // Import LucideIcon type
 import { Skeleton } from '@/components/ui/skeleton';
 
 // Update the Template interface to accept LucideIcon
-export interface Template {
+export interface TEMPLATE {
   name: string;
   desc: string;
   icon: LucideIcon; // Changed from string to LucideIcon
@@ -38,7 +38,7 @@ const TemplateSkeleton = () => (
 // Lazy load the TemplateCard component
 const TemplateCard = lazy(() => import('./TemplateCard'));
 
-const TemplateCardWithSuspense: React.FC<Template> = (props) => (
+const TemplateCardWithSuspense: React.FC<TEMPLATE> = (props) => (
   <Suspense fallback={<TemplateSkeleton />}>
     <TemplateCard {...props} />
   </Suspense>
