@@ -190,6 +190,28 @@ We welcome contributions to Slanine! If you have any ideas, suggestions, or impr
 
 Read the [Contributor's guide](https://github.com/Rakshit-gen/Slanine/blob/main/CONTRIBUTORS.md) carefully before proceeding
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+## Stargazers ❤️
+
+<div align='left'>
+
+[![Stargazers repo roster for @Rakshit-gen/Slanine](https://reporoster.com/stars/dark/Rakshit-gen/Slanine)](https://github.com/Rakshit-gen/Slanine/stargazers)
+
+
+</div>
+
+## Forkers ❤️
+
+[![Forkers repo roster for @Rakshit-gen/Slanine](https://reporoster.com/forks/dark/Rakshit-gen/Slanine)](https://github.com/Rakshit-gen/Slanine/network/members)
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+
+
+
+
 
 
 ## License
