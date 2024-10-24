@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronDown, ChevronRight, Mail } from 'lucide-react';
+import Particles from './ui/particles';
 
 interface FAQ {
   question: string;
@@ -35,9 +36,9 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#040715] py-12 px-4 sm:px-6 lg:px-8 flex justify-center items-center">
+    <div className="min-h-screen bg-transparent py-12 px-4 sm:px-6 lg:px-8 flex justify-center items-center rounded-full">
     <div className="max-w-4xl w-full">
-      <h2 className="text-center text-4xl font-bold text-white mb-12">FAQ Section</h2>
+      <h2 className="text-center text-4xl font-bold text-black dark:text-white mb-12">FAQ Section</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left Section */}
         <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg text-left transform transition-all duration-500 hover:scale-105">
@@ -94,6 +95,20 @@ const FAQSection: React.FC = () => {
         </div>
       </div>
     </div>
+    <Particles
+        className="absolute inset-0 h-full object-cover"
+        quantity={300}
+        ease={80}
+        color={"#ffffff"}
+        refresh
+      />
+      <Particles
+        className="absolute inset-0 h-full"
+        quantity={300}
+        ease={80}
+        color={"#000000"}
+        refresh
+      />
   </div>
   
    

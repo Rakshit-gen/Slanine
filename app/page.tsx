@@ -95,7 +95,7 @@ export default function Home() {
           <br />
           </section>
         <br />
-        <div className="mt-24 p-4">
+        <div className="mt-24 p-4 ">
           <Bent />
         </div>
 
@@ -103,10 +103,11 @@ export default function Home() {
         <br />
 
         <Pricing />
-        
+        <div className="rounded-full dark:bg-transparent bg-white">
         <QuizSection/>
-        <div className="dark:bg-black">
+        <div className="dark:bg-transparent -mt-36">
         <FAQ/>
+        </div>
         </div>
         <div className="dark:bg-black">
         <MarqueeDemo/>

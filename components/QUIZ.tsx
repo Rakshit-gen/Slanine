@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Mail } from 'lucide-react';
+import Particles from './ui/particles';
 
 interface Question {
   question: string;
@@ -217,9 +218,10 @@ const QuizSection: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#040715] py-12 px-4 sm:px-6 lg:px-8 flex justify-center items-center">
+    <>
+    <div className="min-h-screen bg-transparent py-12 px-4 sm:px-6 lg:px-8 flex justify-center items-center">
       <div className="max-w-4xl w-full">
-        <h2 className="text-center text-6xl font-bold text-white mb-12">AI Challenges</h2>
+        <h2 className="text-center text-6xl font-bold text-black dark:text-white mb-12">AI Challenges</h2>
 
         {quizCompleted ? (
           <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg text-left">
@@ -281,7 +283,24 @@ const QuizSection: React.FC = () => {
           </div>
         )}
       </div>
+      
     </div>
+          
+    <Particles
+        className="absolute inset-0 h-full object-cover"
+        quantity={300}
+        ease={80}
+        color={"#ffffff"}
+        refresh
+      />
+      <Particles
+        className="absolute inset-0 h-full"
+        quantity={300}
+        ease={80}
+        color={"#000000"}
+        refresh
+      />
+  </>
   );
 };
 
