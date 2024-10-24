@@ -1,14 +1,11 @@
-// @ts-ignore
 import React, { Suspense, lazy, useMemo } from 'react';
 import Templates from '@/app/(data)/Templates';
-import { LucideIcon } from 'lucide-react'; // Import LucideIcon type
 import { Skeleton } from '@/components/ui/skeleton';
 
-// Update the Template interface to accept LucideIcon
 export interface TEMPLATE {
   name: string;
   desc: string;
-  icon: LucideIcon; // Changed from string to LucideIcon
+  icon: React.ElementType;
   category: string;
   aiPrompt: string;
   slug: string;
@@ -35,33 +32,27 @@ const TemplateSkeleton = () => (
   </div>
 );
 
-// Lazy load the TemplateCard component
 const TemplateCard = lazy(() => import('./TemplateCard'));
 
-const TemplateCardWithSuspense: React.FC<TEMPLATE> = (props) => (
-  <Suspense fallback={<TemplateSkeleton />}>
-    <TemplateCard {...props} />
-  </Suspense>
-);
-
-const TemplateListSection: React.FC<TemplateListSectionProps> = ({ 
+const TemplateListSection: React.FC<TemplateListSectionProps> = ({
   userSearchInput,
-  isLoading = false
+  isLoading = false,
 }) => {
   const filteredTemplates = useMemo(() => {
     if (!userSearchInput) return Templates;
-    
+
     const searchTerm = userSearchInput.toLowerCase().trim();
-    return Templates.filter((template) => (
-      template.name.toLowerCase().includes(searchTerm) ||
-      template.desc.toLowerCase().includes(searchTerm) ||
-      template.category.toLowerCase().includes(searchTerm)
-    ));
+    return Templates.filter(
+      (template) =>
+        template.name.toLowerCase().includes(searchTerm) ||
+        template.desc.toLowerCase().includes(searchTerm) ||
+        template.category.toLowerCase().includes(searchTerm)
+    );
   }, [userSearchInput]);
 
   if (isLoading) {
     return (
-      <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-3 md:mt-3 lg:m-3">
+      <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3">
         {[...Array(6)].map((_, index) => (
           <TemplateSkeleton key={index} />
         ))}
@@ -83,22 +74,18 @@ const TemplateListSection: React.FC<TemplateListSectionProps> = ({
   }
 
   return (
-    <Suspense 
+    <Suspense
       fallback={
-        <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-3 md:mt-3 lg:m-3">
+        <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3">
           {[...Array(6)].map((_, index) => (
             <TemplateSkeleton key={index} />
           ))}
         </div>
       }
     >
-      <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-3 md:mt-3 lg:m-3">
+      <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3">
         {filteredTemplates.map((template) => (
-          // @ts-ignore
-          <TemplateCardWithSuspense 
-            key={template.slug}
-            {...template}
-          />
+          <TemplateCard key={template.slug} {...template} />
         ))}
       </div>
     </Suspense>
