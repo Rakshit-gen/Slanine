@@ -46,8 +46,8 @@ const SideNav = ({setHidden, hidden}: any) => {
       {/* <div className='bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900'> */}
       <div className="h-screen p-5 shadow-lg border flex-col flex items-center flex-grow bg-white dark:bg-transparent dark:text-white">
         <div className=" justify-center gap-3 pr-3 hidden md:flex">
-          <Link href="/">
-            <Image src="/logo.svg" alt="logo" width={100} height={100}></Image>
+          <Link href="/" className="flex gap-2">
+            <h1 className="text-4xl text-transparent font-semibold m-3 bg-gradient-to-l from-yellow-400 via-green-200 to-purple-600 bg-clip-text">Slanine</h1>
           </Link>
           {/*
         <h1 className='mt-1 text-3xl dark:text-white'>
