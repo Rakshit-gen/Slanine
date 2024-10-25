@@ -18,6 +18,8 @@ import { MarqueeDemo } from "@/components/Passers";
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 import FAQ from "@/components/FAQ";
 import QuizSection from "@/components/QUIZ";
+
+import MainComponent from "@/components/Projects";
 export interface TEMPLATE {
   name: string;
   desc: string;
@@ -95,7 +97,7 @@ export default function Home() {
           <br />
           </section>
         <br />
-        <div className="mt-24 p-4 ">
+        <div className="mt-24 p-4">
           <Bent />
         </div>
 
@@ -103,11 +105,11 @@ export default function Home() {
         <br />
 
         <Pricing />
-        <div className="rounded-full dark:bg-transparent bg-white">
+        
         <QuizSection/>
-        <div className="dark:bg-transparent -mt-36">
+        <MainComponent/>
+        <div className="dark:bg-black">
         <FAQ/>
-        </div>
         </div>
         <div className="dark:bg-black">
         <MarqueeDemo/>
