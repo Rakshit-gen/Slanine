@@ -71,7 +71,7 @@ const FAQSection: React.FC = () => {
               className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-all duration-500 transform hover:scale-105"
             >
               <button
-                className="w-full px-6 py-6 flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300"
+                className="w-full px-6 pt-6 pb-4 flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300"
                 onClick={() => toggleFAQ(index)}
                 type="button"
               >
@@ -83,10 +83,10 @@ const FAQSection: React.FC = () => {
               </button>
   
               <div 
-                className={`transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+                className={`transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-[70px] opacity-100' : 'max-h-0 opacity-0'}`}
                 style={{ overflow: 'hidden', transitionProperty: 'max-height, opacity' }}
               >
-                <div className="px-6 py-6 bg-gray-50 dark:bg-gray-700">
+                <div className="px-6 pb-4 pt-1 bg-gray-50 dark:bg-gray-700">
                   <p className="text-gray-600 dark:text-gray-300">{faq.answer}</p>
                 </div>
               </div>
