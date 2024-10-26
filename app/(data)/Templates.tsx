@@ -487,32 +487,40 @@ export default[{
             },
         ]
     },{
-      name: "Movie Recommender",
-      desc: "An AI tool to recommend you movies based on your preferences and likes.",
-      icon: TowerControl,
-      category: "Helper",
-  
-      slug: "movie-recommender",
-      aiPrompt:
-        "Recommend a movie for the givenType type of movie and the givenMood mood of the user. Also consider the givenPreferences preferences if given.",
-      form: [
-        {
-            label: "Type of the movie?",
-            field: "input",
-            name: "givenType",
-            required: true,
+        name: 'Movie Recommender',
+        desc: 'An AI tool to recommend you movies based on your preferences and likes.',
+        icon: TowerControl,
+        category: 'Helper',
+        slug: 'movie-recommender',
+        aiPrompt: 'Recommend a movie for the givenType type of movie and the givenMood mood of the user. Also consider the givenPreferences preferences if given. Make sure to give random recommendations if the user wants it. Also provide trailer links and review links.',
+        form: [{
+            label: 'Type of the movie?',
+            field: 'input',
+            name: 'givenType',
+            required: true
         },
         {
-            label: "Whats your mood now?",
-            field: "input",
-            name: "givenMood",
-            required: true,
+            label: 'Whats your mood now?',
+            field: 'input',
+            name: 'givenMood',
+            required: true
         },
         {
-          label: "Any other preferences?",
-          field: "input",
-          name: "givenPreferences",
+            label: 'Any other preferences? (genres, directors, actors)',
+            field: 'input',
+            name: 'givenPreferences',
+            required: false
+        },
+        {
+            label: 'Your previous choices or interests',
+            field: 'textarea',
+            name: 'previousChoices',
+            required: false
+        },
+        ],
+        additionalFeatures: {
+            trailerLinks: true,
+            reviewLinks: true
         }
-      ],
     },
 ]
