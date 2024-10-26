@@ -486,5 +486,26 @@ export default[{
                 required:true
             },
         ]
+    },{
+        name: 'Health Tracker',
+        desc: 'Monitor your health metrics and get personalized insights and reminders.',
+        category: 'Health',
+        icon:Pill,
+        aiPrompt: 'Analyze the givenHealthData and provide personalized health insights and recommendations. Also, generate reminders for medication and appointments based on the givenSchedule.',
+        slug: 'health-tracker',
+        form: [
+            {
+                label: 'Enter your health metrics (heart rate, steps, sleep patterns)',
+                field: 'textarea',
+                name: 'givenHealthData',
+                required: true
+            },
+            {
+                label: 'Enter your medication and appointment schedule',
+                field: 'textarea',
+                name: 'givenSchedule',
+                required: true
+            }
+        ]
     },
 ]
