@@ -487,6 +487,7 @@ export default[{
             },
         ]
     },{
+
         name: 'Event Networking Assistant',
         desc: 'An AI tool to help you connect with others at events based on shared interests and goals.',
         category: 'Networking',
@@ -508,4 +509,114 @@ export default[{
             }
         ]
     }
+
+        name: 'Sustainability Tracker',
+        desc: 'Track your carbon footprint and get personalized suggestions to reduce your environmental impact. Compare your progress with friends!',
+        category: 'Helper',
+        icon:SproutIcon,
+        aiPrompt: 'Track the carbon footprint based on the givenActivities and provide personalized suggestions to reduce environmental impact. Also, compare the progress with givenFriends.',
+        slug: 'sustainability-tracker',
+        form: [
+            {
+                label: 'Enter your daily activities',
+                field: 'textarea',
+                name: 'givenActivities',
+                required: true
+            },
+            {
+                label: 'Enter your friends\' names to compare progress',
+                field: 'textarea',
+                name: 'givenFriends',
+                required: false
+            }
+        ]
+    }
+
+
+        name: 'Health Tracker',
+        desc: 'Monitor your health metrics and get personalized insights and reminders.',
+        category: 'Health',
+        icon:Pill,
+        aiPrompt: 'Analyze the givenHealthData and provide personalized health insights and recommendations. Also, generate reminders for medication and appointments based on the givenSchedule.',
+        slug: 'health-tracker',
+        form: [
+            {
+                label: 'Enter your health metrics (heart rate, steps, sleep patterns)',
+                field: 'textarea',
+                name: 'givenHealthData',
+                required: true
+            },
+            {
+                label: 'Enter your medication and appointment schedule',
+                field: 'textarea',
+                name: 'givenSchedule',
+                required: true
+
+        name: 'Movie Recommender',
+        desc: 'An AI tool to recommend you movies based on your preferences and likes.',
+        icon: TowerControl,
+        category: 'Helper',
+        slug: 'movie-recommender',
+        aiPrompt: 'Recommend a movie for the givenType type of movie and the givenMood mood of the user. Also consider the givenPreferences preferences if given. Make sure to give random recommendations if the user wants it. Also provide trailer links and review links.',
+        form: [{
+            label: 'Type of the movie?',
+            field: 'input',
+            name: 'givenType',
+            required: true
+        },
+        {
+            label: 'Whats your mood now?',
+            field: 'input',
+            name: 'givenMood',
+            required: true
+        },
+        {
+            label: 'Any other preferences? (genres, directors, actors)',
+            field: 'input',
+            name: 'givenPreferences',
+            required: false
+        },
+        {
+            label: 'Your previous choices or interests',
+            field: 'textarea',
+            name: 'previousChoices',
+            required: false
+        },
+        ],
+        additionalFeatures: {
+            trailerLinks: true,
+            reviewLinks: true
+        }
+    },
+    {
+        name: 'Book Recommender',
+        desc: 'An AI tool to recommend books based on your favorite genres, authors, or books you have enjoyed.',
+        category: 'Helper',
+        icon: IconBook,
+        aiPrompt: 'Recommend books based on the givenGenres, givenAuthors, and givenBooks. Provide links to reviews and summaries.',
+        slug: 'book-recommender',
+        form: [
+            {
+                label: 'Favorite genres',
+                field: 'input',
+                name: 'givenGenres',
+                required: false
+            },
+            {
+                label: 'Favorite authors',
+                field: 'input',
+                name: 'givenAuthors',
+                required: false
+            },
+            {
+                label: 'Books you have enjoyed',
+                field: 'textarea',
+                name: 'givenBooks',
+                required: false
+
+            }
+        ]
+    },
+
+
 ]
