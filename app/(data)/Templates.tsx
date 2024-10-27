@@ -487,6 +487,7 @@ export default[{
             },
         ]
     },{
+
         name: 'Health Tracker',
         desc: 'Monitor your health metrics and get personalized insights and reminders.',
         category: 'Health',
@@ -505,6 +506,69 @@ export default[{
                 field: 'textarea',
                 name: 'givenSchedule',
                 required: true
+=======
+        name: 'Movie Recommender',
+        desc: 'An AI tool to recommend you movies based on your preferences and likes.',
+        icon: TowerControl,
+        category: 'Helper',
+        slug: 'movie-recommender',
+        aiPrompt: 'Recommend a movie for the givenType type of movie and the givenMood mood of the user. Also consider the givenPreferences preferences if given. Make sure to give random recommendations if the user wants it. Also provide trailer links and review links.',
+        form: [{
+            label: 'Type of the movie?',
+            field: 'input',
+            name: 'givenType',
+            required: true
+        },
+        {
+            label: 'Whats your mood now?',
+            field: 'input',
+            name: 'givenMood',
+            required: true
+        },
+        {
+            label: 'Any other preferences? (genres, directors, actors)',
+            field: 'input',
+            name: 'givenPreferences',
+            required: false
+        },
+        {
+            label: 'Your previous choices or interests',
+            field: 'textarea',
+            name: 'previousChoices',
+            required: false
+        },
+        ],
+        additionalFeatures: {
+            trailerLinks: true,
+            reviewLinks: true
+        }
+    },
+    {
+        name: 'Book Recommender',
+        desc: 'An AI tool to recommend books based on your favorite genres, authors, or books you have enjoyed.',
+        category: 'Helper',
+        icon: IconBook,
+        aiPrompt: 'Recommend books based on the givenGenres, givenAuthors, and givenBooks. Provide links to reviews and summaries.',
+        slug: 'book-recommender',
+        form: [
+            {
+                label: 'Favorite genres',
+                field: 'input',
+                name: 'givenGenres',
+                required: false
+            },
+            {
+                label: 'Favorite authors',
+                field: 'input',
+                name: 'givenAuthors',
+                required: false
+            },
+            {
+                label: 'Books you have enjoyed',
+                field: 'textarea',
+                name: 'givenBooks',
+                required: false
+
             }
         ]
     },
