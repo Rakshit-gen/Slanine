@@ -487,6 +487,29 @@ export default[{
             },
         ]
     },{
+
+        name: 'Event Networking Assistant',
+        desc: 'An AI tool to help you connect with others at events based on shared interests and goals.',
+        category: 'Networking',
+        icon:TowerControl,
+        aiPrompt: 'Help the user connect with others at the event based on shared interests and goals. Suggest conversation starters based on common interests and provide a platform for scheduling meetings or follow-ups.',
+        slug: 'event-networking-assistant',
+        form: [
+            {
+                label: 'Enter your interests',
+                field: 'textarea',
+                name: 'interests',
+                required: true
+            },
+            {
+                label: 'Enter your goals for the event',
+                field: 'textarea',
+                name: 'goals',
+                required: true
+            }
+        ]
+    }
+
         name: 'Sustainability Tracker',
         desc: 'Track your carbon footprint and get personalized suggestions to reduce your environmental impact. Compare your progress with friends!',
         category: 'Helper',
@@ -594,5 +617,6 @@ export default[{
             }
         ]
     },
+
 
 ]
