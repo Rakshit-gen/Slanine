@@ -508,7 +508,7 @@ export default[{
                 required: true
             }
         ]
-    }
+    },{
 
         name: 'Sustainability Tracker',
         desc: 'Track your carbon footprint and get personalized suggestions to reduce your environmental impact. Compare your progress with friends!',
@@ -530,7 +530,7 @@ export default[{
                 required: false
             }
         ]
-    }
+    },{
 
 
         name: 'Health Tracker',
@@ -551,7 +551,9 @@ export default[{
                 field: 'textarea',
                 name: 'givenSchedule',
                 required: true
-
+            }
+        ]
+    },{
         name: 'Movie Recommender',
         desc: 'An AI tool to recommend you movies based on your preferences and likes.',
         icon: TowerControl,
