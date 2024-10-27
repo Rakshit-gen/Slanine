@@ -487,6 +487,28 @@ export default[{
             },
         ]
     },{
+        name: 'Sustainability Tracker',
+        desc: 'Track your carbon footprint and get personalized suggestions to reduce your environmental impact. Compare your progress with friends!',
+        category: 'Helper',
+        icon:SproutIcon,
+        aiPrompt: 'Track the carbon footprint based on the givenActivities and provide personalized suggestions to reduce environmental impact. Also, compare the progress with givenFriends.',
+        slug: 'sustainability-tracker',
+        form: [
+            {
+                label: 'Enter your daily activities',
+                field: 'textarea',
+                name: 'givenActivities',
+                required: true
+            },
+            {
+                label: 'Enter your friends\' names to compare progress',
+                field: 'textarea',
+                name: 'givenFriends',
+                required: false
+            }
+        ]
+    }
+
 
         name: 'Health Tracker',
         desc: 'Monitor your health metrics and get personalized insights and reminders.',
@@ -506,7 +528,7 @@ export default[{
                 field: 'textarea',
                 name: 'givenSchedule',
                 required: true
-=======
+
         name: 'Movie Recommender',
         desc: 'An AI tool to recommend you movies based on your preferences and likes.',
         icon: TowerControl,
@@ -572,4 +594,5 @@ export default[{
             }
         ]
     },
+
 ]
