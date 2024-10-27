@@ -7,6 +7,34 @@ Welcome to **Slanine**, an advanced AI assistant designed to help you tackle dai
 |--------------|--------------|---------------|-----------------|------------------|------------------|------------------|
 | ![GitHub stars](https://img.shields.io/github/stars/Rakshit-gen/Slanine) | ![forks](https://img.shields.io/github/forks/Rakshit-gen/Slanine) | ![issues](https://img.shields.io/github/issues/Rakshit-gen/Slanine?color=32CD32) | ![pull requests](https://img.shields.io/github/issues-pr/Rakshit-gen/Slanine?color=FFFF8F) | ![Closed PRs](https://img.shields.io/github/issues-pr-closed/Rakshit-gen/Slanine?color=20B2AA) | ![Languages](https://img.shields.io/github/languages/count/Rakshit-gen/Slanine?color=20B2AA) | ![Contributors](https://img.shields.io/github/contributors/Rakshit-gen/Slanine?color=00FA9A) |
 
+## 📑 Table of Contents
+
+1. [🎬 What is Slanine?](#slanine-ai-assistant)
+2. [🔢Github repository stats](#-github-repository-stats)
+3. [🔑Features](#features)
+4. [🛠️Technologies Used](#technologies-used)
+5. [🔧Installation](#installation)
+6. [💾Docker Setup](#docker-setup)
+7. [📋Prerequisites](#prerequisites)
+   - [💻Clone the repository ](#1-clone-the-repository)
+   - [🌏 Configure environment variables ](#2-configure-environment-variables)
+   - [💻Build and run the containers ](#3-build-and-run-the-containers)
+   - [📲Access the application ](#4-access-the-application)
+   - [🚫Terminate the containers ](#5-terminate-the-containers)
+   - [🔒Stop the Containers](#6-stop-the-containers)
+   - [🔓Start the containers ](#7-start-the-containers)
+   - [💿Docker Volumes](#8-docker-volumes)
+7. [💻Usage](#usage)
+8. [✏️Author](#author)
+9. [📋This project is now OFFICIALLY accepted for](#this-project-is-now-officially-accepted-for)
+10. [❤️Contributors](#contributors)
+11. [🤝contributing](#contributing)
+12. [⭐Stargazers](#stargazers-%EF%B8%8F)
+13. [🔨Forkers](#forkers-%EF%B8%8F)
+14. [📜License](#license)
+
+
+
 ## Features
 
 Slanine offers a variety of features to assist you in your daily tasks, including:

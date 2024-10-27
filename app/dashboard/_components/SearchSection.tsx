@@ -33,7 +33,7 @@ const SearchSection = ({ onSearchInput }: any) => {
             </Button>
           </a>
         </div>
-        <div className="dark:bg-slate-800 w-[50%] my-4">
+        <div className="dark:bg-slate-800 w-[80%] md:w-[50%] my-4">
           <div className="flex gap-2 items-center p-3 border rounded-md max-w-xl bg-white shadow-md dark:bg-gray-800 w-[100%]">
             <Search className="text-gray-700 dark:text-gray-300" />
             <input
