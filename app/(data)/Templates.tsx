@@ -523,4 +523,32 @@ export default[{
             reviewLinks: true
         }
     },
+    {
+        name: 'Book Recommender',
+        desc: 'An AI tool to recommend books based on your favorite genres, authors, or books you have enjoyed.',
+        category: 'Helper',
+        icon: IconBook,
+        aiPrompt: 'Recommend books based on the givenGenres, givenAuthors, and givenBooks. Provide links to reviews and summaries.',
+        slug: 'book-recommender',
+        form: [
+            {
+                label: 'Favorite genres',
+                field: 'input',
+                name: 'givenGenres',
+                required: false
+            },
+            {
+                label: 'Favorite authors',
+                field: 'input',
+                name: 'givenAuthors',
+                required: false
+            },
+            {
+                label: 'Books you have enjoyed',
+                field: 'textarea',
+                name: 'givenBooks',
+                required: false
+            }
+        ]
+    },
 ]
