@@ -646,6 +646,7 @@ export default [
       trailerLinks: true,
       reviewLinks: true,
     },
+  },
     {
         name: 'YouTube Video Script Generator',
         desc: 'Creates video scripts based on a specified topic and target audience, helping creators produce compelling YouTube content.',
@@ -705,10 +706,7 @@ export default [
                 required: true
             }
         ]
-    }
-]
-=======
-  },
+    },
   {
     name: "Book Recommender",
     desc: "An AI tool to recommend books based on your favorite genres, authors, or books you have enjoyed.",
