@@ -646,6 +646,68 @@ export default [
       trailerLinks: true,
       reviewLinks: true,
     },
+    {
+        name: 'YouTube Video Script Generator',
+        desc: 'Creates video scripts based on a specified topic and target audience, helping creators produce compelling YouTube content.',
+        category: 'Content Creation',
+        icon: IconBook,
+        aiPrompt: 'Generate a YouTube video script for the givenTopic targeting the givenAudience. Make it engaging and structured with an introduction, main content, and conclusion.',
+        slug: 'generate-youtube-script',
+        form: [
+            {
+                label: 'Enter your topic',
+                field: 'input',
+                name: 'givenTopic',
+                required: true
+            },
+            {
+                label: 'Target audience',
+                field: 'input',
+                name: 'givenAudience',
+                required: true
+            }
+        ]
+    },
+    {
+        name: 'Story Idea Generator',
+        desc: 'Suggests unique and engaging story ideas, ideal for writers and content creators looking to explore fresh narratives.',
+        category: 'Content Creation',
+        icon: IconBook,
+        aiPrompt: 'Generate unique and engaging story ideas based on the givenGenre and givenKeywords. Provide a brief synopsis for each idea.',
+        slug: 'generate-story-ideas',
+        form: [
+            {
+                label: 'Preferred genre',
+                field: 'input',
+                name: 'givenGenre',
+                required: false
+            },
+            {
+                label: 'Keywords or themes',
+                field: 'textarea',
+                name: 'givenKeywords',
+                required: false
+            }
+        ]
+    },
+    {
+        name: 'Caption Enhancer',
+        desc: 'Recommends creative and engaging captions for social media posts to increase visibility and user engagement.',
+        category: 'Social Media',
+        icon: IconBook,
+        aiPrompt: 'Generate creative and engaging captions for the givenContent. Make sure the captions are catchy and suitable for social media platforms.',
+        slug: 'generate-captions',
+        form: [
+            {
+                label: 'Enter your content',
+                field: 'textarea',
+                name: 'givenContent',
+                required: true
+            }
+        ]
+    }
+]
+=======
   },
   {
     name: "Book Recommender",
