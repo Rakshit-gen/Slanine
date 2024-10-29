@@ -759,44 +759,5 @@ export default [
       },
     ],
   },
-  {
-    name: "Story Idea Generator",
-    desc: "Suggests unique and engaging story ideas, ideal for writers and content creators looking to explore fresh narratives.",
-    category: "Content Creation",
-    icon: CodeIcon,
-    aiPrompt:
-      "Generate a story idea based on the givenGenre and givenKeywords. Make it unique and engaging.",
-    slug: "story-idea-generator",
-    form: [
-      {
-        label: "Genre",
-        field: "input",
-        name: "givenGenre",
-        required: true,
-      },
-      {
-        label: "Keywords",
-        field: "input",
-        name: "givenKeywords",
-        required: true,
-      },
-    ],
-  },
-  {
-    name: "Caption Enhancer",
-    desc: "Recommends creative and engaging captions for social media posts to increase visibility and user engagement.",
-    category: "Content Creation",
-    icon: CodeIcon, 
-    aiPrompt:
-      "Generate a creative and engaging caption for the givenPostContent. Make it attention-grabbing and suitable for social media.",
-    slug: "caption-enhancer",
-    form: [
-      {
-        label: "Post Content",
-        field: "textarea",
-        name: "givenPostContent",
-        required: true,
-      },
-    ],
-  },
+  
 ];
