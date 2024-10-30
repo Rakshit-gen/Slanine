@@ -120,6 +120,7 @@ export default function Home() {
           <Footer />
         </div>
       </div>
+      <div className="hidden md:grid">
       <Particles
         className="absolute inset-0 h-full object-cover"
         quantity={150}
@@ -131,9 +132,26 @@ export default function Home() {
         className="absolute inset-0 h-full"
         quantity={150}
         ease={80}
-        color={"#000000"}
+        color={"#090e2c"}
         refresh
       />
+      </div>
+      <div className="grid md:hidden">
+      <Particles
+        className="absolute inset-0 h-full object-cover"
+        quantity={60}
+        ease={80}
+        color={"#ffffff"}
+        refresh
+      />
+      <Particles
+        className="absolute inset-0 h-full"
+        quantity={60}
+        ease={80}
+        color={"#090e2c"}
+        refresh
+      />
+      </div>
       <ScrollToTopButton /> {/* Add this line */}
     </div>
   );
