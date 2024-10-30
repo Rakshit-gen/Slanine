@@ -1,4 +1,4 @@
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://slanine-s4bi.vercel.app/' ;
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.slanine.online' ;
 module.exports = {
     siteUrl: baseUrl, 
     generateRobotsTxt: true, 

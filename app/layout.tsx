@@ -12,7 +12,7 @@ const inter = Rajdhani({
   weight: ["300", "400", "600", "700"],
 });
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://slanine-s4bi.vercel.app/";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.slanine.online";
 
 export const metadata: Metadata = {
   title: "Slanine | Tasks Simplified",
