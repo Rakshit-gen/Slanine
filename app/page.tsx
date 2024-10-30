@@ -122,14 +122,14 @@ export default function Home() {
       </div>
       <Particles
         className="absolute inset-0 h-full object-cover"
-        quantity={300}
+        quantity={150}
         ease={80}
         color={"#ffffff"}
         refresh
       />
       <Particles
         className="absolute inset-0 h-full"
-        quantity={300}
+        quantity={150}
         ease={80}
         color={"#000000"}
         refresh
