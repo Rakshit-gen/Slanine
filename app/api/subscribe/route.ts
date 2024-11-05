@@ -11,7 +11,7 @@ async function sendEmail(email : any) {
   });
 
   let info = await transporter.sendMail({
-    from: '"Slanine" <your-email@gmail.com>', // Sender address
+    from: 'email@slanine.online', // Sender address
     to: email, // Recipient email
     subject: 'Thank you for subscribing Slanine!',
     text: 'Thank you for subscribing to our platform!',
