@@ -20,6 +20,7 @@ import FAQ from "@/components/FAQ";
 import QuizSection from "@/components/QUIZ";
 
 import MainComponent from "@/components/Projects";
+import ProgressBar from "@/components/ProgressBar";
 export interface TEMPLATE {
   name: string;
   desc: string;
@@ -47,6 +48,7 @@ export default function Home() {
 
   return (
     <div className="h-full w-full dark:bg-[#040715]">
+      <ProgressBar/>
       <div className="h-full overflow-hidden ">
         <Navbarb />
         <section
