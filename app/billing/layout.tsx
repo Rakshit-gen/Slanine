@@ -4,6 +4,7 @@ import SideNav from '../dashboard/_components/SideNav'
 import { ThemeProvider } from '@/components/ThemeProv'
 import { TotalUsageContext } from '../(context)/TotalUsageContext'
 import Header from '../dashboard/_components/Header'
+import Preloader from '@/components/Preloader'
 
 
 function layout({children,}:Readonly<{children:React.ReactNode}>) {
@@ -12,6 +13,7 @@ function layout({children,}:Readonly<{children:React.ReactNode}>) {
   const [hidden, setHidden] = useState(true)
   return (
     <TotalUsageContext.Provider value={{total,setTotal}}>
+      <Preloader />
     <div className='bg-white h-screen dark:bg-[#080d2b]' suppressHydrationWarning={true}>
         <div className={`md:w-64 w-full z-[11] md:block fixed bg-white ${hidden ? "hidden" : ""} md:flex md:flex-col`}>
             <SideNav setHidden={setHidden} hidden={hidden} />

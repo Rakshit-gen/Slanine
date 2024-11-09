@@ -24,6 +24,7 @@ import {
   Dialog,
 } from "@/components/ui/dialog";
 import { DialogDescription } from "@radix-ui/react-dialog";
+import Preloader from "@/components/Preloader";
 
 interface AIOutputRecord {
   id: number;
@@ -58,6 +59,7 @@ const Page = () => {
   }, [userEmail]);
   return (
     <div className="min-h-screen w-full bg-[#E5E7EB] dark:bg-[#080d2b] p-8 text-center">
+      <Preloader />
       <h1 className="bg-clip-text text-4xl md:text-5xl dark:text-white text-black font-extrabold inline-block mb-8">
         Your History
       </h1>
