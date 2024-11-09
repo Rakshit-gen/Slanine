@@ -5,11 +5,13 @@ import SearchSection from './_components/SearchSection'
 import TemplateListSection from './_components/TemplateListSection'
 import { UsageTrack } from './_components/UsageTrack'
 import Particles from '@/components/ui/particles'
+import Preloader from '@/components/Preloader'
 
 const Dashboard = () => {
   const [userSearchInput,setUserSearchInput]=useState<string>()
   return (
     <div className='dark:bg-[#080d2b]'>
+      <Preloader />
       <SearchSection onSearchInput={(value:string)=>setUserSearchInput(value)} />
       <TemplateListSection userSearchInput={userSearchInput} isLoading={false} />
 
