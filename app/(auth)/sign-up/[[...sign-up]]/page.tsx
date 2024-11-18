@@ -26,6 +26,13 @@ const page = () => {
     }
   }
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      changeTheme();
+    }
+  }
+
   return (
     <div className='relative flex items-center h-screen justify-center dark:bg-[#040715] bg-slate-100'>
       <Particles
@@ -62,7 +69,11 @@ const page = () => {
       >
         <div 
           onClick={changeTheme} 
+          onKeyDown={handleKeyDown}
           className="cursor-pointer border-2 border-gray-500 rounded-lg h-[2.5rem] w-[2.5rem] flex justify-center items-center hover:border-orange-400 transition-all duration-300 hover:scale-110"
+          aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+          role="button"
+          tabIndex={0}
         >
           {theme === 'light' ? 
             <SunIcon className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:-rotate-90 dark:scale-0 text-orange-500" /> :
