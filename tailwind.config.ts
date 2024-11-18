@@ -7,11 +7,11 @@ const {
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -84,12 +84,12 @@ const config = {
           from: { transform: "translateY(0)" },
           to: { transform: "translateY(calc(-100% - var(--gap)))" },
         },
-      
+
         scroll: {
-        to: {
-          transform: "translate(calc(-50% - 0.5rem))",
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
         },
-      },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -98,6 +98,17 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+
+        glowingBar: {
+          "0%": {
+            boxShadow:
+              "0 0 5px #2ec4b6, 0 0 10px #f72585, 0 0 15px #ff00ff80",
+          },
+          "100%": {
+            boxShadow:
+              "0 0 15px #2ec4b6, 0 0 25px #f72585, 0 0 35px #ff00ffcc",
+          },
+        },
       },
       animation: {
         shimmer: "shimmer 8s infinite",
@@ -105,13 +116,15 @@ const config = {
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        scroll:"scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
         rotate: "rotate 10s linear infinite",
+        glowingBar: "glowingBar 1.5s ease-in-out infinite alternate",
       },
     },
   },
-  plugins: [require("tailwindcss-animate"),addVariablesForColors],
-} satisfies Config
+  plugins: [require("tailwindcss-animate"), addVariablesForColors],
+} satisfies Config;
 
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));

@@ -54,7 +54,7 @@ export function ModeToggle() {
       <div onClick={()=>changeTheme()} className="cursor-pointer border-2 border-gray-500 rounded-lg h-[2.5rem] w-[2.5rem] flex justify-center items-center">
         {
           theme === 'light' ? 
-          <SunIcon className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:-rotate-90 dark:scale-0 text-black" /> :
+          <SunIcon className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 text-black dark:text-black" /> :
           <MoonIcon className="h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
         }
       </div>

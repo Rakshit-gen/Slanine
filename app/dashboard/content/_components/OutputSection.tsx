@@ -6,7 +6,6 @@ import '@toast-ui/editor/dist/toastui-editor.css';
 import { Editor } from '@toast-ui/react-editor';
 import { Button } from '@/components/ui/button';
 import { Copy, IndentIncrease, Mic2, Pause, Play } from 'lucide-react';
-import { Select,SelectItem } from '@/components/ui/select';
 
 interface PROPS{
   aiOutput:string
@@ -48,15 +47,15 @@ const OutputSection = ({aiOutput}:PROPS) => {
     <div className='flex justify-between items-center p-5'>
         <h2 className='font-bold'>Your Results</h2>
         <div className='justify-between hidden md:flex'>
-        <Button className='text-black dark:text-white bg-transparent border hover:bg-gray-200 dark:hover:bg-slate-900 mx-2' onClick={()=>{speakthis(aiOutput)}}><Mic2></Mic2></Button>
-        <Button className='text-black dark:text-white bg-transparent border mx-2 hover:bg-gray-200 dark:hover:bg-slate-900' onClick={()=>{pause()}}><Pause /></Button>
-        <Button className='text-black dark:text-white bg-transparent border mx-2 hover:bg-gray-200 dark:hover:bg-slate-900' onClick={()=>{play()}}><Play /></Button>
+        <Button className='text-black dark:text-white bg-transparent border hover:bg-gray-200 dark:hover:bg-slate-900 mx-2' onClick={()=>{speakthis(aiOutput)}} name='mic'><Mic2></Mic2></Button>
+        <Button className='text-black dark:text-white bg-transparent border mx-2 hover:bg-gray-200 dark:hover:bg-slate-900' onClick={()=>{pause()}} name='pause'><Pause /></Button>
+        <Button className='text-black dark:text-white bg-transparent border mx-2 hover:bg-gray-200 dark:hover:bg-slate-900' onClick={()=>{play()}} name='play'><Play /></Button>
 
         
         
         </div>
         
-        <Button className='flex gap-2 bg-transparent hover:bg-transparent dark:text-white border text-black' onClick={()=>{navigator.clipboard.writeText(aiOutput); setcopy('Copied'); setInterval(()=>setcopy('Copy'),2000)}}>
+        <Button name='copy' className='flex gap-2 bg-transparent hover:bg-transparent dark:text-white border text-black' onClick={()=>{navigator.clipboard.writeText(aiOutput); setcopy('Copied'); setInterval(()=>setcopy('Copy'),2000)}}>
           <Copy className='w-4 h-4'></Copy>{copy}
         </Button>
         

@@ -2,6 +2,39 @@
 
 Welcome to **Slanine**, an advanced AI assistant designed to help you tackle daily problems and tasks with ease. Built with modern web technologies, Slanine leverages powerful AI capabilities to enhance your productivity and streamline your workflows.
 
+## 📈 GitHub Repository Stats
+| 🌟 **Stars** | 🍴 **Forks** | 🐛 **Issues** | 🔔 **Open PRs** | 🔕 **Closed PRs** | 🛠️ **Languages** | ✅ **Contributors** |
+|--------------|--------------|---------------|-----------------|------------------|------------------|------------------|
+| ![GitHub stars](https://img.shields.io/github/stars/Rakshit-gen/Slanine) | ![forks](https://img.shields.io/github/forks/Rakshit-gen/Slanine) | ![issues](https://img.shields.io/github/issues/Rakshit-gen/Slanine?color=32CD32) | ![pull requests](https://img.shields.io/github/issues-pr/Rakshit-gen/Slanine?color=FFFF8F) | ![Closed PRs](https://img.shields.io/github/issues-pr-closed/Rakshit-gen/Slanine?color=20B2AA) | ![Languages](https://img.shields.io/github/languages/count/Rakshit-gen/Slanine?color=20B2AA) | ![Contributors](https://img.shields.io/github/contributors/Rakshit-gen/Slanine?color=00FA9A) |
+
+## 📑 Table of Contents
+
+1. [🎬 What is Slanine?](#slanine-ai-assistant)
+2. [🔢Github repository stats](#-github-repository-stats)
+3. [🔑Features](#features)
+4. [🛠️Technologies Used](#technologies-used)
+5. [🔧Installation](#installation)
+6. [💾Docker Setup](#docker-setup)
+7. [📋Prerequisites](#prerequisites)
+   - [💻Clone the repository ](#1-clone-the-repository)
+   - [🌏 Configure environment variables ](#2-configure-environment-variables)
+   - [💻Build and run the containers ](#3-build-and-run-the-containers)
+   - [📲Access the application ](#4-access-the-application)
+   - [🚫Terminate the containers ](#5-terminate-the-containers)
+   - [🔒Stop the Containers](#6-stop-the-containers)
+   - [🔓Start the containers ](#7-start-the-containers)
+   - [💿Docker Volumes](#8-docker-volumes)
+7. [💻Usage](#usage)
+8. [✏️Author](#author)
+9. [📋This project is now OFFICIALLY accepted for](#this-project-is-now-officially-accepted-for)
+10. [❤️Contributors](#contributors)
+11. [🤝contributing](#contributing)
+12. [⭐Stargazers](#stargazers-%EF%B8%8F)
+13. [🔨Forkers](#forkers-%EF%B8%8F)
+14. [📜License](#license)
+
+
+
 ## Features
 
 Slanine offers a variety of features to assist you in your daily tasks, including:
@@ -174,6 +207,26 @@ Explore the various features Slanine offers through its intuitive user interface
 <img src="https://github.com/Rakshit-gen.png" alt="GitHub Profile" class="profile-pic" height="70px" width="70px">
 </a>
 
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+
+
+## This project is now OFFICIALLY accepted for
+
+<div align="center">
+  <img src="https://github.com/amiya-cyber/banner/blob/main/329829127-e79eb6de-81b1-4ffb-b6ed-f018bb977e88.png" alt="GSSoC 2024 Extd" width="60%">
+</div>
+
+<div align="center">
+  <img src="https://github.com/amiya-cyber/banner/blob/main/hacktober.png" alt="Hacktober fest 2024" width="60%">
+</div>
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+
 ## Contributors
 <a href="https://github.com/Rakshit-gen/Slanine/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Rakshit-gen/Slanine" />
@@ -184,6 +237,28 @@ Explore the various features Slanine offers through its intuitive user interface
 We welcome contributions to Slanine! If you have any ideas, suggestions, or improvements, please feel free to open an issue or submit a pull request.
 
 Read the [Contributor's guide](https://github.com/Rakshit-gen/Slanine/blob/main/CONTRIBUTORS.md) carefully before proceeding
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+## Stargazers ❤️
+
+<div align='left'>
+
+[![Stargazers repo roster for @Rakshit-gen/Slanine](https://reporoster.com/stars/dark/Rakshit-gen/Slanine)](https://github.com/Rakshit-gen/Slanine/stargazers)
+
+
+</div>
+
+## Forkers ❤️
+
+[![Forkers repo roster for @Rakshit-gen/Slanine](https://reporoster.com/forks/dark/Rakshit-gen/Slanine)](https://github.com/Rakshit-gen/Slanine/network/members)
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+
+
+
 
 
 

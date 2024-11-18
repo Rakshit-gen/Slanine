@@ -1,102 +1,153 @@
-import { GitHubLogoIcon, InstagramLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons'
-import React from 'react'
-import { Input } from './ui/input'
-import { Label } from './ui/label'
-import { Button } from './ui/button'
-import { SendIcon } from 'lucide-react'
+"use client";
+// @ts-nocheck
+import React, { useEffect, useRef, useState } from "react";
+import { GitHubLogoIcon, InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Send } from "lucide-react";
+
+const StarryNight = () => {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null); 
+
+
+  useEffect(() => {
+    const canvas:any = canvasRef.current;
+    if (!canvas) return; 
+
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const stars:any = [];
+    for (let i = 0; i < 100; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 2,
+        speed: Math.random() * 0.5,
+      });
+    }
+
+    function animate() {
+      if (!ctx) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "white";
+      stars.forEach((star:any) => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+        ctx.fill();
+        star.y += star.speed;
+        if (star.y > canvas.height) star.y = 0;
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    const handleResize = () => {
+      if (canvas) {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return <canvas ref={canvasRef} className="absolute inset-0" />;
+};
+
+const AnimatedTitle = () => {
+  return (
+    <h1 className="text-purple-300 text-5xl font-bold lg:text-6xl mb-4 relative">
+      <span className="absolute inset-0 animate-float">Slanine</span>
+      <span className="relative z-10">Slanine</span>
+    </h1>
+  );
+};
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  
+  const handleSubmit = async (e : any) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://localhost:3000/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+      const data = await response.json();
+      alert(data.message);
+    } catch (error) {
+      console.error('Error subscribing:', error);
+    }
+  };
   return (
-    <footer className="bg-transparent dark:bg-transparent from-slate-700 via-slate-800 to-slate-900">
-  <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
-    
+    <footer className="bg-black text-white relative overflow-hidden py-8">
+      <StarryNight />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black"></div>
 
-    <div className="lg:flex lg:items-end lg:justify-between">
-      <div>
-        <div className="flex justify-center text-purple-600 lg:justify-start dark:text-purple-300 text-4xl">
-          Slanine
+      <div className="relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="lg:col-span-2">
+            <AnimatedTitle />
+            <p className="text-sm text-gray-400 leading-tight mb-2">
+              Always helping people through AI tools and developing a fast pace towards a brighter future.
+            </p>
+            <div className="flex space-x-4">
+              <a href="https://github.com/Rakshit-gen/Slanine" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-300 transition-colors">
+                <GitHubLogoIcon className="h-5 w-5" />
+                <span className="sr-only">GitHub</span>
+              </a>
+              <a href="/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-300 transition-colors">
+                <InstagramLogoIcon className="h-5 w-5" />
+                <span className="sr-only">Instagram</span>
+              </a>
+              <a href="/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-300 transition-colors">
+                <TwitterLogoIcon className="h-5 w-5" />
+                <span className="sr-only">Twitter</span>
+              </a>
+            </div>
+          </div>
+          <div>
+            <p className="font-medium text-purple-300 text-sm mb-2">Quick Links</p>
+            <nav className="flex flex-col space-y-1 text-xs text-gray-400">
+              <a className="hover:text-purple-300 transition-colors" href="/">Home</a>
+              <a className="hover:text-purple-300 transition-colors" href="/dashboard">Dashboard</a>
+              <a className="hover:text-purple-300 transition-colors" href={"https://rakshit-portfolio-one.vercel.app/"} target="_blank">Other projects</a>
+              <a className="hover:text-purple-300 transition-colors" href={"https://github.com/Rakshit-gen/Slanine"} target="_blank">Contribute</a>
+            </nav>
+          </div>
+          <div>
+          <p className="text-xl font-semibold text-center text-white mb-4">
+                Subscribe to our website
+              </p>
+            <p className="font-medium text-purple-300 text-sm mb-2">Stay Updated</p>
+            
+            <form className="flex items-center" onSubmit={handleSubmit}>
+              <Input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full text-xs h-8 rounded-l-md border-gray-700 bg-gray-800 text-white focus:border-purple-300 focus:ring-purple-300"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <Button name="message" type="submit" size="sm" className="h-8 rounded-l-none bg-purple-600 hover:bg-purple-700">
+                <Send className="h-3 w-3" />
+                <span className="sr-only">Subscribe</span>
+              </Button>
+            </form>
+          </div>
         </div>
-
-        <p
-          className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left dark:text-gray-400"
-        >
-          Always helping people through AI tools and developing a fast pace towards a brighter future.
-        </p>
+        <div className="mt-4 pt-4 border-t border-gray-800">
+          <p className="text-center text-xs text-gray-400">© 2024 Rakshit Sisodiya. All rights reserved.</p>
+        </div>
       </div>
-      <div className='block items-center justify-center m-auto mt-10 md:mb-0 md:justify-end md:items-end md:content-end'>
-        
-    <br />
-      <ul
-        className="mt-10 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12"
-      >
-        <li>
-          <a
-            className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-            href="/"
-          >
-            Home
-          </a>
-        </li>
+    </footer>
+  );
+};
 
-        <li>
-          <a
-            className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-            href="/dashboard"
-          >
-            Dashboard
-          </a>
-        </li>
-
-        <li>
-          <a
-            className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-            href="https://rakshit-portfolio-one.vercel.app/"
-          >
-            See my other projects
-          </a>
-        </li>
-
-        <li>
-          <a
-            className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-            href="https://github.com/Rakshit-gen/Slanine"
-          >
-            Contribute?
-          </a>
-        </li>
-      </ul>
-      <ul className='items-center justify-center flex m-auto gap-10 mt-10'>
-            <li>
-              <a href="https://github.com/Rakshit-gen/Slanine" target="_blank" rel="noopener noreferrer">
-                <GitHubLogoIcon />
-              </a>
-            </li>
-            <li>
-              <a href="/" target="_blank" rel="noopener noreferrer">
-                <InstagramLogoIcon />
-              </a>
-            </li>
-            <li>
-              <a href="/" target="_blank" rel="noopener noreferrer">
-                <TwitterLogoIcon />
-              </a>
-            </li>
-        </ul>
-      </div>
-      
-    </div>
-    
-
-    <p className="mt-12 text-center text-sm text-gray-500 lg:text-right dark:text-gray-400">
-    {/*<div className='flex'>
-      <div className='gap-4 flex'>
-      <Label className='text-xl mt-1 text-red-300'>Keep in touch</Label> <Input placeholder='Write your email' className='w-72 bg-slate-700 text-white'></Input></div><Button className='bg-slate-700 h-10 text-white'><SendIcon></SendIcon></Button>
-    </div>*/}
-      Copyright &copy; 2024. Rakshit Sisodiya.
-    </p>
-  </div>
-</footer>
-  )
-}
-
-export default Footer
+export default Footer;

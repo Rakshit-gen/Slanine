@@ -3,37 +3,25 @@
 import { useState, useEffect } from "react";
 
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { UserButton, useSession } from "@clerk/nextjs";
-import { Github, HeartHandshake } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { Navbarb } from "@/components/Nav";
 import { ModeToggle } from "@/components/ModeToggle";
 import Particles from "@/components/ui/particles";
 import { useTheme } from "next-themes";
-import TemplateCard from "./dashboard/_components/TemplateCard";
-import Templates from "./(data)/Templates";
-import { InfiniteMovingCards } from "@/components/ui/infinitecards";
 import MovingCards from "@/components/InfiniteCards";
-import Billingcards from "@/components/Billingcards";
 import { Bent } from "@/components/Grid";
 import Footer from "@/components/Footer";
 import Pricing from "@/components/Pricing";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { IconBrandGithub } from "@tabler/icons-react";
 import { MarqueeDemo } from "@/components/Passers";
 import ScrollToTopButton from '@/components/ScrollToTopButton';
+import FAQ from "@/components/FAQ";
+import QuizSection from "@/components/QUIZ";
 
+import MainComponent from "@/components/Projects";
+import ProgressBar from "@/components/ProgressBar";
+import Preloader from "@/components/Preloader";
 export interface TEMPLATE {
   name: string;
   desc: string;
@@ -61,6 +49,8 @@ export default function Home() {
 
   return (
     <div className="h-full w-full dark:bg-[#040715]">
+      {/* <Preloader /> */}
+      <ProgressBar/>
       <div className="h-full overflow-hidden ">
         <Navbarb />
         <section
@@ -73,7 +63,7 @@ export default function Home() {
                 <UserButton />
               </div>
               <Link href={"https://github.com/Rakshit-gen/Slanine"}>
-                <Button className="bg-transparent text-black hover:bg-slate-300 dark:text-white dark:hover:bg-black">
+                <Button name="github" className="bg-transparent text-black hover:bg-slate-300 dark:text-white dark:hover:bg-black">
                   <IconBrandGithub className="z-20" />
                 </Button>
               </Link>
@@ -119,30 +109,54 @@ export default function Home() {
         <br />
 
         <Pricing />
+        
+        <QuizSection/>
+        <MainComponent/>
         <div className="dark:bg-black">
-        <MarqueeDemo></MarqueeDemo>
+        <FAQ/>
         </div>
+        <div className="dark:bg-black">
+        <MarqueeDemo/>
+        </div>
+
 
         <div className="p-4">
           <Footer />
         </div>
       </div>
+      <div className="hidden md:grid">
       <Particles
         className="absolute inset-0 h-full object-cover"
-        quantity={300}
+        quantity={150}
         ease={80}
         color={"#ffffff"}
         refresh
       />
       <Particles
         className="absolute inset-0 h-full"
-        quantity={300}
+        quantity={150}
         ease={80}
-        color={"#000000"}
+        color={"#090e2c"}
         refresh
       />
+      </div>
+      <div className="grid md:hidden">
+      <Particles
+        className="absolute inset-0 h-full object-cover"
+        quantity={60}
+        ease={80}
+        color={"#ffffff"}
+        refresh
+      />
+      <Particles
+        className="absolute inset-0 h-full"
+        quantity={60}
+        ease={80}
+        color={"#090e2c"}
+        refresh
+      />
+      </div>
       <ScrollToTopButton /> {/* Add this line */}
     </div>
   );
 }
-

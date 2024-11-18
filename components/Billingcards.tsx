@@ -50,7 +50,7 @@ const Billingcards = () => {
         <CardFooter className="flex justify-between">
           <div className="w-full">
             <Link href="/dashboard">
-              <Button className="bg-black dark:hover:bg-slate-400 text-white dark:text-black dark:bg-slate-200 rounded-xl w-full hover:bg-gray-600 font-bold">
+              <Button name="explore" className="bg-black dark:hover:bg-slate-400 text-white dark:text-black dark:bg-slate-200 rounded-xl w-full hover:bg-gray-600 font-bold">
                 Explore
               </Button>
             </Link>
@@ -91,7 +91,7 @@ const Billingcards = () => {
         <CardFooter className="flex justify-between">
           <div className="w-full">
             <Link href="https://buy.stripe.com/test_14keW25rNcK36as145">
-              <Button className="bg-black dark:hover:bg-slate-400 font-bold text-white dark:text-black dark:bg-slate-200 rounded-xl w-full hover:bg-gray-600">
+              <Button name="buy" className="bg-black dark:hover:bg-slate-400 font-bold text-white dark:text-black dark:bg-slate-200 rounded-xl w-full hover:bg-gray-600">
                 Buy
               </Button>
             </Link>
