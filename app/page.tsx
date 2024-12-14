@@ -143,14 +143,14 @@ export default function Home() {
       <div className="grid md:hidden">
       <Particles
         className="absolute inset-0 h-full object-cover"
-        quantity={60}
+        quantity={30}
         ease={80}
         color={"#ffffff"}
         refresh
       />
       <Particles
         className="absolute inset-0 h-full"
-        quantity={60}
+        quantity={30}
         ease={80}
         color={"#090e2c"}
         refresh
