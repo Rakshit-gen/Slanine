@@ -45,7 +45,7 @@ export default function RootLayout({
             attribute="class"
             defaultTheme="dark"
             enableSystem
-            disableTransitionOnChange
+            disableTransitionOnChange={false}
           >
             {children}
             <ScrollToTopButton />
