@@ -16,11 +16,8 @@ import Pricing from "@/components/Pricing";
 import { IconBrandGithub } from "@tabler/icons-react";
 import { MarqueeDemo } from "@/components/Passers";
 import ScrollToTopButton from '@/components/ScrollToTopButton';
-import FAQ from "@/components/FAQ";
-import QuizSection from "@/components/QUIZ";
 
 import MainComponent from "@/components/Projects";
-import ProgressBar from "@/components/ProgressBar";
 import Preloader from "@/components/Preloader";
 export interface TEMPLATE {
   name: string;
@@ -49,8 +46,6 @@ export default function Home() {
 
   return (
     <div className="h-full w-full dark:bg-[#040715]">
-      {/* <Preloader /> */}
-      <ProgressBar/>
       <div className="h-full overflow-hidden ">
         <Navbarb />
         <section
@@ -109,12 +104,7 @@ export default function Home() {
         <br />
 
         <Pricing />
-        
-        <QuizSection/>
         <MainComponent/>
-        <div className="dark:bg-black">
-        <FAQ/>
-        </div>
         <div className="dark:bg-black">
         <MarqueeDemo/>
         </div>
