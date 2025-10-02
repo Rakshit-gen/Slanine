@@ -16,7 +16,7 @@ import Pricing from "@/components/Pricing";
 import { IconBrandGithub } from "@tabler/icons-react";
 import { MarqueeDemo } from "@/components/Passers";
 import ScrollToTopButton from '@/components/ScrollToTopButton';
-import Preloader from "@/components/Preloader";
+import FAQ from "@/components/FAQ";
 export interface TEMPLATE {
   name: string;
   desc: string;
@@ -102,6 +102,8 @@ export default function Home() {
         <br />
 
         <Pricing />
+        <br />
+        <FAQ />
         <div className="dark:bg-black">
         <MarqueeDemo/>
         </div>
