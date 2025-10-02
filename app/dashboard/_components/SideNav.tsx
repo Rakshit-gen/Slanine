@@ -62,8 +62,8 @@ const SideNav = ({setHidden, hidden}: any) => {
           {MenuList.map((menu, index) => (
             <Link key={index} href={menu.path} onClick={()=>setHidden(true)} >
               <div
-                className={`flex rounded-2xl gap-2 mb-2 p-3 border-b hover:bg-blue-500 hover:text-white rounded-lg${
-                  path === menu.path && "m-2 text-white border-blue-500"
+                className={`flex rounded-2xl gap-2 mb-2 p-3 border-b hover:border-blue-500 hover:border transition duration-900 ease-in-out hover:text-white rounded-lg${
+                  path === menu.path && "m-2 text-black dark:text-white border-blue-500"
                 }`}
               >
                 <menu.icons />
