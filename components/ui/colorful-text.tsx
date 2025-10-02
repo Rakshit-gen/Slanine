@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "motion/react";
 
 export function ColourfulText({ text }: { text: string }) {
-  const colors = ["rgb(30,144,255)", "rgb(65,105,225)"]; // ✅ only 2 colors
+  const colors = ["rgb(30,144,255)", "rgb(30,144,255)"]; // ✅ only 2 colors
 
   const [toggle, setToggle] = React.useState(false);
 
