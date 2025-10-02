@@ -55,10 +55,10 @@ const FAQSection: React.FC = () => {
               </span>
             </p>
             <a 
-              href="mailto:someone@example.com" 
+              href="mailto:sisodiarakshit456@gmail.com" 
               className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-semibold transition-colors duration-300"
             >
-              someone@example.com
+              Contact me
             </a>
           </div>
         </div>
