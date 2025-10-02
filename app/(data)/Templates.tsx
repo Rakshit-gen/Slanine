@@ -759,5 +759,78 @@ export default [
       },
     ],
   },
-  
+    {
+    name: "Meeting Notes Generator",
+    desc: "Upload or paste meeting transcripts and instantly get structured meeting notes with key points, action items, and deadlines.",
+    category: "Productivity",
+    icon: Package,
+    aiPrompt:
+      "Summarize the givenTranscript into structured meeting notes. Extract decisions, action items, deadlines, and owners. Format the output in a professional way.",
+    slug: "meeting-notes-generator",
+    form: [
+      {
+        label: "Paste your meeting transcript",
+        field: "textarea",
+        name: "givenTranscript",
+        required: true,
+      },
+    ],
+  },
+  {
+    name: "Email Summarizer",
+    desc: "Summarize long emails into short, actionable points and provide a suggested quick reply draft.",
+    category: "Productivity",
+    icon: BookImage,
+    aiPrompt:
+      "Summarize the givenEmail into 3-5 concise action points and generate a professional reply draft.",
+    slug: "email-summarizer",
+    form: [
+      {
+        label: "Paste your email content",
+        field: "textarea",
+        name: "givenEmail",
+        required: true,
+      },
+    ],
+  },
+  {
+    name: "Idea Brainstormer",
+    desc: "Stuck on a project? Get fresh brainstorming ideas for tasks, features, or improvements instantly.",
+    category: "Productivity",
+    icon: SproutIcon,
+    aiPrompt:
+      "Generate a list of brainstorming ideas for the givenTopic. Include at least 5 creative, actionable, and realistic ideas.",
+    slug: "idea-brainstormer",
+    form: [
+      {
+        label: "Enter your project/topic",
+        field: "input",
+        name: "givenTopic",
+        required: true,
+      },
+    ],
+  },
+  {
+    name: "Time Block Planner",
+    desc: "Create an efficient time-blocked daily schedule from your to-do list.",
+    category: "Productivity",
+    icon: Workflow,
+    aiPrompt:
+      "Distribute the givenTasks into an optimized time-block schedule across the givenHours. Include breaks and focus sessions. Output in table format.",
+    slug: "time-block-planner",
+    form: [
+      {
+        label: "Enter your tasks (comma separated)",
+        field: "textarea",
+        name: "givenTasks",
+        required: true,
+      },
+      {
+        label: "How many hours do you have today?",
+        field: "input",
+        name: "givenHours",
+        required: true,
+      },
+    ],
+  },
 ];
