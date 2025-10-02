@@ -19,7 +19,7 @@ const SearchSection = ({ onSearchInput }: any) => {
   return (
     <div className="bg-gray-300 text-black">
       <div className="p-8 bg-transparent flex flex-col justify-center items-center text-black dark:text-gray-300 dark:bg-[#050d36]">
-        <h1 className="bg-clip-text text-2xl font-mono text-transparent z-10 hidden md:flex">
+        <h1 className="bg-clip-text text-4xl font-mono text-transparent sm:text-5xl z-10 hidden md:flex">
           <ColourfulText text="Cool Prompts for you" colors={["rgb(131, 179, 32)","rgb(47, 195, 106)","rgb(42, 169, 210)","rgb(4, 112, 202)","rgb(107, 10, 255)","rgb(183, 0, 218)","rgb(218, 0, 171)","rgb(230, 64, 92)","rgb(232, 98, 63)","rgb(249, 129, 47)"]} />
         </h1>
         <br />
