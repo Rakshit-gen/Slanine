@@ -101,8 +101,6 @@ UPSTASH_REDIS_REST_TOKEN=
 
 5. Open your browser and navigate to `http://localhost:3000`.
 
-Here’s the `README.md` written in MDN format:
-
 ---
 
 ## Docker Setup
