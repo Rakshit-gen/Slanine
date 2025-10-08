@@ -210,26 +210,6 @@ Explore the various features Slanine offers through its intuitive user interface
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 
-
-## This project is now OFFICIALLY accepted for
-
-<div align="center">
-  <img src="https://github.com/amiya-cyber/banner/blob/main/329829127-e79eb6de-81b1-4ffb-b6ed-f018bb977e88.png" alt="GSSoC 2024 Extd" width="60%">
-</div>
-
-<div align="center">
-  <img src="https://github.com/amiya-cyber/banner/blob/main/hacktober.png" alt="Hacktober fest 2024" width="60%">
-</div>
-
-
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-
-
-## Contributors
-<a href="https://github.com/Rakshit-gen/Slanine/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Rakshit-gen/Slanine" />
-</a>
-
 ## Contributing
 
 We welcome contributions to Slanine! If you have any ideas, suggestions, or improvements, please feel free to open an issue or submit a pull request.
