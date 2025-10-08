@@ -94,6 +94,7 @@ const page = () => {
          />
         </div>
       </div>
+    </div>
   );
 }
 
