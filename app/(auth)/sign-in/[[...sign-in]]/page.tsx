@@ -85,10 +85,15 @@ const page = () => {
       </motion.div>
       <div className='absolute z-10 flex items-center h-screen justify-center self-center'>
         <div className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-lg text-black dark:text-white">
-          <SignIn />
+          <SignIn
+          path="/sign-in"
+          routing="path"
+          signUpUrl="/sign-up"
+          forceRedirectUrl="/dashboard"          // 👈 after sign-in, always go here
+          signUpForceRedirectUrl="/dashboard"    // 👈 after sign-up, always go here
+         />
         </div>
       </div>
-    </div>
   );
 }
 

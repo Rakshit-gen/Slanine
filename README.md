@@ -75,7 +75,7 @@ To get started with Slanine, follow these steps:
    ```
 
 3. Set up the environment variables:
-   Create a `.env` file in the root directory and add your configuration details:
+   Create a `.env.local` file in the root directory and add your configuration details:
 
 ```env
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
@@ -100,8 +100,6 @@ UPSTASH_REDIS_REST_TOKEN=
    ```
 
 5. Open your browser and navigate to `http://localhost:3000`.
-
-Here’s the `README.md` written in MDN format:
 
 ---
 
@@ -211,26 +209,6 @@ Explore the various features Slanine offers through its intuitive user interface
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-
-
-## This project is now OFFICIALLY accepted for
-
-<div align="center">
-  <img src="https://github.com/amiya-cyber/banner/blob/main/329829127-e79eb6de-81b1-4ffb-b6ed-f018bb977e88.png" alt="GSSoC 2024 Extd" width="60%">
-</div>
-
-<div align="center">
-  <img src="https://github.com/amiya-cyber/banner/blob/main/hacktober.png" alt="Hacktober fest 2024" width="60%">
-</div>
-
-
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-
-
-## Contributors
-<a href="https://github.com/Rakshit-gen/Slanine/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Rakshit-gen/Slanine" />
-</a>
 
 ## Contributing
 

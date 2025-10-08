@@ -17,11 +17,7 @@ import { IconBrandGithub } from "@tabler/icons-react";
 import { MarqueeDemo } from "@/components/Passers";
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 import FAQ from "@/components/FAQ";
-import QuizSection from "@/components/QUIZ";
-
-import MainComponent from "@/components/Projects";
-import ProgressBar from "@/components/ProgressBar";
-import Preloader from "@/components/Preloader";
+import { MainNameText } from "@/components/MainNameText";
 export interface TEMPLATE {
   name: string;
   desc: string;
@@ -49,8 +45,6 @@ export default function Home() {
 
   return (
     <div className="h-full w-full dark:bg-[#040715]">
-      {/* <Preloader /> */}
-      <ProgressBar/>
       <div className="h-full overflow-hidden ">
         <Navbarb />
         <section
@@ -75,9 +69,7 @@ export default function Home() {
 
           <div className="min-h-fit mx-auto max-w-screen-xl px-4 py-12 lg:flex lg:items-center">
             <div className="mx-auto max-w-3xl text-center mt-14">
-              <h1 className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-400 text-transparent bg-clip-text text-3xl font-extrabold sm:text-5xl z-10">
-                Slanine: Your AI problem solver.
-              </h1>
+                <MainNameText />
 
               <p className="mx-auto mt-4 max-w-xl sm:text-xl/relaxed font-superbold">
                 Gemini AI-powered solutions, pre-programmed for efficiency.
@@ -87,6 +79,7 @@ export default function Home() {
                 <a
                   className="block w-full rounded-full border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-opacity-75 sm:w-auto z-10 dark:hover:text-slate-300"
                   href="/dashboard"
+                  style={{borderWidth: "2px"}}
                 >
                   Save time and boost productivity with AI
                 </a>
@@ -109,12 +102,8 @@ export default function Home() {
         <br />
 
         <Pricing />
-        
-        <QuizSection/>
-        <MainComponent/>
-        <div className="dark:bg-black">
-        <FAQ/>
-        </div>
+        <br />
+        <FAQ />
         <div className="dark:bg-black">
         <MarqueeDemo/>
         </div>
@@ -143,14 +132,14 @@ export default function Home() {
       <div className="grid md:hidden">
       <Particles
         className="absolute inset-0 h-full object-cover"
-        quantity={60}
+        quantity={30}
         ease={80}
         color={"#ffffff"}
         refresh
       />
       <Particles
         className="absolute inset-0 h-full"
-        quantity={60}
+        quantity={30}
         ease={80}
         color={"#090e2c"}
         refresh

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Rajdhani } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from '@clerk/themes'
 import { ThemeProvider } from "@/components/ThemeProv";
 import { Toaster } from "@/components/ui/toaster";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
@@ -38,7 +39,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider      appearance={{
+        baseTheme: [dark],
+      }}>
       <html lang="en" suppressHydrationWarning={true}>
         <body className={inter.className}>
           <ThemeProvider
