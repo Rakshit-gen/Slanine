@@ -55,7 +55,7 @@ Slanine is built using the following technologies:
 - **[PostgreSQL](https://www.postgresql.org/)**: A robust and reliable relational database system.
 - **[Stripe](https://stripe.com/)**: A comprehensive suite of APIs for handling payments and subscriptions.
 - **[Drizzle ORM](https://github.com/jeremydmiller/drizzle)**: A flexible ORM for TypeScript and Node.js.
-- **[Gemini AI Flash 1.5](https://geminiaiflash.com/)**: A state-of-the-art AI model for natural language processing and generation.
+- **[Gemini AI Flash 2.5](https://geminiaiflash.com/)**: A state-of-the-art AI model for natural language processing and generation.
 
 ## Installation
 

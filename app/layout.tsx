@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Slanine | Tasks Simplified",
     description:
-      "An AI solution for everything, powered by Gemini 1.5 Flash. Uses templates to do all your tasks.",
+      "An AI solution for everything, powered by Gemini 2.5 Flash. Uses templates to do all your tasks.",
     url: baseUrl,
     type: "website",
   },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Slanine | Tasks Simplified",
     description:
-      "Generate anything using Gemini AI, powered by Gemini 1.5 Flash.",
+      "Generate anything using Gemini AI, powered by Gemini 2.5 Flash.",
   },
 };
 
